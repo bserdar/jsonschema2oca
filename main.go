@@ -28,12 +28,18 @@ func (i *Index) add(name string) string {
 	return idstr
 }
 
+type Entity struct {
+	Name      string
+	Reference string   `json:"reference"`
+	Blinding  []string `json:"blinding"`
+}
+
 func main() {
 	if len(os.Args) != 2 {
 		fmt.Println("json2oca <entity mappings file>")
 		return
 	}
-	var objects map[string]string
+	var objects map[string]Entity
 	data, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
 		panic(err)
@@ -41,11 +47,15 @@ func main() {
 	if err := json.Unmarshal(data, &objects); err != nil {
 		panic(err)
 	}
+	for k, v := range objects {
+		v.Name = k
+		objects[k] = v
+	}
 	compiler := jsonschema.NewCompiler()
 	schemas := make(map[string]*jsonschema.Schema)
 	schemaNames := make(map[*jsonschema.Schema]string)
-	for name, ref := range objects {
-		sch, err := compiler.Compile(ref)
+	for name, e := range objects {
+		sch, err := compiler.Compile(e.Reference)
 		if err != nil {
 			panic(err)
 		}

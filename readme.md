@@ -28,7 +28,12 @@ The entity mappings file is a JSON file of the form:
 
 ```
 {
-  "EntityName" : "schema reference",
+  "EntityName" : {
+    "reference": "schema reference",
+    "blinding": [
+       field names,...
+    ]
+  },
   ...
 }
 ```
@@ -39,8 +44,10 @@ For the FHIR schema this is defined as:
 
 ```
 {
-      "Account": "testdata/fhir.schema.json#/definitions/Account",
-      "ActivityDefinition": "testdata/fhir.schema.json#/definitions/ActivityDefinition",
+      "Account": {
+        "reference": "testdata/fhir.schema.json#/definitions/Account",
+        "blinding": []
+       },
       ...
 }
 ```
@@ -101,39 +108,39 @@ as of this writing:
      ...
   }
 }
-
+```
   * Simple attributes are defined as:
-  
+```
     "key": "value"
-    
+```
   * Nested objects are defined as:
-  
+```
     "key": {
       "object" {
          <attribute definition>...
       }
     }
-    
+```
   * Arrays are defined as:
-  
+```
     "key": {
       "array": { <array item definition> }
     }
-    
+```
     where array item definition can be a reference, object, array, or "value"
 
   * References are defined as:
-  
+```
     "key": {
        "reference": <schema name>
     }
-    
+```
   * oneOf constructs are defined as:
-  
-    "key": {
+```
+   "key": {
       "oneOf": [
          <item definition>
          ...
       ]
     }
-    
+```
