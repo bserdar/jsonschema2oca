@@ -1,142 +1,553 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "CompartmentDefinition",
-  "types": {
-    "id_code_55289": "string",
-    "id_code_55314": "string",
-    "id_code_55386": "string",
-    "id_code_55403": "string",
-    "id_code_55439": "string",
-    "id_code_55457": "string",
-    "id_code_55486": "string",
-    "id_code_55527": "string",
-    "id_date_55267": "string",
-    "id_description_55548": "string",
-    "id_display_55272": "string",
-    "id_display_55308": "string",
-    "id_display_55380": "string",
-    "id_display_55419": "string",
-    "id_documentation_55534": "string",
-    "id_end_55353": "string",
-    "id_experimental_55545": "boolean",
-    "id_id_55240": "string",
-    "id_id_55245": "string",
-    "id_id_55250": "string",
-    "id_id_55253": "string",
-    "id_id_55257": "string",
-    "id_id_55260": "string",
-    "id_id_55263": "string",
-    "id_id_55268": "string",
-    "id_id_55273": "string",
-    "id_id_55276": "string",
-    "id_id_55279": "string",
-    "id_id_55282": "string",
-    "id_id_55284": "string",
-    "id_id_55290": "string",
-    "id_id_55294": "string",
-    "id_id_55298": "string",
-    "id_id_55301": "string",
-    "id_id_55304": "string",
-    "id_id_55309": "string",
-    "id_id_55315": "string",
-    "id_id_55318": "string",
-    "id_id_55319": "string",
-    "id_id_55324": "string",
-    "id_id_55327": "string",
-    "id_id_55333": "string",
-    "id_id_55336": "string",
-    "id_id_55340": "string",
-    "id_id_55344": "string",
-    "id_id_55348": "string",
-    "id_id_55350": "string",
-    "id_id_55354": "string",
-    "id_id_55357": "string",
-    "id_id_55360": "string",
-    "id_id_55364": "string",
-    "id_id_55371": "string",
-    "id_id_55374": "string",
-    "id_id_55376": "string",
-    "id_id_55381": "string",
-    "id_id_55388": "string",
-    "id_id_55390": "string",
-    "id_id_55391": "string",
-    "id_id_55396": "string",
-    "id_id_55399": "string",
-    "id_id_55404": "string",
-    "id_id_55407": "string",
-    "id_id_55408": "string",
-    "id_id_55412": "string",
-    "id_id_55415": "string",
-    "id_id_55420": "string",
-    "id_id_55426": "string",
-    "id_id_55430": "string",
-    "id_id_55434": "string",
-    "id_id_55436": "string",
-    "id_id_55441": "string",
-    "id_id_55444": "string",
-    "id_id_55450": "string",
-    "id_id_55454": "string",
-    "id_id_55459": "string",
-    "id_id_55462": "string",
-    "id_id_55463": "string",
-    "id_id_55467": "string",
-    "id_id_55472": "string",
-    "id_id_55473": "string",
-    "id_id_55478": "string",
-    "id_id_55483": "string",
-    "id_id_55488": "string",
-    "id_id_55491": "string",
-    "id_id_55495": "string",
-    "id_id_55499": "string",
-    "id_id_55505": "string",
-    "id_id_55509": "string",
-    "id_id_55513": "string",
-    "id_id_55517": "string",
-    "id_id_55519": "string",
-    "id_id_55522": "string",
-    "id_id_55525": "string",
-    "id_id_55528": "string",
-    "id_id_55531": "string",
-    "id_id_55539": "string",
-    "id_id_55542": "string",
-    "id_implicitRules_55266": "string",
-    "id_language_55256": "string",
-    "id_lastUpdated_55300": "string",
-    "id_name_55335": "string",
-    "id_name_55540": "string",
-    "id_param_55526": "string",
-    "id_profile_55330": "string",
-    "id_publisher_55512": "string",
-    "id_purpose_55244": "string",
-    "id_rank_55347": "number",
-    "id_search_55243": "boolean",
-    "id_source_55297": "string",
-    "id_start_55359": "string",
-    "id_system_55271": "string",
-    "id_system_55307": "string",
-    "id_system_55379": "string",
-    "id_system_55418": "string",
-    "id_system_55429": "string",
-    "id_system_55466": "string",
-    "id_system_55476": "string",
-    "id_text_55424": "string",
-    "id_unit_55435": "string",
-    "id_unit_55453": "string",
-    "id_unit_55482": "string",
-    "id_url_55546": "string",
-    "id_userSelected_55286": "boolean",
-    "id_userSelected_55322": "boolean",
-    "id_userSelected_55394": "boolean",
-    "id_userSelected_55411": "boolean",
-    "id_value_55343": "string",
-    "id_value_55440": "number",
-    "id_value_55458": "number",
-    "id_value_55487": "number",
-    "id_versionId_55331": "string",
-    "id_version_55288": "string",
-    "id_version_55313": "string",
-    "id_version_55385": "string",
-    "id_version_55402": "string",
-    "id_version_55538": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/CompartmentDefinition",
+  "selectors": [
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity.value",
+      "type": "number"
+    },
+    {
+      "key": "useContext.code.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom._rank.id",
+      "type": "string"
+    },
+    {
+      "key": "version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept._text.id",
+      "type": "string"
+    },
+    {
+      "key": "_description.id",
+      "type": "string"
+    },
+    {
+      "key": "description",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code.version",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "_purpose.id",
+      "type": "string"
+    },
+    {
+      "key": "experimental",
+      "type": "boolean"
+    },
+    {
+      "key": "contact.telecom.rank",
+      "type": "number"
+    },
+    {
+      "key": "contact.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "resource.param",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high._system.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high.unit",
+      "type": "string"
+    },
+    {
+      "key": "_name.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code._system.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low._value.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_version.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "purpose",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high._code.id",
+      "type": "string"
+    },
+    {
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low.value",
+      "type": "number"
+    },
+    {
+      "key": "_url.id",
+      "type": "string"
+    },
+    {
+      "key": "_code.id",
+      "type": "string"
+    },
+    {
+      "key": "url",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.period.end",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high.code",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "resource.id",
+      "type": "string"
+    },
+    {
+      "key": "resource._param.id",
+      "type": "string"
+    },
+    {
+      "key": "resource._code.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code._code.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low._code.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_search.id",
+      "type": "string"
+    },
+    {
+      "key": "resource.documentation",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low.code",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.period.id",
+      "type": "string"
+    },
+    {
+      "key": "_publisher.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code.system",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity.system",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "useContext.code._display.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "resource.code",
+      "type": "string"
+    },
+    {
+      "key": "search",
+      "type": "boolean"
+    },
+    {
+      "key": "useContext.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code._version.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high._value.id",
+      "type": "string"
+    },
+    {
+      "key": "contact._name.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.period.start",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "date",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high.system",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.high.value",
+      "type": "number"
+    },
+    {
+      "key": "useContext.valueRange.high._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom._value.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom._use.id",
+      "type": "string"
+    },
+    {
+      "key": "_date.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code.display",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "resource._documentation.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low.unit",
+      "type": "string"
+    },
+    {
+      "key": "publisher",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.name",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "useContext.code.code",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueCodeableConcept.text",
+      "type": "string"
+    },
+    {
+      "key": "_experimental.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity.id",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueRange.low._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "useContext.valueQuantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "contact.telecom.value",
+      "type": "string"
+    }
+  ]
 }

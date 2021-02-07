@@ -1,119 +1,461 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "Schedule",
-  "types": {
-    "id_active_27345": "boolean",
-    "id_code_27147": "string",
-    "id_code_27175": "string",
-    "id_code_27206": "string",
-    "id_code_27261": "string",
-    "id_code_27315": "string",
-    "id_code_27362": "string",
-    "id_comment_27226": "string",
-    "id_display_27139": "string",
-    "id_display_27158": "string",
-    "id_display_27196": "string",
-    "id_display_27244": "string",
-    "id_display_27327": "string",
-    "id_display_27367": "string",
-    "id_end_27233": "string",
-    "id_end_27291": "string",
-    "id_id_27131": "string",
-    "id_id_27132": "string",
-    "id_id_27136": "string",
-    "id_id_27141": "string",
-    "id_id_27143": "string",
-    "id_id_27148": "string",
-    "id_id_27151": "string",
-    "id_id_27152": "string",
-    "id_id_27159": "string",
-    "id_id_27163": "string",
-    "id_id_27165": "string",
-    "id_id_27169": "string",
-    "id_id_27176": "string",
-    "id_id_27179": "string",
-    "id_id_27181": "string",
-    "id_id_27187": "string",
-    "id_id_27190": "string",
-    "id_id_27197": "string",
-    "id_id_27200": "string",
-    "id_id_27203": "string",
-    "id_id_27207": "string",
-    "id_id_27210": "string",
-    "id_id_27212": "string",
-    "id_id_27219": "string",
-    "id_id_27222": "string",
-    "id_id_27227": "string",
-    "id_id_27230": "string",
-    "id_id_27234": "string",
-    "id_id_27237": "string",
-    "id_id_27242": "string",
-    "id_id_27245": "string",
-    "id_id_27248": "string",
-    "id_id_27251": "string",
-    "id_id_27255": "string",
-    "id_id_27262": "string",
-    "id_id_27265": "string",
-    "id_id_27269": "string",
-    "id_id_27273": "string",
-    "id_id_27276": "string",
-    "id_id_27279": "string",
-    "id_id_27283": "string",
-    "id_id_27288": "string",
-    "id_id_27292": "string",
-    "id_id_27295": "string",
-    "id_id_27299": "string",
-    "id_id_27304": "string",
-    "id_id_27308": "string",
-    "id_id_27311": "string",
-    "id_id_27313": "string",
-    "id_id_27316": "string",
-    "id_id_27319": "string",
-    "id_id_27320": "string",
-    "id_id_27328": "string",
-    "id_id_27331": "string",
-    "id_id_27334": "string",
-    "id_id_27339": "string",
-    "id_id_27349": "string",
-    "id_id_27351": "string",
-    "id_id_27354": "string",
-    "id_id_27356": "string",
-    "id_id_27363": "string",
-    "id_id_27366": "string",
-    "id_id_27368": "string",
-    "id_id_27371": "string",
-    "id_id_27375": "string",
-    "id_implicitRules_27224": "string",
-    "id_language_27287": "string",
-    "id_lastUpdated_27134": "string",
-    "id_profile_27185": "string",
-    "id_source_27184": "string",
-    "id_start_27239": "string",
-    "id_start_27297": "string",
-    "id_system_27138": "string",
-    "id_system_27168": "string",
-    "id_system_27195": "string",
-    "id_system_27254": "string",
-    "id_system_27303": "string",
-    "id_system_27326": "string",
-    "id_system_27377": "string",
-    "id_text_27218": "string",
-    "id_text_27267": "string",
-    "id_text_27338": "string",
-    "id_text_27379": "string",
-    "id_userSelected_27155": "boolean",
-    "id_userSelected_27172": "boolean",
-    "id_userSelected_27214": "boolean",
-    "id_userSelected_27258": "boolean",
-    "id_userSelected_27323": "boolean",
-    "id_userSelected_27359": "boolean",
-    "id_value_27312": "string",
-    "id_versionId_27186": "string",
-    "id_version_27146": "string",
-    "id_version_27174": "string",
-    "id_version_27216": "string",
-    "id_version_27260": "string",
-    "id_version_27325": "string",
-    "id_version_27361": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/Schedule",
+  "selectors": [
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "specialty.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "_active.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "specialty.text",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.text",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "active",
+      "type": "boolean"
+    },
+    {
+      "key": "planningHorizon._end.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "comment",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "specialty.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "planningHorizon.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty._text.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory._text.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.text",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "serviceType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "planningHorizon._start.id",
+      "type": "string"
+    },
+    {
+      "key": "planningHorizon.end",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "planningHorizon.id",
+      "type": "string"
+    },
+    {
+      "key": "_comment.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.id",
+      "type": "string"
+    }
+  ]
 }

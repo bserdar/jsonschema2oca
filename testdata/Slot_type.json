@@ -1,133 +1,517 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "Slot",
-  "types": {
-    "id_code_48662": "string",
-    "id_code_48693": "string",
-    "id_code_48734": "string",
-    "id_code_48757": "string",
-    "id_code_48790": "string",
-    "id_code_48845": "string",
-    "id_code_48889": "string",
-    "id_comment_48857": "string",
-    "id_display_48645": "string",
-    "id_display_48676": "string",
-    "id_display_48717": "string",
-    "id_display_48769": "string",
-    "id_display_48792": "string",
-    "id_display_48825": "string",
-    "id_display_48907": "string",
-    "id_end_48852": "string",
-    "id_end_48864": "string",
-    "id_id_48638": "string",
-    "id_id_48639": "string",
-    "id_id_48642": "string",
-    "id_id_48646": "string",
-    "id_id_48650": "string",
-    "id_id_48652": "string",
-    "id_id_48655": "string",
-    "id_id_48656": "string",
-    "id_id_48664": "string",
-    "id_id_48671": "string",
-    "id_id_48673": "string",
-    "id_id_48677": "string",
-    "id_id_48681": "string",
-    "id_id_48684": "string",
-    "id_id_48686": "string",
-    "id_id_48687": "string",
-    "id_id_48695": "string",
-    "id_id_48705": "string",
-    "id_id_48709": "string",
-    "id_id_48711": "string",
-    "id_id_48718": "string",
-    "id_id_48721": "string",
-    "id_id_48724": "string",
-    "id_id_48727": "string",
-    "id_id_48728": "string",
-    "id_id_48735": "string",
-    "id_id_48740": "string",
-    "id_id_48743": "string",
-    "id_id_48746": "string",
-    "id_id_48749": "string",
-    "id_id_48752": "string",
-    "id_id_48758": "string",
-    "id_id_48761": "string",
-    "id_id_48762": "string",
-    "id_id_48770": "string",
-    "id_id_48773": "string",
-    "id_id_48776": "string",
-    "id_id_48780": "string",
-    "id_id_48783": "string",
-    "id_id_48785": "string",
-    "id_id_48793": "string",
-    "id_id_48797": "string",
-    "id_id_48799": "string",
-    "id_id_48803": "string",
-    "id_id_48807": "string",
-    "id_id_48810": "string",
-    "id_id_48813": "string",
-    "id_id_48819": "string",
-    "id_id_48822": "string",
-    "id_id_48826": "string",
-    "id_id_48829": "string",
-    "id_id_48832": "string",
-    "id_id_48835": "string",
-    "id_id_48838": "string",
-    "id_id_48839": "string",
-    "id_id_48849": "string",
-    "id_id_48855": "string",
-    "id_id_48858": "string",
-    "id_id_48862": "string",
-    "id_id_48865": "string",
-    "id_id_48868": "string",
-    "id_id_48873": "string",
-    "id_id_48877": "string",
-    "id_id_48882": "string",
-    "id_id_48884": "string",
-    "id_id_48890": "string",
-    "id_id_48893": "string",
-    "id_id_48894": "string",
-    "id_id_48897": "string",
-    "id_id_48901": "string",
-    "id_id_48903": "string",
-    "id_id_48910": "string",
-    "id_id_48915": "string",
-    "id_implicitRules_48669": "string",
-    "id_language_48702": "string",
-    "id_lastUpdated_48756": "string",
-    "id_overbooked_48745": "boolean",
-    "id_profile_48808": "string",
-    "id_source_48806": "string",
-    "id_start_48700": "string",
-    "id_start_48870": "string",
-    "id_system_48644": "string",
-    "id_system_48675": "string",
-    "id_system_48716": "string",
-    "id_system_48768": "string",
-    "id_system_48791": "string",
-    "id_system_48824": "string",
-    "id_system_48876": "string",
-    "id_system_48906": "string",
-    "id_text_48667": "string",
-    "id_text_48698": "string",
-    "id_text_48739": "string",
-    "id_text_48818": "string",
-    "id_text_48909": "string",
-    "id_userSelected_48659": "boolean",
-    "id_userSelected_48690": "boolean",
-    "id_userSelected_48731": "boolean",
-    "id_userSelected_48765": "boolean",
-    "id_userSelected_48787": "boolean",
-    "id_userSelected_48842": "boolean",
-    "id_userSelected_48886": "boolean",
-    "id_value_48883": "string",
-    "id_versionId_48809": "string",
-    "id_version_48661": "string",
-    "id_version_48692": "string",
-    "id_version_48733": "string",
-    "id_version_48767": "string",
-    "id_version_48789": "string",
-    "id_version_48844": "string",
-    "id_version_48888": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/Slot",
+  "selectors": [
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "_overbooked.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "specialty.id",
+      "type": "string"
+    },
+    {
+      "key": "comment",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "specialty.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "start",
+      "type": "string"
+    },
+    {
+      "key": "overbooked",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "serviceType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory._text.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "_comment.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.text",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "serviceType.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "_start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "end",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.text",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "serviceType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "_end.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "serviceCategory.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "appointmentType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    }
+  ]
 }

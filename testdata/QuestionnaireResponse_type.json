@@ -1,72 +1,273 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "QuestionnaireResponse",
-  "types": {
-    "id_authored_76148": "string",
-    "id_code_76031": "string",
-    "id_code_76090": "string",
-    "id_code_76101": "string",
-    "id_display_76036": "string",
-    "id_display_76073": "string",
-    "id_display_76106": "string",
-    "id_end_76007": "string",
-    "id_id_76001": "string",
-    "id_id_76004": "string",
-    "id_id_76008": "string",
-    "id_id_76011": "string",
-    "id_id_76015": "string",
-    "id_id_76020": "string",
-    "id_id_76023": "string",
-    "id_id_76025": "string",
-    "id_id_76032": "string",
-    "id_id_76035": "string",
-    "id_id_76037": "string",
-    "id_id_76040": "string",
-    "id_id_76043": "string",
-    "id_id_76049": "string",
-    "id_id_76054": "string",
-    "id_id_76060": "string",
-    "id_id_76062": "string",
-    "id_id_76066": "string",
-    "id_id_76074": "string",
-    "id_id_76077": "string",
-    "id_id_76080": "string",
-    "id_id_76083": "string",
-    "id_id_76084": "string",
-    "id_id_76091": "string",
-    "id_id_76095": "string",
-    "id_id_76102": "string",
-    "id_id_76105": "string",
-    "id_id_76107": "string",
-    "id_id_76110": "string",
-    "id_id_76113": "string",
-    "id_id_76118": "string",
-    "id_id_76122": "string",
-    "id_id_76126": "string",
-    "id_id_76129": "string",
-    "id_id_76135": "string",
-    "id_id_76138": "string",
-    "id_id_76141": "string",
-    "id_id_76150": "string",
-    "id_implicitRules_75998": "string",
-    "id_language_76144": "string",
-    "id_lastUpdated_76071": "string",
-    "id_profile_76124": "string",
-    "id_questionnaire_76058": "string",
-    "id_source_76121": "string",
-    "id_start_76013": "string",
-    "id_system_76019": "string",
-    "id_system_76046": "string",
-    "id_system_76072": "string",
-    "id_system_76116": "string",
-    "id_text_76048": "string",
-    "id_userSelected_76028": "boolean",
-    "id_userSelected_76087": "boolean",
-    "id_userSelected_76098": "boolean",
-    "id_value_76055": "string",
-    "id_versionId_76125": "string",
-    "id_version_76030": "string",
-    "id_version_76089": "string",
-    "id_version_76100": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/QuestionnaireResponse",
+  "selectors": [
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "authored",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "questionnaire",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "_authored.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    }
+  ]
 }

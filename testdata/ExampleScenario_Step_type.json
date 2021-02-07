@@ -1,50 +1,185 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "ExampleScenario_Step",
-  "types": {
-    "id_description_57595": "string",
-    "id_description_57640": "string",
-    "id_description_57672": "string",
-    "id_id_57578": "string",
-    "id_id_57581": "string",
-    "id_id_57585": "string",
-    "id_id_57591": "string",
-    "id_id_57597": "string",
-    "id_id_57600": "string",
-    "id_id_57603": "string",
-    "id_id_57607": "string",
-    "id_id_57616": "string",
-    "id_id_57622": "string",
-    "id_id_57626": "string",
-    "id_id_57629": "string",
-    "id_id_57631": "string",
-    "id_id_57634": "string",
-    "id_id_57637": "string",
-    "id_id_57641": "string",
-    "id_id_57644": "string",
-    "id_id_57646": "string",
-    "id_id_57648": "string",
-    "id_id_57655": "string",
-    "id_id_57658": "string",
-    "id_id_57661": "string",
-    "id_id_57669": "string",
-    "id_id_57673": "string",
-    "id_id_57677": "string",
-    "id_initiatorActive_57664": "boolean",
-    "id_initiator_57610": "string",
-    "id_name_57613": "string",
-    "id_number_57663": "string",
-    "id_pause_57602": "boolean",
-    "id_postConditions_57596": "string",
-    "id_preConditions_57588": "string",
-    "id_receiverActive_57606": "boolean",
-    "id_receiver_57614": "string",
-    "id_resourceId_57621": "string",
-    "id_resourceId_57653": "string",
-    "id_title_57590": "string",
-    "id_title_57668": "string",
-    "id_type_57611": "string",
-    "id_versionId_57625": "string",
-    "id_versionId_57657": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/ExampleScenario_Step",
+  "selectors": [
+    {
+      "key": "operation.response.resourceId",
+      "type": "string"
+    },
+    {
+      "key": "operation.response._resourceId.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.name",
+      "type": "string"
+    },
+    {
+      "key": "operation.number",
+      "type": "string"
+    },
+    {
+      "key": "operation.request.id",
+      "type": "string"
+    },
+    {
+      "key": "alternative._description.id",
+      "type": "string"
+    },
+    {
+      "key": "process._postConditions.id",
+      "type": "string"
+    },
+    {
+      "key": "pause",
+      "type": "boolean"
+    },
+    {
+      "key": "operation.receiver",
+      "type": "string"
+    },
+    {
+      "key": "operation._description.id",
+      "type": "string"
+    },
+    {
+      "key": "operation._type.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.request.versionId",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "operation.response._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "operation._name.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.description",
+      "type": "string"
+    },
+    {
+      "key": "process.id",
+      "type": "string"
+    },
+    {
+      "key": "process.title",
+      "type": "string"
+    },
+    {
+      "key": "process._description.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.initiator",
+      "type": "string"
+    },
+    {
+      "key": "alternative._title.id",
+      "type": "string"
+    },
+    {
+      "key": "alternative.id",
+      "type": "string"
+    },
+    {
+      "key": "process.postConditions",
+      "type": "string"
+    },
+    {
+      "key": "process._preConditions.id",
+      "type": "string"
+    },
+    {
+      "key": "process._title.id",
+      "type": "string"
+    },
+    {
+      "key": "_pause.id",
+      "type": "string"
+    },
+    {
+      "key": "operation._receiverActive.id",
+      "type": "string"
+    },
+    {
+      "key": "alternative.title",
+      "type": "string"
+    },
+    {
+      "key": "alternative.description",
+      "type": "string"
+    },
+    {
+      "key": "operation.response.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.initiatorActive",
+      "type": "boolean"
+    },
+    {
+      "key": "operation.type",
+      "type": "string"
+    },
+    {
+      "key": "operation.request.resourceId",
+      "type": "string"
+    },
+    {
+      "key": "operation.request._resourceId.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.request._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "process.description",
+      "type": "string"
+    },
+    {
+      "key": "process.preConditions",
+      "type": "string"
+    },
+    {
+      "key": "operation.receiverActive",
+      "type": "boolean"
+    },
+    {
+      "key": "operation._initiator.id",
+      "type": "string"
+    },
+    {
+      "key": "operation._number.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.response.versionId",
+      "type": "string"
+    },
+    {
+      "key": "operation._initiatorActive.id",
+      "type": "string"
+    },
+    {
+      "key": "operation._receiver.id",
+      "type": "string"
+    },
+    {
+      "key": "operation.id",
+      "type": "string"
+    }
+  ]
 }

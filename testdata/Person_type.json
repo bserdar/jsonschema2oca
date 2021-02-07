@@ -1,143 +1,557 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "Person",
-  "types": {
-    "id_active_40124": "boolean",
-    "id_birthDate_40123": "string",
-    "id_city_40080": "string",
-    "id_code_40179": "string",
-    "id_code_40213": "string",
-    "id_code_40272": "string",
-    "id_contentType_40138": "string",
-    "id_country_40104": "string",
-    "id_creation_40139": "string",
-    "id_data_40156": "string",
-    "id_display_40197": "string",
-    "id_display_40209": "string",
-    "id_display_40252": "string",
-    "id_district_40115": "string",
-    "id_end_40037": "string",
-    "id_end_40074": "string",
-    "id_end_40233": "string",
-    "id_end_40300": "string",
-    "id_family_40032": "string",
-    "id_given_40033": "string",
-    "id_hash_40127": "string",
-    "id_id_40015": "string",
-    "id_id_40019": "string",
-    "id_id_40023": "string",
-    "id_id_40027": "string",
-    "id_id_40035": "string",
-    "id_id_40038": "string",
-    "id_id_40041": "string",
-    "id_id_40045": "string",
-    "id_id_40050": "string",
-    "id_id_40054": "string",
-    "id_id_40057": "string",
-    "id_id_40060": "string",
-    "id_id_40063": "string",
-    "id_id_40066": "string",
-    "id_id_40068": "string",
-    "id_id_40071": "string",
-    "id_id_40075": "string",
-    "id_id_40079": "string",
-    "id_id_40083": "string",
-    "id_id_40088": "string",
-    "id_id_40092": "string",
-    "id_id_40095": "string",
-    "id_id_40099": "string",
-    "id_id_40101": "string",
-    "id_id_40106": "string",
-    "id_id_40110": "string",
-    "id_id_40112": "string",
-    "id_id_40120": "string",
-    "id_id_40126": "string",
-    "id_id_40128": "string",
-    "id_id_40131": "string",
-    "id_id_40135": "string",
-    "id_id_40141": "string",
-    "id_id_40144": "string",
-    "id_id_40149": "string",
-    "id_id_40153": "string",
-    "id_id_40157": "string",
-    "id_id_40162": "string",
-    "id_id_40167": "string",
-    "id_id_40169": "string",
-    "id_id_40173": "string",
-    "id_id_40180": "string",
-    "id_id_40183": "string",
-    "id_id_40184": "string",
-    "id_id_40187": "string",
-    "id_id_40190": "string",
-    "id_id_40193": "string",
-    "id_id_40199": "string",
-    "id_id_40202": "string",
-    "id_id_40205": "string",
-    "id_id_40214": "string",
-    "id_id_40217": "string",
-    "id_id_40218": "string",
-    "id_id_40222": "string",
-    "id_id_40227": "string",
-    "id_id_40230": "string",
-    "id_id_40234": "string",
-    "id_id_40237": "string",
-    "id_id_40241": "string",
-    "id_id_40247": "string",
-    "id_id_40249": "string",
-    "id_id_40253": "string",
-    "id_id_40256": "string",
-    "id_id_40259": "string",
-    "id_id_40262": "string",
-    "id_id_40265": "string",
-    "id_id_40266": "string",
-    "id_id_40275": "string",
-    "id_id_40280": "string",
-    "id_id_40283": "string",
-    "id_id_40287": "string",
-    "id_id_40290": "string",
-    "id_id_40297": "string",
-    "id_id_40301": "string",
-    "id_id_40304": "string",
-    "id_id_40307": "string",
-    "id_id_40311": "string",
-    "id_id_40314": "string",
-    "id_id_40318": "string",
-    "id_id_40321": "string",
-    "id_id_40326": "string",
-    "id_implicitRules_40121": "string",
-    "id_language_40152": "string",
-    "id_language_40295": "string",
-    "id_lastUpdated_40175": "string",
-    "id_line_40086": "string",
-    "id_postalCode_40082": "string",
-    "id_prefix_40053": "string",
-    "id_profile_40164": "string",
-    "id_rank_40317": "number",
-    "id_size_40134": "number",
-    "id_source_40172": "string",
-    "id_start_40043": "string",
-    "id_start_40070": "string",
-    "id_start_40239": "string",
-    "id_start_40306": "string",
-    "id_state_40087": "string",
-    "id_suffix_40031": "string",
-    "id_system_40196": "string",
-    "id_system_40208": "string",
-    "id_system_40245": "string",
-    "id_system_40251": "string",
-    "id_text_40049": "string",
-    "id_text_40081": "string",
-    "id_text_40274": "string",
-    "id_title_40147": "string",
-    "id_url_40148": "string",
-    "id_userSelected_40176": "boolean",
-    "id_userSelected_40210": "boolean",
-    "id_userSelected_40269": "boolean",
-    "id_value_40281": "string",
-    "id_value_40324": "string",
-    "id_versionId_40165": "string",
-    "id_version_40178": "string",
-    "id_version_40212": "string",
-    "id_version_40271": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/Person",
+  "selectors": [
+    {
+      "key": "photo.size",
+      "type": "number"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "address.country",
+      "type": "string"
+    },
+    {
+      "key": "photo._hash.id",
+      "type": "string"
+    },
+    {
+      "key": "name.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "address._postalCode.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "telecom._rank.id",
+      "type": "string"
+    },
+    {
+      "key": "photo.title",
+      "type": "string"
+    },
+    {
+      "key": "name._suffix.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "name.prefix",
+      "type": "string"
+    },
+    {
+      "key": "name.suffix",
+      "type": "string"
+    },
+    {
+      "key": "name._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "telecom._value.id",
+      "type": "string"
+    },
+    {
+      "key": "photo.url",
+      "type": "string"
+    },
+    {
+      "key": "name.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.id",
+      "type": "string"
+    },
+    {
+      "key": "photo.contentType",
+      "type": "string"
+    },
+    {
+      "key": "name.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "name._given.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.value",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "photo._language.id",
+      "type": "string"
+    },
+    {
+      "key": "link._assurance.id",
+      "type": "string"
+    },
+    {
+      "key": "name.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "photo.creation",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "_birthDate.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "address._country.id",
+      "type": "string"
+    },
+    {
+      "key": "address.line",
+      "type": "string"
+    },
+    {
+      "key": "address.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "address.period.end",
+      "type": "string"
+    },
+    {
+      "key": "photo.id",
+      "type": "string"
+    },
+    {
+      "key": "name._use.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "address.id",
+      "type": "string"
+    },
+    {
+      "key": "address.period.id",
+      "type": "string"
+    },
+    {
+      "key": "photo._size.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "address.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "photo.hash",
+      "type": "string"
+    },
+    {
+      "key": "name.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "address._line.id",
+      "type": "string"
+    },
+    {
+      "key": "birthDate",
+      "type": "string"
+    },
+    {
+      "key": "name.family",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "address.city",
+      "type": "string"
+    },
+    {
+      "key": "address._text.id",
+      "type": "string"
+    },
+    {
+      "key": "photo.data",
+      "type": "string"
+    },
+    {
+      "key": "address.state",
+      "type": "string"
+    },
+    {
+      "key": "address._type.id",
+      "type": "string"
+    },
+    {
+      "key": "address.district",
+      "type": "string"
+    },
+    {
+      "key": "telecom.rank",
+      "type": "number"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "address.postalCode",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "_active.id",
+      "type": "string"
+    },
+    {
+      "key": "_gender.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "photo._creation.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "photo._contentType.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "photo.language",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "address._use.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.end",
+      "type": "string"
+    },
+    {
+      "key": "photo._data.id",
+      "type": "string"
+    },
+    {
+      "key": "name.period.start",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.start",
+      "type": "string"
+    },
+    {
+      "key": "name.given",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "active",
+      "type": "boolean"
+    },
+    {
+      "key": "photo._title.id",
+      "type": "string"
+    },
+    {
+      "key": "name._family.id",
+      "type": "string"
+    },
+    {
+      "key": "name._prefix.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom._system.id",
+      "type": "string"
+    },
+    {
+      "key": "link.id",
+      "type": "string"
+    },
+    {
+      "key": "name.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "address.text",
+      "type": "string"
+    },
+    {
+      "key": "address.period.start",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "address._city.id",
+      "type": "string"
+    },
+    {
+      "key": "photo._url.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "address._state.id",
+      "type": "string"
+    },
+    {
+      "key": "address._district.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom._use.id",
+      "type": "string"
+    }
+  ]
 }

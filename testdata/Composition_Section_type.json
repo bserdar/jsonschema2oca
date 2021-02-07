@@ -1,55 +1,205 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "Composition_Section",
-  "types": {
-    "id_code_94051": "string",
-    "id_code_94092": "string",
-    "id_code_94131": "string",
-    "id_display_94056": "string",
-    "id_display_94108": "string",
-    "id_display_94136": "string",
-    "id_id_94042": "string",
-    "id_id_94044": "string",
-    "id_id_94045": "string",
-    "id_id_94052": "string",
-    "id_id_94057": "string",
-    "id_id_94060": "string",
-    "id_id_94063": "string",
-    "id_id_94068": "string",
-    "id_id_94078": "string",
-    "id_id_94081": "string",
-    "id_id_94084": "string",
-    "id_id_94085": "string",
-    "id_id_94088": "string",
-    "id_id_94093": "string",
-    "id_id_94096": "string",
-    "id_id_94098": "string",
-    "id_id_94101": "string",
-    "id_id_94104": "string",
-    "id_id_94109": "string",
-    "id_id_94116": "string",
-    "id_id_94120": "string",
-    "id_id_94124": "string",
-    "id_id_94125": "string",
-    "id_id_94133": "string",
-    "id_id_94138": "string",
-    "id_id_94140": "string",
-    "id_id_94143": "string",
-    "id_id_94148": "string",
-    "id_id_94151": "string",
-    "id_mode_94115": "string",
-    "id_system_94055": "string",
-    "id_system_94107": "string",
-    "id_system_94135": "string",
-    "id_text_94067": "string",
-    "id_text_94113": "string",
-    "id_text_94147": "string",
-    "id_title_94072": "string",
-    "id_userSelected_94048": "boolean",
-    "id_userSelected_94100": "boolean",
-    "id_userSelected_94128": "boolean",
-    "id_version_94050": "string",
-    "id_version_94091": "string",
-    "id_version_94130": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/Composition_Section",
+  "selectors": [
+    {
+      "key": "orderedBy.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy._text.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "code.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "code.text",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.text",
+      "type": "string"
+    },
+    {
+      "key": "code._text.id",
+      "type": "string"
+    },
+    {
+      "key": "_title.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "emptyReason.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason._text.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "title",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "code.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "_mode.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "code.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "orderedBy.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.text",
+      "type": "string"
+    },
+    {
+      "key": "emptyReason.id",
+      "type": "string"
+    },
+    {
+      "key": "mode",
+      "type": "string"
+    }
+  ]
 }

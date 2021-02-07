@@ -1,139 +1,541 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "SubstanceProtein",
-  "types": {
-    "id_cTerminalModification_101396": "string",
-    "id_code_101288": "string",
-    "id_code_101357": "string",
-    "id_code_101368": "string",
-    "id_code_101428": "string",
-    "id_code_101481": "string",
-    "id_contentType_101523": "string",
-    "id_creation_101524": "string",
-    "id_data_101539": "string",
-    "id_display_101300": "string",
-    "id_display_101340": "string",
-    "id_display_101373": "string",
-    "id_display_101433": "string",
-    "id_display_101461": "string",
-    "id_disulfideLinkage_101569": "string",
-    "id_end_101415": "string",
-    "id_end_101497": "string",
-    "id_hash_101545": "string",
-    "id_id_101282": "string",
-    "id_id_101286": "string",
-    "id_id_101289": "string",
-    "id_id_101292": "string",
-    "id_id_101293": "string",
-    "id_id_101301": "string",
-    "id_id_101304": "string",
-    "id_id_101308": "string",
-    "id_id_101312": "string",
-    "id_id_101318": "string",
-    "id_id_101322": "string",
-    "id_id_101328": "string",
-    "id_id_101332": "string",
-    "id_id_101335": "string",
-    "id_id_101341": "string",
-    "id_id_101344": "string",
-    "id_id_101347": "string",
-    "id_id_101350": "string",
-    "id_id_101351": "string",
-    "id_id_101358": "string",
-    "id_id_101362": "string",
-    "id_id_101369": "string",
-    "id_id_101372": "string",
-    "id_id_101374": "string",
-    "id_id_101377": "string",
-    "id_id_101380": "string",
-    "id_id_101385": "string",
-    "id_id_101389": "string",
-    "id_id_101393": "string",
-    "id_id_101399": "string",
-    "id_id_101404": "string",
-    "id_id_101406": "string",
-    "id_id_101409": "string",
-    "id_id_101412": "string",
-    "id_id_101418": "string",
-    "id_id_101421": "string",
-    "id_id_101422": "string",
-    "id_id_101430": "string",
-    "id_id_101434": "string",
-    "id_id_101438": "string",
-    "id_id_101440": "string",
-    "id_id_101445": "string",
-    "id_id_101448": "string",
-    "id_id_101451": "string",
-    "id_id_101455": "string",
-    "id_id_101462": "string",
-    "id_id_101465": "string",
-    "id_id_101468": "string",
-    "id_id_101472": "string",
-    "id_id_101474": "string",
-    "id_id_101475": "string",
-    "id_id_101484": "string",
-    "id_id_101487": "string",
-    "id_id_101491": "string",
-    "id_id_101495": "string",
-    "id_id_101498": "string",
-    "id_id_101501": "string",
-    "id_id_101504": "string",
-    "id_id_101508": "string",
-    "id_id_101513": "string",
-    "id_id_101518": "string",
-    "id_id_101520": "string",
-    "id_id_101526": "string",
-    "id_id_101529": "string",
-    "id_id_101532": "string",
-    "id_id_101536": "string",
-    "id_id_101540": "string",
-    "id_id_101546": "string",
-    "id_id_101549": "string",
-    "id_id_101553": "string",
-    "id_id_101556": "string",
-    "id_id_101558": "string",
-    "id_id_101562": "string",
-    "id_id_101566": "string",
-    "id_id_101572": "string",
-    "id_id_101575": "string",
-    "id_implicitRules_101316": "string",
-    "id_language_101535": "string",
-    "id_language_101571": "string",
-    "id_lastUpdated_101391": "string",
-    "id_length_101517": "number",
-    "id_nTerminalModification_101454": "string",
-    "id_numberOfSubunits_101326": "number",
-    "id_profile_101338": "string",
-    "id_sequence_101561": "string",
-    "id_size_101552": "number",
-    "id_source_101388": "string",
-    "id_start_101411": "string",
-    "id_start_101503": "string",
-    "id_subunit_101519": "number",
-    "id_system_101299": "string",
-    "id_system_101339": "string",
-    "id_system_101383": "string",
-    "id_system_101398": "string",
-    "id_system_101432": "string",
-    "id_system_101460": "string",
-    "id_system_101512": "string",
-    "id_text_101311": "string",
-    "id_text_101444": "string",
-    "id_text_101483": "string",
-    "id_title_101543": "string",
-    "id_url_101544": "string",
-    "id_userSelected_101296": "boolean",
-    "id_userSelected_101354": "boolean",
-    "id_userSelected_101365": "boolean",
-    "id_userSelected_101425": "boolean",
-    "id_userSelected_101478": "boolean",
-    "id_value_101452": "string",
-    "id_value_101492": "string",
-    "id_versionId_101331": "string",
-    "id_version_101298": "string",
-    "id_version_101356": "string",
-    "id_version_101367": "string",
-    "id_version_101427": "string",
-    "id_version_101480": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/SubstanceProtein",
+  "selectors": [
+    {
+      "key": "disulfideLinkage",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModification",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "subunit._sequence.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.data",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId._value.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.period.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.subunit",
+      "type": "number"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "subunit.length",
+      "type": "number"
+    },
+    {
+      "key": "subunit._cTerminalModification.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.value",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.text",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._data.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.hash",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.system",
+      "type": "string"
+    },
+    {
+      "key": "subunit.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.contentType",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.period.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit._subunit.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId._use.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId._value.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.language",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.title",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "numberOfSubunits",
+      "type": "number"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.period.start",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId._system.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.text",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "_disulfideLinkage.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.size",
+      "type": "number"
+    },
+    {
+      "key": "subunit.nTerminalModificationId._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "_numberOfSubunits.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId._use.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.period.end",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.period.end",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "subunit.sequenceAttachment.url",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit._length.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._title.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._url.id",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment.creation",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._size.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModification",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._hash.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.period.start",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequence",
+      "type": "string"
+    },
+    {
+      "key": "subunit._nTerminalModification.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._language.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._contentType.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.nTerminalModificationId.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.text",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.sequenceAttachment._creation.id",
+      "type": "string"
+    },
+    {
+      "key": "subunit.cTerminalModificationId.value",
+      "type": "string"
+    },
+    {
+      "key": "sequenceType.coding._display.id",
+      "type": "string"
+    }
+  ]
 }

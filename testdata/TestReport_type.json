@@ -1,124 +1,481 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "TestReport",
-  "types": {
-    "id_code_60182": "string",
-    "id_code_60194": "string",
-    "id_code_60385": "string",
-    "id_description_60285": "string",
-    "id_detail_60250": "string",
-    "id_detail_60255": "string",
-    "id_detail_60293": "string",
-    "id_detail_60321": "string",
-    "id_detail_60349": "string",
-    "id_display_60161": "string",
-    "id_display_60176": "string",
-    "id_display_60210": "string",
-    "id_display_60368": "string",
-    "id_end_60405": "string",
-    "id_id_60149": "string",
-    "id_id_60154": "string",
-    "id_id_60158": "string",
-    "id_id_60162": "string",
-    "id_id_60166": "string",
-    "id_id_60169": "string",
-    "id_id_60172": "string",
-    "id_id_60177": "string",
-    "id_id_60183": "string",
-    "id_id_60186": "string",
-    "id_id_60187": "string",
-    "id_id_60195": "string",
-    "id_id_60198": "string",
-    "id_id_60199": "string",
-    "id_id_60203": "string",
-    "id_id_60206": "string",
-    "id_id_60211": "string",
-    "id_id_60215": "string",
-    "id_id_60220": "string",
-    "id_id_60223": "string",
-    "id_id_60228": "string",
-    "id_id_60233": "string",
-    "id_id_60236": "string",
-    "id_id_60239": "string",
-    "id_id_60243": "string",
-    "id_id_60248": "string",
-    "id_id_60252": "string",
-    "id_id_60258": "string",
-    "id_id_60263": "string",
-    "id_id_60266": "string",
-    "id_id_60269": "string",
-    "id_id_60273": "string",
-    "id_id_60277": "string",
-    "id_id_60282": "string",
-    "id_id_60286": "string",
-    "id_id_60291": "string",
-    "id_id_60294": "string",
-    "id_id_60300": "string",
-    "id_id_60303": "string",
-    "id_id_60308": "string",
-    "id_id_60311": "string",
-    "id_id_60315": "string",
-    "id_id_60318": "string",
-    "id_id_60323": "string",
-    "id_id_60325": "string",
-    "id_id_60328": "string",
-    "id_id_60335": "string",
-    "id_id_60343": "string",
-    "id_id_60346": "string",
-    "id_id_60350": "string",
-    "id_id_60355": "string",
-    "id_id_60358": "string",
-    "id_id_60360": "string",
-    "id_id_60363": "string",
-    "id_id_60366": "string",
-    "id_id_60369": "string",
-    "id_id_60372": "string",
-    "id_id_60375": "string",
-    "id_id_60379": "string",
-    "id_id_60386": "string",
-    "id_id_60389": "string",
-    "id_id_60393": "string",
-    "id_id_60396": "string",
-    "id_id_60399": "string",
-    "id_id_60402": "string",
-    "id_id_60406": "string",
-    "id_id_60410": "string",
-    "id_id_60415": "string",
-    "id_id_60419": "string",
-    "id_id_60422": "string",
-    "id_id_60426": "string",
-    "id_id_60430": "string",
-    "id_id_60434": "string",
-    "id_id_60437": "string",
-    "id_implicitRules_60332": "string",
-    "id_issued_60334": "string",
-    "id_language_60272": "string",
-    "id_lastUpdated_60168": "string",
-    "id_message_60247": "string",
-    "id_message_60262": "string",
-    "id_message_60298": "string",
-    "id_message_60307": "string",
-    "id_message_60354": "string",
-    "id_name_60278": "string",
-    "id_name_60281": "string",
-    "id_profile_60218": "string",
-    "id_score_60276": "number",
-    "id_source_60165": "string",
-    "id_start_60401": "string",
-    "id_system_60175": "string",
-    "id_system_60209": "string",
-    "id_system_60378": "string",
-    "id_system_60414": "string",
-    "id_tester_60425": "string",
-    "id_text_60362": "string",
-    "id_uri_60157": "string",
-    "id_userSelected_60190": "boolean",
-    "id_userSelected_60202": "boolean",
-    "id_userSelected_60382": "boolean",
-    "id_value_60394": "string",
-    "id_versionId_60219": "string",
-    "id_version_60181": "string",
-    "id_version_60193": "string",
-    "id_version_60384": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/TestReport",
+  "selectors": [
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.assert._message.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.operation._result.id",
+      "type": "string"
+    },
+    {
+      "key": "participant._type.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.assert.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.operation.message",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation.detail",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert._message.id",
+      "type": "string"
+    },
+    {
+      "key": "name",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert.detail",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "_result.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "test.id",
+      "type": "string"
+    },
+    {
+      "key": "_name.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "issued",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "tester",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert.message",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert._detail.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.id",
+      "type": "string"
+    },
+    {
+      "key": "test._description.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.operation._detail.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation._result.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation._message.id",
+      "type": "string"
+    },
+    {
+      "key": "participant.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_issued.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "participant._uri.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "participant._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "_score.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "_tester.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.assert._result.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "test.action.assert.message",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation._result.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation.message",
+      "type": "string"
+    },
+    {
+      "key": "test.action.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation._detail.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.assert._detail.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "score",
+      "type": "number"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "setup.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "test.description",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "test._name.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation.message",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "test.action.assert._result.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.operation.detail",
+      "type": "string"
+    },
+    {
+      "key": "test.action.assert.detail",
+      "type": "string"
+    },
+    {
+      "key": "setup.action.operation._detail.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation._message.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "test.name",
+      "type": "string"
+    },
+    {
+      "key": "participant.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.operation.id",
+      "type": "string"
+    },
+    {
+      "key": "test.action.operation.detail",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "participant.uri",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "teardown.action.operation._message.id",
+      "type": "string"
+    },
+    {
+      "key": "teardown.action.id",
+      "type": "string"
+    }
+  ]
 }

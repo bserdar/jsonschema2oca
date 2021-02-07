@@ -1,126 +1,489 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "ImmunizationEvaluation",
-  "types": {
-    "id_code_113291": "string",
-    "id_code_113320": "string",
-    "id_code_113363": "string",
-    "id_code_113428": "string",
-    "id_code_113470": "string",
-    "id_code_113504": "string",
-    "id_date_113536": "string",
-    "id_description_113493": "string",
-    "id_display_113307": "string",
-    "id_display_113334": "string",
-    "id_display_113368": "string",
-    "id_display_113433": "string",
-    "id_display_113453": "string",
-    "id_display_113520": "string",
-    "id_doseNumberPositiveInt_113276": "number",
-    "id_doseNumberString_113535": "string",
-    "id_end_113398": "string",
-    "id_id_113272": "string",
-    "id_id_113278": "string",
-    "id_id_113282": "string",
-    "id_id_113285": "string",
-    "id_id_113292": "string",
-    "id_id_113295": "string",
-    "id_id_113297": "string",
-    "id_id_113300": "string",
-    "id_id_113303": "string",
-    "id_id_113308": "string",
-    "id_id_113312": "string",
-    "id_id_113316": "string",
-    "id_id_113322": "string",
-    "id_id_113324": "string",
-    "id_id_113325": "string",
-    "id_id_113330": "string",
-    "id_id_113335": "string",
-    "id_id_113338": "string",
-    "id_id_113343": "string",
-    "id_id_113347": "string",
-    "id_id_113351": "string",
-    "id_id_113354": "string",
-    "id_id_113356": "string",
-    "id_id_113357": "string",
-    "id_id_113364": "string",
-    "id_id_113370": "string",
-    "id_id_113372": "string",
-    "id_id_113376": "string",
-    "id_id_113380": "string",
-    "id_id_113385": "string",
-    "id_id_113387": "string",
-    "id_id_113391": "string",
-    "id_id_113395": "string",
-    "id_id_113399": "string",
-    "id_id_113402": "string",
-    "id_id_113405": "string",
-    "id_id_113414": "string",
-    "id_id_113416": "string",
-    "id_id_113419": "string",
-    "id_id_113421": "string",
-    "id_id_113422": "string",
-    "id_id_113429": "string",
-    "id_id_113434": "string",
-    "id_id_113437": "string",
-    "id_id_113440": "string",
-    "id_id_113448": "string",
-    "id_id_113450": "string",
-    "id_id_113454": "string",
-    "id_id_113457": "string",
-    "id_id_113461": "string",
-    "id_id_113463": "string",
-    "id_id_113464": "string",
-    "id_id_113471": "string",
-    "id_id_113477": "string",
-    "id_id_113483": "string",
-    "id_id_113487": "string",
-    "id_id_113490": "string",
-    "id_id_113494": "string",
-    "id_id_113497": "string",
-    "id_id_113500": "string",
-    "id_id_113505": "string",
-    "id_id_113508": "string",
-    "id_id_113509": "string",
-    "id_id_113514": "string",
-    "id_id_113516": "string",
-    "id_id_113521": "string",
-    "id_id_113526": "string",
-    "id_id_113532": "string",
-    "id_implicitRules_113275": "string",
-    "id_language_113530": "string",
-    "id_lastUpdated_113318": "string",
-    "id_profile_113287": "string",
-    "id_seriesDosesPositiveInt_113531": "number",
-    "id_seriesDosesString_113350": "string",
-    "id_series_113489": "string",
-    "id_source_113315": "string",
-    "id_start_113394": "string",
-    "id_status_113346": "string",
-    "id_system_113306": "string",
-    "id_system_113333": "string",
-    "id_system_113367": "string",
-    "id_system_113409": "string",
-    "id_system_113432": "string",
-    "id_system_113452": "string",
-    "id_system_113519": "string",
-    "id_text_113379": "string",
-    "id_text_113415": "string",
-    "id_text_113475": "string",
-    "id_text_113525": "string",
-    "id_userSelected_113299": "boolean",
-    "id_userSelected_113328": "boolean",
-    "id_userSelected_113360": "boolean",
-    "id_userSelected_113425": "boolean",
-    "id_userSelected_113467": "boolean",
-    "id_userSelected_113512": "boolean",
-    "id_value_113386": "string",
-    "id_versionId_113288": "string",
-    "id_version_113290": "string",
-    "id_version_113319": "string",
-    "id_version_113362": "string",
-    "id_version_113427": "string",
-    "id_version_113469": "string",
-    "id_version_113503": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/ImmunizationEvaluation",
+  "selectors": [
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "_description.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "_doseNumberPositiveInt.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease._text.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_seriesDosesPositiveInt.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.text",
+      "type": "string"
+    },
+    {
+      "key": "date",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "targetDisease.text",
+      "type": "string"
+    },
+    {
+      "key": "status",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "doseStatus._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "seriesDosesString",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "doseNumberString",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "description",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "seriesDosesPositiveInt",
+      "type": "number"
+    },
+    {
+      "key": "_seriesDosesString.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "series",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "doseNumberPositiveInt",
+      "type": "number"
+    },
+    {
+      "key": "doseStatusReason.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "_doseNumberString.id",
+      "type": "string"
+    },
+    {
+      "key": "_date.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "_series.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "targetDisease.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "doseStatusReason._text.id",
+      "type": "string"
+    },
+    {
+      "key": "doseStatus.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    }
+  ]
 }

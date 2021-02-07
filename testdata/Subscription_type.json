@@ -1,72 +1,273 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "Subscription",
-  "types": {
-    "id_code_68920": "string",
-    "id_code_68929": "string",
-    "id_criteria_68962": "string",
-    "id_display_68903": "string",
-    "id_display_68947": "string",
-    "id_end_68970": "string",
-    "id_end_69017": "string",
-    "id_endpoint_68986": "string",
-    "id_error_68898": "string",
-    "id_header_68987": "string",
-    "id_id_68895": "string",
-    "id_id_68900": "string",
-    "id_id_68905": "string",
-    "id_id_68907": "string",
-    "id_id_68910": "string",
-    "id_id_68914": "string",
-    "id_id_68921": "string",
-    "id_id_68924": "string",
-    "id_id_68930": "string",
-    "id_id_68933": "string",
-    "id_id_68934": "string",
-    "id_id_68937": "string",
-    "id_id_68940": "string",
-    "id_id_68943": "string",
-    "id_id_68949": "string",
-    "id_id_68954": "string",
-    "id_id_68957": "string",
-    "id_id_68963": "string",
-    "id_id_68967": "string",
-    "id_id_68975": "string",
-    "id_id_68978": "string",
-    "id_id_68983": "string",
-    "id_id_68988": "string",
-    "id_id_68991": "string",
-    "id_id_68995": "string",
-    "id_id_68997": "string",
-    "id_id_69002": "string",
-    "id_id_69005": "string",
-    "id_id_69009": "string",
-    "id_id_69011": "string",
-    "id_id_69014": "string",
-    "id_id_69018": "string",
-    "id_id_69021": "string",
-    "id_id_69026": "string",
-    "id_id_69030": "string",
-    "id_id_69034": "string",
-    "id_id_69038": "string",
-    "id_id_69042": "string",
-    "id_id_69046": "string",
-    "id_implicitRules_68966": "string",
-    "id_language_68974": "string",
-    "id_lastUpdated_68902": "string",
-    "id_payload_68981": "string",
-    "id_profile_68952": "string",
-    "id_rank_69008": "number",
-    "id_reason_68996": "string",
-    "id_source_68899": "string",
-    "id_start_69023": "string",
-    "id_system_68913": "string",
-    "id_system_68946": "string",
-    "id_userSelected_68917": "boolean",
-    "id_userSelected_68926": "boolean",
-    "id_value_69004": "string",
-    "id_versionId_68953": "string",
-    "id_version_68919": "string",
-    "id_version_68928": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/Subscription",
+  "selectors": [
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "channel.endpoint",
+      "type": "string"
+    },
+    {
+      "key": "channel._payload.id",
+      "type": "string"
+    },
+    {
+      "key": "channel._endpoint.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "contact._value.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "_error.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "criteria",
+      "type": "string"
+    },
+    {
+      "key": "contact._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.rank",
+      "type": "number"
+    },
+    {
+      "key": "contact.period.end",
+      "type": "string"
+    },
+    {
+      "key": "_criteria.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "error",
+      "type": "string"
+    },
+    {
+      "key": "channel.payload",
+      "type": "string"
+    },
+    {
+      "key": "channel.header",
+      "type": "string"
+    },
+    {
+      "key": "contact.period.start",
+      "type": "string"
+    },
+    {
+      "key": "contact.value",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "_reason.id",
+      "type": "string"
+    },
+    {
+      "key": "reason",
+      "type": "string"
+    },
+    {
+      "key": "end",
+      "type": "string"
+    },
+    {
+      "key": "contact._use.id",
+      "type": "string"
+    },
+    {
+      "key": "contact._rank.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "channel.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "channel._type.id",
+      "type": "string"
+    },
+    {
+      "key": "channel._header.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "_end.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "contact.period.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    }
+  ]
 }

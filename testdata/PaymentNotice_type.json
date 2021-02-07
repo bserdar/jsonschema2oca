@@ -1,93 +1,357 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "PaymentNotice",
-  "types": {
-    "id_code_40818": "string",
-    "id_code_40879": "string",
-    "id_code_40902": "string",
-    "id_code_40981": "string",
-    "id_created_40949": "string",
-    "id_currency_40955": "string",
-    "id_display_40808": "string",
-    "id_display_40881": "string",
-    "id_display_40904": "string",
-    "id_display_40964": "string",
-    "id_end_40849": "string",
-    "id_id_40797": "string",
-    "id_id_40805": "string",
-    "id_id_40809": "string",
-    "id_id_40812": "string",
-    "id_id_40815": "string",
-    "id_id_40819": "string",
-    "id_id_40822": "string",
-    "id_id_40823": "string",
-    "id_id_40831": "string",
-    "id_id_40836": "string",
-    "id_id_40837": "string",
-    "id_id_40842": "string",
-    "id_id_40846": "string",
-    "id_id_40850": "string",
-    "id_id_40853": "string",
-    "id_id_40856": "string",
-    "id_id_40861": "string",
-    "id_id_40865": "string",
-    "id_id_40869": "string",
-    "id_id_40872": "string",
-    "id_id_40873": "string",
-    "id_id_40883": "string",
-    "id_id_40885": "string",
-    "id_id_40888": "string",
-    "id_id_40892": "string",
-    "id_id_40895": "string",
-    "id_id_40896": "string",
-    "id_id_40905": "string",
-    "id_id_40909": "string",
-    "id_id_40911": "string",
-    "id_id_40915": "string",
-    "id_id_40919": "string",
-    "id_id_40923": "string",
-    "id_id_40926": "string",
-    "id_id_40933": "string",
-    "id_id_40937": "string",
-    "id_id_40941": "string",
-    "id_id_40946": "string",
-    "id_id_40952": "string",
-    "id_id_40956": "string",
-    "id_id_40959": "string",
-    "id_id_40961": "string",
-    "id_id_40965": "string",
-    "id_id_40968": "string",
-    "id_id_40972": "string",
-    "id_id_40975": "string",
-    "id_id_40982": "string",
-    "id_id_40985": "string",
-    "id_id_40989": "string",
-    "id_id_40991": "string",
-    "id_implicitRules_40931": "string",
-    "id_language_40936": "string",
-    "id_lastUpdated_40921": "string",
-    "id_paymentDate_40802": "string",
-    "id_profile_40929": "string",
-    "id_source_40918": "string",
-    "id_start_40855": "string",
-    "id_status_40801": "string",
-    "id_system_40807": "string",
-    "id_system_40841": "string",
-    "id_system_40880": "string",
-    "id_system_40903": "string",
-    "id_system_40974": "string",
-    "id_text_40830": "string",
-    "id_text_40987": "string",
-    "id_userSelected_40826": "boolean",
-    "id_userSelected_40876": "boolean",
-    "id_userSelected_40899": "boolean",
-    "id_userSelected_40978": "boolean",
-    "id_value_40804": "string",
-    "id_value_40951": "number",
-    "id_versionId_40922": "string",
-    "id_version_40828": "string",
-    "id_version_40878": "string",
-    "id_version_40901": "string",
-    "id_version_40980": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/PaymentNotice",
+  "selectors": [
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "_created.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "paymentStatus.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "_paymentDate.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentDate",
+      "type": "string"
+    },
+    {
+      "key": "amount._currency.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "amount.value",
+      "type": "number"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "amount.currency",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "status",
+      "type": "string"
+    },
+    {
+      "key": "created",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.text",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "amount._value.id",
+      "type": "string"
+    },
+    {
+      "key": "paymentStatus.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "amount.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    }
+  ]
 }

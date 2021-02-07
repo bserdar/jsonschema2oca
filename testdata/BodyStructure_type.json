@@ -1,131 +1,509 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "BodyStructure",
-  "types": {
-    "id_active_120168": "boolean",
-    "id_code_120222": "string",
-    "id_code_120256": "string",
-    "id_code_120300": "string",
-    "id_code_120312": "string",
-    "id_code_120341": "string",
-    "id_code_120387": "string",
-    "id_contentType_120203": "string",
-    "id_creation_120170": "string",
-    "id_data_120182": "string",
-    "id_description_120169": "string",
-    "id_display_120227": "string",
-    "id_display_120250": "string",
-    "id_display_120280": "string",
-    "id_display_120314": "string",
-    "id_display_120353": "string",
-    "id_display_120379": "string",
-    "id_end_120417": "string",
-    "id_hash_120191": "string",
-    "id_id_120172": "string",
-    "id_id_120175": "string",
-    "id_id_120179": "string",
-    "id_id_120183": "string",
-    "id_id_120188": "string",
-    "id_id_120192": "string",
-    "id_id_120195": "string",
-    "id_id_120199": "string",
-    "id_id_120200": "string",
-    "id_id_120207": "string",
-    "id_id_120210": "string",
-    "id_id_120213": "string",
-    "id_id_120215": "string",
-    "id_id_120217": "string",
-    "id_id_120223": "string",
-    "id_id_120228": "string",
-    "id_id_120231": "string",
-    "id_id_120234": "string",
-    "id_id_120239": "string",
-    "id_id_120243": "string",
-    "id_id_120247": "string",
-    "id_id_120251": "string",
-    "id_id_120257": "string",
-    "id_id_120260": "string",
-    "id_id_120261": "string",
-    "id_id_120267": "string",
-    "id_id_120270": "string",
-    "id_id_120274": "string",
-    "id_id_120281": "string",
-    "id_id_120285": "string",
-    "id_id_120287": "string",
-    "id_id_120290": "string",
-    "id_id_120293": "string",
-    "id_id_120295": "string",
-    "id_id_120302": "string",
-    "id_id_120305": "string",
-    "id_id_120306": "string",
-    "id_id_120315": "string",
-    "id_id_120318": "string",
-    "id_id_120321": "string",
-    "id_id_120325": "string",
-    "id_id_120329": "string",
-    "id_id_120333": "string",
-    "id_id_120336": "string",
-    "id_id_120342": "string",
-    "id_id_120345": "string",
-    "id_id_120346": "string",
-    "id_id_120354": "string",
-    "id_id_120357": "string",
-    "id_id_120360": "string",
-    "id_id_120365": "string",
-    "id_id_120368": "string",
-    "id_id_120371": "string",
-    "id_id_120376": "string",
-    "id_id_120381": "string",
-    "id_id_120383": "string",
-    "id_id_120388": "string",
-    "id_id_120391": "string",
-    "id_id_120392": "string",
-    "id_id_120399": "string",
-    "id_id_120402": "string",
-    "id_id_120405": "string",
-    "id_id_120408": "string",
-    "id_id_120411": "string",
-    "id_id_120414": "string",
-    "id_id_120418": "string",
-    "id_id_120421": "string",
-    "id_id_120425": "string",
-    "id_id_120433": "string",
-    "id_id_120437": "string",
-    "id_id_120441": "string",
-    "id_implicitRules_120205": "string",
-    "id_language_120178": "string",
-    "id_language_120431": "string",
-    "id_lastUpdated_120278": "string",
-    "id_profile_120331": "string",
-    "id_size_120198": "number",
-    "id_source_120328": "string",
-    "id_start_120423": "string",
-    "id_system_120226": "string",
-    "id_system_120249": "string",
-    "id_system_120279": "string",
-    "id_system_120313": "string",
-    "id_system_120352": "string",
-    "id_system_120378": "string",
-    "id_system_120429": "string",
-    "id_text_120238": "string",
-    "id_text_120266": "string",
-    "id_text_120364": "string",
-    "id_text_120398": "string",
-    "id_title_120186": "string",
-    "id_url_120187": "string",
-    "id_userSelected_120219": "boolean",
-    "id_userSelected_120264": "boolean",
-    "id_userSelected_120297": "boolean",
-    "id_userSelected_120309": "boolean",
-    "id_userSelected_120349": "boolean",
-    "id_userSelected_120395": "boolean",
-    "id_value_120406": "string",
-    "id_versionId_120332": "string",
-    "id_version_120221": "string",
-    "id_version_120255": "string",
-    "id_version_120299": "string",
-    "id_version_120311": "string",
-    "id_version_120351": "string",
-    "id_version_120386": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/BodyStructure",
+  "selectors": [
+    {
+      "key": "location.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "location._text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "image.data",
+      "type": "string"
+    },
+    {
+      "key": "image.title",
+      "type": "string"
+    },
+    {
+      "key": "image._url.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "location.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "image.creation",
+      "type": "string"
+    },
+    {
+      "key": "image.hash",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "_description.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.text",
+      "type": "string"
+    },
+    {
+      "key": "image.language",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "image._language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "image._hash.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "location.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "image._size.id",
+      "type": "string"
+    },
+    {
+      "key": "image._creation.id",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "location.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "active",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "image.size",
+      "type": "number"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "location.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "image._data.id",
+      "type": "string"
+    },
+    {
+      "key": "image._title.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "image.url",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "location.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "description",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "image.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "_active.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.text",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier._text.id",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "morphology.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "morphology.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "image._contentType.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "location.text",
+      "type": "string"
+    },
+    {
+      "key": "morphology._text.id",
+      "type": "string"
+    },
+    {
+      "key": "locationQualifier.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "image.contentType",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "location.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    }
+  ]
 }

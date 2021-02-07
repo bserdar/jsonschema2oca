@@ -1,128 +1,497 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "DetectedIssue",
-  "types": {
-    "id_code_69072": "string",
-    "id_code_69110": "string",
-    "id_code_69179": "string",
-    "id_code_69246": "string",
-    "id_code_69285": "string",
-    "id_code_69297": "string",
-    "id_date_69051": "string",
-    "id_detail_69210": "string",
-    "id_display_69077": "string",
-    "id_display_69106": "string",
-    "id_display_69184": "string",
-    "id_display_69229": "string",
-    "id_display_69265": "string",
-    "id_display_69299": "string",
-    "id_end_69154": "string",
-    "id_end_69211": "string",
-    "id_id_69048": "string",
-    "id_id_69052": "string",
-    "id_id_69056": "string",
-    "id_id_69060": "string",
-    "id_id_69063": "string",
-    "id_id_69065": "string",
-    "id_id_69066": "string",
-    "id_id_69073": "string",
-    "id_id_69078": "string",
-    "id_id_69081": "string",
-    "id_id_69084": "string",
-    "id_id_69091": "string",
-    "id_id_69094": "string",
-    "id_id_69096": "string",
-    "id_id_69100": "string",
-    "id_id_69103": "string",
-    "id_id_69111": "string",
-    "id_id_69114": "string",
-    "id_id_69115": "string",
-    "id_id_69122": "string",
-    "id_id_69127": "string",
-    "id_id_69131": "string",
-    "id_id_69135": "string",
-    "id_id_69136": "string",
-    "id_id_69142": "string",
-    "id_id_69145": "string",
-    "id_id_69148": "string",
-    "id_id_69151": "string",
-    "id_id_69156": "string",
-    "id_id_69161": "string",
-    "id_id_69165": "string",
-    "id_id_69168": "string",
-    "id_id_69170": "string",
-    "id_id_69172": "string",
-    "id_id_69174": "string",
-    "id_id_69180": "string",
-    "id_id_69185": "string",
-    "id_id_69188": "string",
-    "id_id_69191": "string",
-    "id_id_69196": "string",
-    "id_id_69203": "string",
-    "id_id_69207": "string",
-    "id_id_69212": "string",
-    "id_id_69215": "string",
-    "id_id_69218": "string",
-    "id_id_69223": "string",
-    "id_id_69226": "string",
-    "id_id_69231": "string",
-    "id_id_69233": "string",
-    "id_id_69236": "string",
-    "id_id_69239": "string",
-    "id_id_69240": "string",
-    "id_id_69247": "string",
-    "id_id_69257": "string",
-    "id_id_69260": "string",
-    "id_id_69266": "string",
-    "id_id_69269": "string",
-    "id_id_69272": "string",
-    "id_id_69275": "string",
-    "id_id_69278": "string",
-    "id_id_69279": "string",
-    "id_id_69287": "string",
-    "id_id_69290": "string",
-    "id_id_69291": "string",
-    "id_id_69300": "string",
-    "id_id_69303": "string",
-    "id_id_69307": "string",
-    "id_id_69310": "string",
-    "id_id_69314": "string",
-    "id_id_69318": "string",
-    "id_id_69322": "string",
-    "id_identifiedDateTime_69144": "string",
-    "id_implicitRules_69130": "string",
-    "id_language_69325": "string",
-    "id_lastUpdated_69263": "string",
-    "id_profile_69255": "string",
-    "id_reference_69317": "string",
-    "id_source_69313": "string",
-    "id_start_69150": "string",
-    "id_start_69217": "string",
-    "id_status_69134": "string",
-    "id_system_69076": "string",
-    "id_system_69105": "string",
-    "id_system_69160": "string",
-    "id_system_69183": "string",
-    "id_system_69228": "string",
-    "id_system_69264": "string",
-    "id_system_69298": "string",
-    "id_text_69059": "string",
-    "id_text_69119": "string",
-    "id_text_69195": "string",
-    "id_text_69222": "string",
-    "id_userSelected_69069": "boolean",
-    "id_userSelected_69107": "boolean",
-    "id_userSelected_69176": "boolean",
-    "id_userSelected_69243": "boolean",
-    "id_userSelected_69282": "boolean",
-    "id_userSelected_69294": "boolean",
-    "id_value_69169": "string",
-    "id_versionId_69256": "string",
-    "id_version_69071": "string",
-    "id_version_69109": "string",
-    "id_version_69178": "string",
-    "id_version_69245": "string",
-    "id_version_69284": "string",
-    "id_version_69296": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/DetectedIssue",
+  "selectors": [
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation._date.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "_identifiedDateTime.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "detail",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "mitigation.date",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "code.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "_reference.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "_detail.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.text",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifiedPeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifiedDateTime",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifiedPeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "_severity.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "status",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "reference",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "identifiedPeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code._text.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifiedPeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "code.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifiedPeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "code._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "evidence.code.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "mitigation.action._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._system.id",
+      "type": "string"
+    }
+  ]
 }

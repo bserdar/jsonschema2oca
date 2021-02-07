@@ -1,90 +1,345 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "AppointmentResponse",
-  "types": {
-    "id_code_45227": "string",
-    "id_code_45285": "string",
-    "id_code_45347": "string",
-    "id_code_45370": "string",
-    "id_comment_45262": "string",
-    "id_display_45239": "string",
-    "id_display_45301": "string",
-    "id_display_45363": "string",
-    "id_display_45386": "string",
-    "id_end_45266": "string",
-    "id_end_45321": "string",
-    "id_id_45222": "string",
-    "id_id_45225": "string",
-    "id_id_45229": "string",
-    "id_id_45231": "string",
-    "id_id_45232": "string",
-    "id_id_45240": "string",
-    "id_id_45243": "string",
-    "id_id_45246": "string",
-    "id_id_45251": "string",
-    "id_id_45256": "string",
-    "id_id_45259": "string",
-    "id_id_45263": "string",
-    "id_id_45268": "string",
-    "id_id_45272": "string",
-    "id_id_45276": "string",
-    "id_id_45281": "string",
-    "id_id_45286": "string",
-    "id_id_45289": "string",
-    "id_id_45291": "string",
-    "id_id_45294": "string",
-    "id_id_45297": "string",
-    "id_id_45302": "string",
-    "id_id_45307": "string",
-    "id_id_45312": "string",
-    "id_id_45315": "string",
-    "id_id_45318": "string",
-    "id_id_45322": "string",
-    "id_id_45325": "string",
-    "id_id_45329": "string",
-    "id_id_45334": "string",
-    "id_id_45338": "string",
-    "id_id_45342": "string",
-    "id_id_45348": "string",
-    "id_id_45351": "string",
-    "id_id_45352": "string",
-    "id_id_45356": "string",
-    "id_id_45360": "string",
-    "id_id_45364": "string",
-    "id_id_45371": "string",
-    "id_id_45374": "string",
-    "id_id_45375": "string",
-    "id_id_45379": "string",
-    "id_id_45382": "string",
-    "id_id_45388": "string",
-    "id_id_45392": "string",
-    "id_id_45395": "string",
-    "id_id_45399": "string",
-    "id_id_45402": "string",
-    "id_implicitRules_45257": "string",
-    "id_language_45279": "string",
-    "id_lastUpdated_45397": "string",
-    "id_participantStatus_45258": "string",
-    "id_profile_45405": "string",
-    "id_source_45394": "string",
-    "id_start_45220": "string",
-    "id_start_45327": "string",
-    "id_system_45238": "string",
-    "id_system_45300": "string",
-    "id_system_45333": "string",
-    "id_system_45362": "string",
-    "id_system_45385": "string",
-    "id_text_45250": "string",
-    "id_text_45306": "string",
-    "id_userSelected_45235": "boolean",
-    "id_userSelected_45293": "boolean",
-    "id_userSelected_45355": "boolean",
-    "id_userSelected_45378": "boolean",
-    "id_value_45313": "string",
-    "id_versionId_45398": "string",
-    "id_version_45237": "string",
-    "id_version_45284": "string",
-    "id_version_45346": "string",
-    "id_version_45369": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/AppointmentResponse",
+  "selectors": [
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "participantType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "_start.id",
+      "type": "string"
+    },
+    {
+      "key": "comment",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "participantType.text",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "_participantStatus.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "participantStatus",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "participantType.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "_comment.id",
+      "type": "string"
+    },
+    {
+      "key": "_end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "start",
+      "type": "string"
+    },
+    {
+      "key": "end",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "participantType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    }
+  ]
 }

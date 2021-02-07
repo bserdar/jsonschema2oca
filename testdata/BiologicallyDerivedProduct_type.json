@@ -1,139 +1,541 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "BiologicallyDerivedProduct",
-  "types": {
-    "id_code_31570": "string",
-    "id_code_31601": "string",
-    "id_code_31619": "string",
-    "id_code_31698": "string",
-    "id_code_31740": "string",
-    "id_collectedDateTime_31811": "string",
-    "id_description_31721": "string",
-    "id_description_31790": "string",
-    "id_description_31821": "string",
-    "id_display_31553": "string",
-    "id_display_31584": "string",
-    "id_display_31611": "string",
-    "id_display_31681": "string",
-    "id_display_31736": "string",
-    "id_end_31667": "string",
-    "id_end_31759": "string",
-    "id_end_31780": "string",
-    "id_end_31801": "string",
-    "id_end_31826": "string",
-    "id_id_31550": "string",
-    "id_id_31554": "string",
-    "id_id_31557": "string",
-    "id_id_31560": "string",
-    "id_id_31563": "string",
-    "id_id_31564": "string",
-    "id_id_31571": "string",
-    "id_id_31576": "string",
-    "id_id_31581": "string",
-    "id_id_31585": "string",
-    "id_id_31588": "string",
-    "id_id_31591": "string",
-    "id_id_31595": "string",
-    "id_id_31602": "string",
-    "id_id_31605": "string",
-    "id_id_31607": "string",
-    "id_id_31612": "string",
-    "id_id_31615": "string",
-    "id_id_31620": "string",
-    "id_id_31623": "string",
-    "id_id_31624": "string",
-    "id_id_31630": "string",
-    "id_id_31634": "string",
-    "id_id_31638": "string",
-    "id_id_31641": "string",
-    "id_id_31647": "string",
-    "id_id_31651": "string",
-    "id_id_31655": "string",
-    "id_id_31660": "string",
-    "id_id_31664": "string",
-    "id_id_31669": "string",
-    "id_id_31671": "string",
-    "id_id_31674": "string",
-    "id_id_31678": "string",
-    "id_id_31682": "string",
-    "id_id_31685": "string",
-    "id_id_31688": "string",
-    "id_id_31692": "string",
-    "id_id_31699": "string",
-    "id_id_31702": "string",
-    "id_id_31705": "string",
-    "id_id_31708": "string",
-    "id_id_31712": "string",
-    "id_id_31717": "string",
-    "id_id_31718": "string",
-    "id_id_31722": "string",
-    "id_id_31726": "string",
-    "id_id_31730": "string",
-    "id_id_31732": "string",
-    "id_id_31741": "string",
-    "id_id_31744": "string",
-    "id_id_31745": "string",
-    "id_id_31750": "string",
-    "id_id_31753": "string",
-    "id_id_31756": "string",
-    "id_id_31760": "string",
-    "id_id_31763": "string",
-    "id_id_31769": "string",
-    "id_id_31773": "string",
-    "id_id_31777": "string",
-    "id_id_31781": "string",
-    "id_id_31784": "string",
-    "id_id_31787": "string",
-    "id_id_31792": "string",
-    "id_id_31795": "string",
-    "id_id_31798": "string",
-    "id_id_31802": "string",
-    "id_id_31806": "string",
-    "id_id_31812": "string",
-    "id_id_31817": "string",
-    "id_id_31823": "string",
-    "id_id_31828": "string",
-    "id_id_31830": "string",
-    "id_id_31833": "string",
-    "id_id_31837": "string",
-    "id_id_31839": "string",
-    "id_id_31843": "string",
-    "id_id_31851": "string",
-    "id_id_31855": "string",
-    "id_implicitRules_31646": "string",
-    "id_language_31549": "string",
-    "id_lastUpdated_31636": "string",
-    "id_profile_31644": "string",
-    "id_quantity_31548": "number",
-    "id_source_31633": "string",
-    "id_start_31673": "string",
-    "id_start_31765": "string",
-    "id_start_31776": "string",
-    "id_start_31797": "string",
-    "id_start_31832": "string",
-    "id_system_31552": "string",
-    "id_system_31594": "string",
-    "id_system_31610": "string",
-    "id_system_31659": "string",
-    "id_system_31691": "string",
-    "id_system_31735": "string",
-    "id_temperature_31822": "number",
-    "id_text_31575": "string",
-    "id_text_31704": "string",
-    "id_text_31749": "string",
-    "id_timeDateTime_31716": "string",
-    "id_timeDateTime_31772": "string",
-    "id_userSelected_31567": "boolean",
-    "id_userSelected_31598": "boolean",
-    "id_userSelected_31627": "boolean",
-    "id_userSelected_31695": "boolean",
-    "id_userSelected_31737": "boolean",
-    "id_value_31713": "string",
-    "id_versionId_31637": "string",
-    "id_version_31569": "string",
-    "id_version_31600": "string",
-    "id_version_31618": "string",
-    "id_version_31697": "string",
-    "id_version_31739": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/BiologicallyDerivedProduct",
+  "selectors": [
+    {
+      "key": "productCode.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "quantity",
+      "type": "number"
+    },
+    {
+      "key": "manipulation.timePeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedPeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "_quantity.id",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedDateTime",
+      "type": "string"
+    },
+    {
+      "key": "processing.timePeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "processing.description",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.timePeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.timeDateTime",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "processing._timeDateTime.id",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "collection.id",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.duration.start",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "productCode.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.description",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "_productCategory.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedPeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.timeDateTime",
+      "type": "string"
+    },
+    {
+      "key": "storage._scale.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.timePeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.timePeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "productCode._text.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.timePeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedPeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.duration.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.timePeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.timePeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "storage.duration.end",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation._description.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedPeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "collection._collectedDateTime.id",
+      "type": "string"
+    },
+    {
+      "key": "collection.collectedPeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation._timeDateTime.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "processing._description.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "processing.timePeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "storage._temperature.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.duration._end.id",
+      "type": "string"
+    },
+    {
+      "key": "manipulation.timePeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.description",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.text",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "storage.duration._start.id",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "storage._description.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "productCode.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "storage.temperature",
+      "type": "number"
+    },
+    {
+      "key": "productCode.text",
+      "type": "string"
+    },
+    {
+      "key": "processing.procedure.coding.id",
+      "type": "string"
+    }
+  ]
 }

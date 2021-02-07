@@ -1,32 +1,113 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "GraphDefinition_Link",
-  "types": {
-    "id_code_41024": "string",
-    "id_description_41031": "string",
-    "id_description_41055": "string",
-    "id_expression_41010": "string",
-    "id_id_40995": "string",
-    "id_id_40996": "string",
-    "id_id_41005": "string",
-    "id_id_41011": "string",
-    "id_id_41013": "string",
-    "id_id_41016": "string",
-    "id_id_41021": "string",
-    "id_id_41025": "string",
-    "id_id_41028": "string",
-    "id_id_41037": "string",
-    "id_id_41038": "string",
-    "id_id_41042": "string",
-    "id_id_41045": "string",
-    "id_id_41048": "string",
-    "id_id_41051": "string",
-    "id_max_41000": "string",
-    "id_min_41054": "number",
-    "id_params_41035": "string",
-    "id_path_41003": "string",
-    "id_profile_41036": "string",
-    "id_sliceName_41002": "string",
-    "id_type_41034": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/GraphDefinition_Link",
+  "selectors": [
+    {
+      "key": "target.type",
+      "type": "string"
+    },
+    {
+      "key": "target.profile",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment.expression",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment._description.id",
+      "type": "string"
+    },
+    {
+      "key": "target._params.id",
+      "type": "string"
+    },
+    {
+      "key": "min",
+      "type": "number"
+    },
+    {
+      "key": "max",
+      "type": "string"
+    },
+    {
+      "key": "_path.id",
+      "type": "string"
+    },
+    {
+      "key": "_description.id",
+      "type": "string"
+    },
+    {
+      "key": "target.params",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment._expression.id",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment._rule.id",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment.description",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment.id",
+      "type": "string"
+    },
+    {
+      "key": "_max.id",
+      "type": "string"
+    },
+    {
+      "key": "sliceName",
+      "type": "string"
+    },
+    {
+      "key": "target._type.id",
+      "type": "string"
+    },
+    {
+      "key": "_sliceName.id",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment.code",
+      "type": "string"
+    },
+    {
+      "key": "_min.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "description",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment._code.id",
+      "type": "string"
+    },
+    {
+      "key": "target.id",
+      "type": "string"
+    },
+    {
+      "key": "path",
+      "type": "string"
+    },
+    {
+      "key": "target.compartment._use.id",
+      "type": "string"
+    }
+  ]
 }

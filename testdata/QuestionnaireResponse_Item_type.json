@@ -1,68 +1,257 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "QuestionnaireResponse_Item",
-  "types": {
-    "id_code_76182": "string",
-    "id_code_76208": "string",
-    "id_contentType_76244": "string",
-    "id_creation_76251": "string",
-    "id_data_76219": "string",
-    "id_definition_76278": "string",
-    "id_display_76165": "string",
-    "id_hash_76237": "string",
-    "id_id_76157": "string",
-    "id_id_76159": "string",
-    "id_id_76166": "string",
-    "id_id_76169": "string",
-    "id_id_76172": "string",
-    "id_id_76177": "string",
-    "id_id_76183": "string",
-    "id_id_76186": "string",
-    "id_id_76189": "string",
-    "id_id_76194": "string",
-    "id_id_76196": "string",
-    "id_id_76200": "string",
-    "id_id_76205": "string",
-    "id_id_76210": "string",
-    "id_id_76213": "string",
-    "id_id_76221": "string",
-    "id_id_76225": "string",
-    "id_id_76229": "string",
-    "id_id_76233": "string",
-    "id_id_76236": "string",
-    "id_id_76238": "string",
-    "id_id_76241": "string",
-    "id_id_76245": "string",
-    "id_id_76248": "string",
-    "id_id_76254": "string",
-    "id_id_76257": "string",
-    "id_id_76261": "string",
-    "id_id_76264": "string",
-    "id_id_76267": "string",
-    "id_id_76271": "string",
-    "id_id_76276": "string",
-    "id_id_76279": "string",
-    "id_id_76284": "string",
-    "id_id_76288": "string",
-    "id_language_76228": "string",
-    "id_linkId_76274": "string",
-    "id_size_76235": "number",
-    "id_system_76175": "string",
-    "id_system_76198": "string",
-    "id_text_76287": "string",
-    "id_title_76223": "string",
-    "id_unit_76204": "string",
-    "id_url_76224": "string",
-    "id_userSelected_76179": "boolean",
-    "id_valueBoolean_76272": "boolean",
-    "id_valueDateTime_76270": "string",
-    "id_valueDate_76188": "string",
-    "id_valueDecimal_76217": "number",
-    "id_valueInteger_76162": "number",
-    "id_valueString_76192": "string",
-    "id_valueTime_76163": "string",
-    "id_valueUri_76218": "string",
-    "id_value_76209": "number",
-    "id_version_76181": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/QuestionnaireResponse_Item",
+  "selectors": [
+    {
+      "key": "answer.valueCoding.display",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueDate",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.contentType",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity.code",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueUri",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueInteger.id",
+      "type": "string"
+    },
+    {
+      "key": "_linkId.id",
+      "type": "string"
+    },
+    {
+      "key": "_definition.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._contentType.id",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueDateTime.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity.value",
+      "type": "number"
+    },
+    {
+      "key": "answer.valueCoding.id",
+      "type": "string"
+    },
+    {
+      "key": "definition",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._url.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.hash",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueString",
+      "type": "string"
+    },
+    {
+      "key": "answer.id",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueBoolean",
+      "type": "boolean"
+    },
+    {
+      "key": "answer.valueDateTime",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._language.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._hash.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._data.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.data",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueDecimal.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding.system",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueTime.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity.system",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueTime",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._creation.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.language",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "linkId",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueString.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.size",
+      "type": "number"
+    },
+    {
+      "key": "answer.valueCoding.version",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.creation",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._size.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding.code",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueBoolean.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment._title.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueDecimal",
+      "type": "number"
+    },
+    {
+      "key": "answer.valueAttachment.url",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueInteger",
+      "type": "number"
+    },
+    {
+      "key": "answer.valueCoding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueUri.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "text",
+      "type": "string"
+    },
+    {
+      "key": "_text.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueQuantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "answer._valueDate.id",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueAttachment.title",
+      "type": "string"
+    },
+    {
+      "key": "answer.valueCoding.userSelected",
+      "type": "boolean"
+    }
+  ]
 }

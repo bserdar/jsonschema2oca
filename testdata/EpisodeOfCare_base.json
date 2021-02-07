@@ -1,1190 +1,1550 @@
 {
-  "@context": "https://oca.tech/v1",
-  "attributes": {
-    "id__implicitRules_93573": {
-      "object": {
-        "id_extension_93572": {
-          "array": {
-            "reference": "Extension"
-          }
+  "@context": "http://schemas.cloudprivacylabs.com/BaseSchema",
+  "@id": "http://fhirschema/EpisodeOfCare",
+  "attributes": [
+    {
+      "attributes": [
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
+          },
+          "key": "_id_extension"
         },
-        "id_id_93571": "value"
-      }
+        {
+          "key": "_id_id"
+        }
+      ],
+      "key": "_id__status"
     },
-    "id__language_93811": {
-      "object": {
-        "id_extension_93810": {
-          "array": {
-            "reference": "Extension"
-          }
-        },
-        "id_id_93809": "value"
-      }
+    {
+      "items": {
+        "reference": "http://fhirschema/Extension"
+      },
+      "key": "_id_modifierExtension"
     },
-    "id__status_93815": {
-      "object": {
-        "id_extension_93814": {
-          "array": {
-            "reference": "Extension"
-          }
-        },
-        "id_id_93813": "value"
-      }
+    {
+      "items": {
+        "reference": "http://fhirschema/Reference"
+      },
+      "key": "_id_team"
     },
-    "id_account_93727": {
-      "array": {
-        "reference": "Reference"
-      }
+    {
+      "key": "_id_careManager",
+      "reference": "http://fhirschema/Reference"
     },
-    "id_careManager_93726": {
-      "reference": "Reference"
+    {
+      "key": "_id_status"
     },
-    "id_contained_93812": {
-      "array": {
+    {
+      "items": {
         "oneOf": [
           {
-            "reference": "Account"
+            "reference": "http://fhirschema/Account"
           },
           {
-            "reference": "ActivityDefinition"
+            "reference": "http://fhirschema/ActivityDefinition"
           },
           {
-            "reference": "AdverseEvent"
+            "reference": "http://fhirschema/AdverseEvent"
           },
           {
-            "reference": "AllergyIntolerance"
+            "reference": "http://fhirschema/AllergyIntolerance"
           },
           {
-            "reference": "Appointment"
+            "reference": "http://fhirschema/Appointment"
           },
           {
-            "reference": "AppointmentResponse"
+            "reference": "http://fhirschema/AppointmentResponse"
           },
           {
-            "reference": "AuditEvent"
+            "reference": "http://fhirschema/AuditEvent"
           },
           {
-            "reference": "Basic"
+            "reference": "http://fhirschema/Basic"
           },
           {
-            "reference": "Binary"
+            "reference": "http://fhirschema/Binary"
           },
           {
-            "reference": "BiologicallyDerivedProduct"
+            "reference": "http://fhirschema/BiologicallyDerivedProduct"
           },
           {
-            "reference": "BodyStructure"
+            "reference": "http://fhirschema/BodyStructure"
           },
           {
-            "reference": "Bundle"
+            "reference": "http://fhirschema/Bundle"
           },
           {
-            "reference": "CapabilityStatement"
+            "reference": "http://fhirschema/CapabilityStatement"
           },
           {
-            "reference": "CarePlan"
+            "reference": "http://fhirschema/CarePlan"
           },
           {
-            "reference": "CareTeam"
+            "reference": "http://fhirschema/CareTeam"
           },
           {
-            "reference": "CatalogEntry"
+            "reference": "http://fhirschema/CatalogEntry"
           },
           {
-            "reference": "ChargeItem"
+            "reference": "http://fhirschema/ChargeItem"
           },
           {
-            "reference": "ChargeItemDefinition"
+            "reference": "http://fhirschema/ChargeItemDefinition"
           },
           {
-            "reference": "Claim"
+            "reference": "http://fhirschema/Claim"
           },
           {
-            "reference": "ClaimResponse"
+            "reference": "http://fhirschema/ClaimResponse"
           },
           {
-            "reference": "ClinicalImpression"
+            "reference": "http://fhirschema/ClinicalImpression"
           },
           {
-            "reference": "CodeSystem"
+            "reference": "http://fhirschema/CodeSystem"
           },
           {
-            "reference": "Communication"
+            "reference": "http://fhirschema/Communication"
           },
           {
-            "reference": "CommunicationRequest"
+            "reference": "http://fhirschema/CommunicationRequest"
           },
           {
-            "reference": "CompartmentDefinition"
+            "reference": "http://fhirschema/CompartmentDefinition"
           },
           {
-            "reference": "Composition"
+            "reference": "http://fhirschema/Composition"
           },
           {
-            "reference": "ConceptMap"
+            "reference": "http://fhirschema/ConceptMap"
           },
           {
-            "reference": "Condition"
+            "reference": "http://fhirschema/Condition"
           },
           {
-            "reference": "Consent"
+            "reference": "http://fhirschema/Consent"
           },
           {
-            "reference": "Contract"
+            "reference": "http://fhirschema/Contract"
           },
           {
-            "reference": "Coverage"
+            "reference": "http://fhirschema/Coverage"
           },
           {
-            "reference": "CoverageEligibilityRequest"
+            "reference": "http://fhirschema/CoverageEligibilityRequest"
           },
           {
-            "reference": "CoverageEligibilityResponse"
+            "reference": "http://fhirschema/CoverageEligibilityResponse"
           },
           {
-            "reference": "DetectedIssue"
+            "reference": "http://fhirschema/DetectedIssue"
           },
           {
-            "reference": "Device"
+            "reference": "http://fhirschema/Device"
           },
           {
-            "reference": "DeviceDefinition"
+            "reference": "http://fhirschema/DeviceDefinition"
           },
           {
-            "reference": "DeviceMetric"
+            "reference": "http://fhirschema/DeviceMetric"
           },
           {
-            "reference": "DeviceRequest"
+            "reference": "http://fhirschema/DeviceRequest"
           },
           {
-            "reference": "DeviceUseStatement"
+            "reference": "http://fhirschema/DeviceUseStatement"
           },
           {
-            "reference": "DiagnosticReport"
+            "reference": "http://fhirschema/DiagnosticReport"
           },
           {
-            "reference": "DocumentManifest"
+            "reference": "http://fhirschema/DocumentManifest"
           },
           {
-            "reference": "DocumentReference"
+            "reference": "http://fhirschema/DocumentReference"
           },
           {
-            "reference": "EffectEvidenceSynthesis"
+            "reference": "http://fhirschema/EffectEvidenceSynthesis"
           },
           {
-            "reference": "Encounter"
+            "reference": "http://fhirschema/Encounter"
           },
           {
-            "reference": "Endpoint"
+            "reference": "http://fhirschema/Endpoint"
           },
           {
-            "reference": "EnrollmentRequest"
+            "reference": "http://fhirschema/EnrollmentRequest"
           },
           {
-            "reference": "EnrollmentResponse"
+            "reference": "http://fhirschema/EnrollmentResponse"
           },
           {
-            "reference": "EpisodeOfCare"
+            "reference": "http://fhirschema/EpisodeOfCare"
           },
           {
-            "reference": "EventDefinition"
+            "reference": "http://fhirschema/EventDefinition"
           },
           {
-            "reference": "Evidence"
+            "reference": "http://fhirschema/Evidence"
           },
           {
-            "reference": "EvidenceVariable"
+            "reference": "http://fhirschema/EvidenceVariable"
           },
           {
-            "reference": "ExampleScenario"
+            "reference": "http://fhirschema/ExampleScenario"
           },
           {
-            "reference": "ExplanationOfBenefit"
+            "reference": "http://fhirschema/ExplanationOfBenefit"
           },
           {
-            "reference": "FamilyMemberHistory"
+            "reference": "http://fhirschema/FamilyMemberHistory"
           },
           {
-            "reference": "Flag"
+            "reference": "http://fhirschema/Flag"
           },
           {
-            "reference": "Goal"
+            "reference": "http://fhirschema/Goal"
           },
           {
-            "reference": "GraphDefinition"
+            "reference": "http://fhirschema/GraphDefinition"
           },
           {
-            "reference": "Group"
+            "reference": "http://fhirschema/Group"
           },
           {
-            "reference": "GuidanceResponse"
+            "reference": "http://fhirschema/GuidanceResponse"
           },
           {
-            "reference": "HealthcareService"
+            "reference": "http://fhirschema/HealthcareService"
           },
           {
-            "reference": "ImagingStudy"
+            "reference": "http://fhirschema/ImagingStudy"
           },
           {
-            "reference": "Immunization"
+            "reference": "http://fhirschema/Immunization"
           },
           {
-            "reference": "ImmunizationEvaluation"
+            "reference": "http://fhirschema/ImmunizationEvaluation"
           },
           {
-            "reference": "ImmunizationRecommendation"
+            "reference": "http://fhirschema/ImmunizationRecommendation"
           },
           {
-            "reference": "ImplementationGuide"
+            "reference": "http://fhirschema/ImplementationGuide"
           },
           {
-            "reference": "InsurancePlan"
+            "reference": "http://fhirschema/InsurancePlan"
           },
           {
-            "reference": "Invoice"
+            "reference": "http://fhirschema/Invoice"
           },
           {
-            "reference": "Library"
+            "reference": "http://fhirschema/Library"
           },
           {
-            "reference": "Linkage"
+            "reference": "http://fhirschema/Linkage"
           },
           {
-            "reference": "List"
+            "reference": "http://fhirschema/List"
           },
           {
-            "reference": "Location"
+            "reference": "http://fhirschema/Location"
           },
           {
-            "reference": "Measure"
+            "reference": "http://fhirschema/Measure"
           },
           {
-            "reference": "MeasureReport"
+            "reference": "http://fhirschema/MeasureReport"
           },
           {
-            "reference": "Media"
+            "reference": "http://fhirschema/Media"
           },
           {
-            "reference": "Medication"
+            "reference": "http://fhirschema/Medication"
           },
           {
-            "reference": "MedicationAdministration"
+            "reference": "http://fhirschema/MedicationAdministration"
           },
           {
-            "reference": "MedicationDispense"
+            "reference": "http://fhirschema/MedicationDispense"
           },
           {
-            "reference": "MedicationKnowledge"
+            "reference": "http://fhirschema/MedicationKnowledge"
           },
           {
-            "reference": "MedicationRequest"
+            "reference": "http://fhirschema/MedicationRequest"
           },
           {
-            "reference": "MedicationStatement"
+            "reference": "http://fhirschema/MedicationStatement"
           },
           {
-            "reference": "MedicinalProduct"
+            "reference": "http://fhirschema/MedicinalProduct"
           },
           {
-            "reference": "MedicinalProductAuthorization"
+            "reference": "http://fhirschema/MedicinalProductAuthorization"
           },
           {
-            "reference": "MedicinalProductContraindication"
+            "reference": "http://fhirschema/MedicinalProductContraindication"
           },
           {
-            "reference": "MedicinalProductIndication"
+            "reference": "http://fhirschema/MedicinalProductIndication"
           },
           {
-            "reference": "MedicinalProductIngredient"
+            "reference": "http://fhirschema/MedicinalProductIngredient"
           },
           {
-            "reference": "MedicinalProductInteraction"
+            "reference": "http://fhirschema/MedicinalProductInteraction"
           },
           {
-            "reference": "MedicinalProductManufactured"
+            "reference": "http://fhirschema/MedicinalProductManufactured"
           },
           {
-            "reference": "MedicinalProductPackaged"
+            "reference": "http://fhirschema/MedicinalProductPackaged"
           },
           {
-            "reference": "MedicinalProductPharmaceutical"
+            "reference": "http://fhirschema/MedicinalProductPharmaceutical"
           },
           {
-            "reference": "MedicinalProductUndesirableEffect"
+            "reference": "http://fhirschema/MedicinalProductUndesirableEffect"
           },
           {
-            "reference": "MessageDefinition"
+            "reference": "http://fhirschema/MessageDefinition"
           },
           {
-            "reference": "MessageHeader"
+            "reference": "http://fhirschema/MessageHeader"
           },
           {
-            "reference": "MolecularSequence"
+            "reference": "http://fhirschema/MolecularSequence"
           },
           {
-            "reference": "NamingSystem"
+            "reference": "http://fhirschema/NamingSystem"
           },
           {
-            "reference": "NutritionOrder"
+            "reference": "http://fhirschema/NutritionOrder"
           },
           {
-            "reference": "Observation"
+            "reference": "http://fhirschema/Observation"
           },
           {
-            "reference": "ObservationDefinition"
+            "reference": "http://fhirschema/ObservationDefinition"
           },
           {
-            "reference": "OperationDefinition"
+            "reference": "http://fhirschema/OperationDefinition"
           },
           {
-            "reference": "OperationOutcome"
+            "reference": "http://fhirschema/OperationOutcome"
           },
           {
-            "reference": "Organization"
+            "reference": "http://fhirschema/Organization"
           },
           {
-            "reference": "OrganizationAffiliation"
+            "reference": "http://fhirschema/OrganizationAffiliation"
           },
           {
-            "reference": "Parameters"
+            "reference": "http://fhirschema/Parameters"
           },
           {
-            "reference": "Patient"
+            "reference": "http://fhirschema/Patient"
           },
           {
-            "reference": "PaymentNotice"
+            "reference": "http://fhirschema/PaymentNotice"
           },
           {
-            "reference": "PaymentReconciliation"
+            "reference": "http://fhirschema/PaymentReconciliation"
           },
           {
-            "reference": "Person"
+            "reference": "http://fhirschema/Person"
           },
           {
-            "reference": "PlanDefinition"
+            "reference": "http://fhirschema/PlanDefinition"
           },
           {
-            "reference": "Practitioner"
+            "reference": "http://fhirschema/Practitioner"
           },
           {
-            "reference": "PractitionerRole"
+            "reference": "http://fhirschema/PractitionerRole"
           },
           {
-            "reference": "Procedure"
+            "reference": "http://fhirschema/Procedure"
           },
           {
-            "reference": "Provenance"
+            "reference": "http://fhirschema/Provenance"
           },
           {
-            "reference": "Questionnaire"
+            "reference": "http://fhirschema/Questionnaire"
           },
           {
-            "reference": "QuestionnaireResponse"
+            "reference": "http://fhirschema/QuestionnaireResponse"
           },
           {
-            "reference": "RelatedPerson"
+            "reference": "http://fhirschema/RelatedPerson"
           },
           {
-            "reference": "RequestGroup"
+            "reference": "http://fhirschema/RequestGroup"
           },
           {
-            "reference": "ResearchDefinition"
+            "reference": "http://fhirschema/ResearchDefinition"
           },
           {
-            "reference": "ResearchElementDefinition"
+            "reference": "http://fhirschema/ResearchElementDefinition"
           },
           {
-            "reference": "ResearchStudy"
+            "reference": "http://fhirschema/ResearchStudy"
           },
           {
-            "reference": "ResearchSubject"
+            "reference": "http://fhirschema/ResearchSubject"
           },
           {
-            "reference": "RiskAssessment"
+            "reference": "http://fhirschema/RiskAssessment"
           },
           {
-            "reference": "RiskEvidenceSynthesis"
+            "reference": "http://fhirschema/RiskEvidenceSynthesis"
           },
           {
-            "reference": "Schedule"
+            "reference": "http://fhirschema/Schedule"
           },
           {
-            "reference": "SearchParameter"
+            "reference": "http://fhirschema/SearchParameter"
           },
           {
-            "reference": "ServiceRequest"
+            "reference": "http://fhirschema/ServiceRequest"
           },
           {
-            "reference": "Slot"
+            "reference": "http://fhirschema/Slot"
           },
           {
-            "reference": "Specimen"
+            "reference": "http://fhirschema/Specimen"
           },
           {
-            "reference": "SpecimenDefinition"
+            "reference": "http://fhirschema/SpecimenDefinition"
           },
           {
-            "reference": "StructureDefinition"
+            "reference": "http://fhirschema/StructureDefinition"
           },
           {
-            "reference": "StructureMap"
+            "reference": "http://fhirschema/StructureMap"
           },
           {
-            "reference": "Subscription"
+            "reference": "http://fhirschema/Subscription"
           },
           {
-            "reference": "Substance"
+            "reference": "http://fhirschema/Substance"
           },
           {
-            "reference": "SubstanceNucleicAcid"
+            "reference": "http://fhirschema/SubstanceNucleicAcid"
           },
           {
-            "reference": "SubstancePolymer"
+            "reference": "http://fhirschema/SubstancePolymer"
           },
           {
-            "reference": "SubstanceProtein"
+            "reference": "http://fhirschema/SubstanceProtein"
           },
           {
-            "reference": "SubstanceReferenceInformation"
+            "reference": "http://fhirschema/SubstanceReferenceInformation"
           },
           {
-            "reference": "SubstanceSourceMaterial"
+            "reference": "http://fhirschema/SubstanceSourceMaterial"
           },
           {
-            "reference": "SubstanceSpecification"
+            "reference": "http://fhirschema/SubstanceSpecification"
           },
           {
-            "reference": "SupplyDelivery"
+            "reference": "http://fhirschema/SupplyDelivery"
           },
           {
-            "reference": "SupplyRequest"
+            "reference": "http://fhirschema/SupplyRequest"
           },
           {
-            "reference": "Task"
+            "reference": "http://fhirschema/Task"
           },
           {
-            "reference": "TerminologyCapabilities"
+            "reference": "http://fhirschema/TerminologyCapabilities"
           },
           {
-            "reference": "TestReport"
+            "reference": "http://fhirschema/TestReport"
           },
           {
-            "reference": "TestScript"
+            "reference": "http://fhirschema/TestScript"
           },
           {
-            "reference": "ValueSet"
+            "reference": "http://fhirschema/ValueSet"
           },
           {
-            "reference": "VerificationResult"
+            "reference": "http://fhirschema/VerificationResult"
           },
           {
-            "reference": "VisionPrescription"
+            "reference": "http://fhirschema/VisionPrescription"
           }
         ]
-      }
+      },
+      "key": "_id_contained"
     },
-    "id_diagnosis_93694": {
-      "array": {
-        "object": {
-          "id__rank_93691": {
-            "object": {
-              "id_extension_93690": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93689": "value"
-            }
+    {
+      "items": {
+        "reference": "http://fhirschema/Extension"
+      },
+      "key": "_id_extension"
+    },
+    {
+      "key": "_id_implicitRules"
+    },
+    {
+      "attributes": [
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
           },
-          "id_condition_93657": {
-            "reference": "Reference"
-          },
-          "id_extension_93693": {
-            "array": {
-              "reference": "Extension"
-            }
-          },
-          "id_id_93692": "value",
-          "id_modifierExtension_93656": {
-            "array": {
-              "reference": "Extension"
-            }
-          },
-          "id_rank_93688": "value",
-          "id_role_93687": {
-            "object": {
-              "id__text_93684": {
-                "object": {
-                  "id_extension_93683": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93682": "value"
-                }
-              },
-              "id_coding_93680": {
-                "array": {
-                  "object": {
-                    "id__code_93673": {
-                      "object": {
-                        "id_extension_93672": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93671": "value"
-                      }
-                    },
-                    "id__display_93668": {
-                      "object": {
-                        "id_extension_93667": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93666": "value"
-                      }
-                    },
-                    "id__system_93677": {
-                      "object": {
-                        "id_extension_93676": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93675": "value"
-                      }
-                    },
-                    "id__userSelected_93660": {
-                      "object": {
-                        "id_extension_93659": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93658": "value"
-                      }
-                    },
-                    "id__version_93665": {
-                      "object": {
-                        "id_extension_93664": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93663": "value"
-                      }
-                    },
-                    "id_code_93670": "value",
-                    "id_display_93662": "value",
-                    "id_extension_93679": {
-                      "array": {
-                        "reference": "Extension"
-                      }
-                    },
-                    "id_id_93674": "value",
-                    "id_system_93661": "value",
-                    "id_userSelected_93678": "value",
-                    "id_version_93669": "value"
-                  }
-                }
-              },
-              "id_extension_93686": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93685": "value",
-              "id_text_93681": "value"
-            }
-          }
+          "key": "_id_extension"
+        },
+        {
+          "key": "_id_id"
         }
-      }
+      ],
+      "key": "_id__implicitRules"
     },
-    "id_extension_93806": {
-      "array": {
-        "reference": "Extension"
-      }
+    {
+      "key": "_id_id"
     },
-    "id_id_93808": "value",
-    "id_identifier_93803": {
-      "array": {
-        "object": {
-          "id__system_93768": {
-            "object": {
-              "id_extension_93767": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93766": "value"
-            }
-          },
-          "id__use_93749": {
-            "object": {
-              "id_extension_93748": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93747": "value"
-            }
-          },
-          "id__value_93763": {
-            "object": {
-              "id_extension_93762": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93761": "value"
-            }
-          },
-          "id_assigner_93770": {
-            "reference": "Reference"
-          },
-          "id_extension_93769": {
-            "array": {
-              "reference": "Extension"
-            }
-          },
-          "id_id_93771": "value",
-          "id_period_93760": {
-            "object": {
-              "id__end_93756": {
-                "object": {
-                  "id_extension_93755": {
-                    "array": {
-                      "reference": "Extension"
-                    }
+    {
+      "attributes": [
+        {
+          "key": "_id_lastUpdated"
+        },
+        {
+          "key": "_id_source"
+        },
+        {
+          "key": "_id_versionId"
+        },
+        {
+          "items": {
+            "attributes": [
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
                   },
-                  "id_id_93754": "value"
-                }
-              },
-              "id__start_93752": {
-                "object": {
-                  "id_extension_93751": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93750": "value"
-                }
-              },
-              "id_end_93753": "value",
-              "id_extension_93758": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93757": "value",
-              "id_start_93759": "value"
-            }
-          },
-          "id_system_93765": "value",
-          "id_type_93802": {
-            "object": {
-              "id__text_93799": {
-                "object": {
-                  "id_extension_93797": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93798": "value"
-                }
-              },
-              "id_coding_93795": {
-                "array": {
-                  "object": {
-                    "id__code_93776": {
-                      "object": {
-                        "id_extension_93775": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93774": "value"
-                      }
-                    },
-                    "id__display_93791": {
-                      "object": {
-                        "id_extension_93790": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93789": "value"
-                      }
-                    },
-                    "id__system_93780": {
-                      "object": {
-                        "id_extension_93779": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93778": "value"
-                      }
-                    },
-                    "id__userSelected_93794": {
-                      "object": {
-                        "id_extension_93793": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93792": "value"
-                      }
-                    },
-                    "id__version_93788": {
-                      "object": {
-                        "id_extension_93787": {
-                          "array": {
-                            "reference": "Extension"
-                          }
-                        },
-                        "id_id_93786": "value"
-                      }
-                    },
-                    "id_code_93773": "value",
-                    "id_display_93785": "value",
-                    "id_extension_93782": {
-                      "array": {
-                        "reference": "Extension"
-                      }
-                    },
-                    "id_id_93777": "value",
-                    "id_system_93784": "value",
-                    "id_userSelected_93781": "value",
-                    "id_version_93783": "value"
+                  {
+                    "key": "_id_id"
                   }
-                }
+                ],
+                "key": "_id__system"
               },
-              "id_extension_93801": {
-                "array": {
-                  "reference": "Extension"
-                }
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__version"
               },
-              "id_id_93800": "value",
-              "id_text_93796": "value"
-            }
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__code"
+              },
+              {
+                "key": "_id_userSelected"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__userSelected"
+              },
+              {
+                "key": "_id_version"
+              },
+              {
+                "key": "_id_system"
+              },
+              {
+                "key": "_id_code"
+              },
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_display"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__display"
+              },
+              {
+                "key": "_id_id"
+              }
+            ]
           },
-          "id_use_93764": "value",
-          "id_value_93772": "value"
+          "key": "_id_tag"
+        },
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
+          },
+          "key": "_id_extension"
+        },
+        {
+          "attributes": [
+            {
+              "key": "_id_id"
+            },
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__versionId"
+        },
+        {
+          "attributes": [
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__lastUpdated"
+        },
+        {
+          "attributes": [
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__source"
+        },
+        {
+          "items": {},
+          "key": "_id_profile"
+        },
+        {
+          "items": {
+            "attributes": [
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__userSelected"
+              },
+              {
+                "key": "_id_system"
+              },
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__code"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__display"
+              },
+              {
+                "key": "_id_userSelected"
+              },
+              {
+                "key": "_id_version"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__system"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__version"
+              },
+              {
+                "key": "_id_code"
+              },
+              {
+                "key": "_id_display"
+              },
+              {
+                "key": "_id_id"
+              }
+            ]
+          },
+          "key": "_id_security"
+        },
+        {
+          "key": "_id_id"
         }
-      }
+      ],
+      "key": "_id_meta"
     },
-    "id_implicitRules_93804": "value",
-    "id_language_93647": "value",
-    "id_managingOrganization_93695": {
-      "reference": "Reference"
-    },
-    "id_meta_93635": {
-      "object": {
-        "id__lastUpdated_93632": {
-          "object": {
-            "id_extension_93631": {
-              "array": {
-                "reference": "Extension"
+    {
+      "items": {
+        "attributes": [
+          {
+            "attributes": [
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__start"
+              },
+              {
+                "key": "_id_end"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__end"
+              },
+              {
+                "key": "_id_id"
+              },
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_start"
               }
-            },
-            "id_id_93630": "value"
-          }
-        },
-        "id__source_93581": {
-          "object": {
-            "id_extension_93580": {
-              "array": {
-                "reference": "Extension"
-              }
-            },
-            "id_id_93579": "value"
-          }
-        },
-        "id__versionId_93578": {
-          "object": {
-            "id_extension_93576": {
-              "array": {
-                "reference": "Extension"
-              }
-            },
-            "id_id_93577": "value"
-          }
-        },
-        "id_extension_93582": {
-          "array": {
-            "reference": "Extension"
-          }
-        },
-        "id_id_93634": "value",
-        "id_lastUpdated_93583": "value",
-        "id_profile_93574": {
-          "array": "value"
-        },
-        "id_security_93606": {
-          "array": {
-            "object": {
-              "id__code_93605": {
-                "object": {
-                  "id_extension_93603": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93604": "value"
-                }
-              },
-              "id__display_93591": {
-                "object": {
-                  "id_extension_93590": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93589": "value"
-                }
-              },
-              "id__system_93598": {
-                "object": {
-                  "id_extension_93597": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93596": "value"
-                }
-              },
-              "id__userSelected_93594": {
-                "object": {
-                  "id_extension_93593": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93592": "value"
-                }
-              },
-              "id__version_93588": {
-                "object": {
-                  "id_extension_93587": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93586": "value"
-                }
-              },
-              "id_code_93602": "value",
-              "id_display_93585": "value",
-              "id_extension_93600": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93595": "value",
-              "id_system_93584": "value",
-              "id_userSelected_93599": "value",
-              "id_version_93601": "value"
-            }
-          }
-        },
-        "id_source_93633": "value",
-        "id_tag_93629": {
-          "array": {
-            "object": {
-              "id__code_93613": {
-                "object": {
-                  "id_extension_93612": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93611": "value"
-                }
-              },
-              "id__display_93623": {
-                "object": {
-                  "id_extension_93622": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93621": "value"
-                }
-              },
-              "id__system_93617": {
-                "object": {
-                  "id_extension_93616": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93615": "value"
-                }
-              },
-              "id__userSelected_93626": {
-                "object": {
-                  "id_extension_93625": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93624": "value"
-                }
-              },
-              "id__version_93620": {
-                "object": {
-                  "id_extension_93619": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93618": "value"
-                }
-              },
-              "id_code_93610": "value",
-              "id_display_93628": "value",
-              "id_extension_93608": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93614": "value",
-              "id_system_93627": "value",
-              "id_userSelected_93607": "value",
-              "id_version_93609": "value"
-            }
-          }
-        },
-        "id_versionId_93575": "value"
-      }
-    },
-    "id_modifierExtension_93817": {
-      "array": {
-        "reference": "Extension"
-      }
-    },
-    "id_patient_93807": {
-      "reference": "Reference"
-    },
-    "id_period_93646": {
-      "object": {
-        "id__end_93638": {
-          "object": {
-            "id_extension_93637": {
-              "array": {
-                "reference": "Extension"
-              }
-            },
-            "id_id_93636": "value"
-          }
-        },
-        "id__start_93644": {
-          "object": {
-            "id_extension_93643": {
-              "array": {
-                "reference": "Extension"
-              }
-            },
-            "id_id_93642": "value"
-          }
-        },
-        "id_end_93645": "value",
-        "id_extension_93640": {
-          "array": {
-            "reference": "Extension"
-          }
-        },
-        "id_id_93639": "value",
-        "id_start_93641": "value"
-      }
-    },
-    "id_referralRequest_93805": {
-      "array": {
-        "reference": "Reference"
-      }
-    },
-    "id_resourceType_93570": "value",
-    "id_statusHistory_93746": {
-      "array": {
-        "object": {
-          "id__status_93731": {
-            "object": {
-              "id_extension_93730": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93729": "value"
-            }
+            ],
+            "key": "_id_period"
           },
-          "id_extension_93744": {
-            "array": {
-              "reference": "Extension"
-            }
+          {
+            "key": "_id_id"
           },
-          "id_id_93743": "value",
-          "id_modifierExtension_93745": {
-            "array": {
-              "reference": "Extension"
-            }
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
+            },
+            "key": "_id_extension"
           },
-          "id_period_93742": {
-            "object": {
-              "id__end_93738": {
-                "object": {
-                  "id_extension_93737": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93736": "value"
-                }
-              },
-              "id__start_93734": {
-                "object": {
-                  "id_extension_93732": {
-                    "array": {
-                      "reference": "Extension"
-                    }
-                  },
-                  "id_id_93733": "value"
-                }
-              },
-              "id_end_93735": "value",
-              "id_extension_93740": {
-                "array": {
-                  "reference": "Extension"
-                }
-              },
-              "id_id_93739": "value",
-              "id_start_93741": "value"
-            }
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
+            },
+            "key": "_id_modifierExtension"
           },
-          "id_status_93728": "value"
+          {
+            "key": "_id_status"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__status"
+          }
+        ]
+      },
+      "key": "_id_statusHistory"
+    },
+    {
+      "items": {
+        "reference": "http://fhirschema/Reference"
+      },
+      "key": "_id_account"
+    },
+    {
+      "attributes": [
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
+          },
+          "key": "_id_extension"
+        },
+        {
+          "key": "_id_id"
         }
-      }
+      ],
+      "key": "_id__language"
     },
-    "id_status_93818": "value",
-    "id_team_93816": {
-      "array": {
-        "reference": "Reference"
-      }
+    {
+      "key": "_id_managingOrganization",
+      "reference": "http://fhirschema/Reference"
     },
-    "id_text_93655": {
-      "object": {
-        "id__status_93653": {
-          "object": {
-            "id_extension_93652": {
-              "array": {
-                "reference": "Extension"
-              }
+    {
+      "key": "_id_resourceType"
+    },
+    {
+      "items": {
+        "attributes": [
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
             },
-            "id_id_93651": "value"
-          }
-        },
-        "id_div_93654": "value",
-        "id_extension_93649": {
-          "array": {
-            "reference": "Extension"
-          }
-        },
-        "id_id_93648": "value",
-        "id_status_93650": "value"
-      }
-    },
-    "id_type_93725": {
-      "array": {
-        "object": {
-          "id__text_93724": {
-            "object": {
-              "id_extension_93723": {
-                "array": {
-                  "reference": "Extension"
-                }
+            "key": "_id_extension"
+          },
+          {
+            "attributes": [
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__text"
               },
-              "id_id_93722": "value"
-            }
-          },
-          "id_coding_93720": {
-            "array": {
-              "object": {
-                "id__code_93719": {
-                  "object": {
-                    "id_extension_93718": {
-                      "array": {
-                        "reference": "Extension"
-                      }
+              {
+                "key": "_id_id"
+              },
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "items": {
+                  "attributes": [
+                    {
+                      "key": "_id_code"
                     },
-                    "id_id_93717": "value"
-                  }
-                },
-                "id__display_93705": {
-                  "object": {
-                    "id_extension_93704": {
-                      "array": {
-                        "reference": "Extension"
-                      }
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__code"
                     },
-                    "id_id_93703": "value"
-                  }
-                },
-                "id__system_93712": {
-                  "object": {
-                    "id_extension_93711": {
-                      "array": {
-                        "reference": "Extension"
-                      }
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__display"
                     },
-                    "id_id_93710": "value"
-                  }
-                },
-                "id__userSelected_93708": {
-                  "object": {
-                    "id_extension_93707": {
-                      "array": {
-                        "reference": "Extension"
-                      }
+                    {
+                      "key": "_id_userSelected"
                     },
-                    "id_id_93706": "value"
-                  }
-                },
-                "id__version_93702": {
-                  "object": {
-                    "id_extension_93701": {
-                      "array": {
-                        "reference": "Extension"
-                      }
+                    {
+                      "key": "_id_version"
                     },
-                    "id_id_93700": "value"
-                  }
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__version"
+                    },
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    },
+                    {
+                      "key": "_id_display"
+                    },
+                    {
+                      "key": "_id_system"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__system"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__userSelected"
+                    },
+                    {
+                      "key": "_id_id"
+                    }
+                  ]
                 },
-                "id_code_93716": "value",
-                "id_display_93699": "value",
-                "id_extension_93714": {
-                  "array": {
-                    "reference": "Extension"
-                  }
-                },
-                "id_id_93709": "value",
-                "id_system_93698": "value",
-                "id_userSelected_93713": "value",
-                "id_version_93715": "value"
+                "key": "_id_coding"
+              },
+              {
+                "key": "_id_text"
               }
-            }
+            ],
+            "key": "_id_type"
           },
-          "id_extension_93697": {
-            "array": {
-              "reference": "Extension"
-            }
+          {
+            "key": "_id_assigner",
+            "reference": "http://fhirschema/Reference"
           },
-          "id_id_93696": "value",
-          "id_text_93721": "value"
+          {
+            "key": "_id_use"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__use"
+          },
+          {
+            "key": "_id_value"
+          },
+          {
+            "key": "_id_system"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__system"
+          },
+          {
+            "attributes": [
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__end"
+              },
+              {
+                "key": "_id_id"
+              },
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_start"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__start"
+              },
+              {
+                "key": "_id_end"
+              }
+            ],
+            "key": "_id_period"
+          },
+          {
+            "key": "_id_id"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__value"
+          }
+        ]
+      },
+      "key": "_id_identifier"
+    },
+    {
+      "items": {
+        "attributes": [
+          {
+            "key": "_id_rank"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__rank"
+          },
+          {
+            "key": "_id_id"
+          },
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
+            },
+            "key": "_id_extension"
+          },
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
+            },
+            "key": "_id_modifierExtension"
+          },
+          {
+            "key": "_id_condition",
+            "reference": "http://fhirschema/Reference"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "items": {
+                  "attributes": [
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    },
+                    {
+                      "key": "_id_userSelected"
+                    },
+                    {
+                      "key": "_id_version"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__userSelected"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__version"
+                    },
+                    {
+                      "key": "_id_code"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__display"
+                    },
+                    {
+                      "key": "_id_system"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__system"
+                    },
+                    {
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributes": [
+                        {
+                          "items": {
+                            "reference": "http://fhirschema/Extension"
+                          },
+                          "key": "_id_extension"
+                        },
+                        {
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__code"
+                    },
+                    {
+                      "key": "_id_display"
+                    }
+                  ]
+                },
+                "key": "_id_coding"
+              },
+              {
+                "key": "_id_text"
+              },
+              {
+                "attributes": [
+                  {
+                    "items": {
+                      "reference": "http://fhirschema/Extension"
+                    },
+                    "key": "_id_extension"
+                  },
+                  {
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__text"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id_role"
+          }
+        ]
+      },
+      "key": "_id_diagnosis"
+    },
+    {
+      "items": {
+        "reference": "http://fhirschema/Reference"
+      },
+      "key": "_id_referralRequest"
+    },
+    {
+      "key": "_id_patient",
+      "reference": "http://fhirschema/Reference"
+    },
+    {
+      "items": {
+        "attributes": [
+          {
+            "items": {
+              "attributes": [
+                {
+                  "key": "_id_id"
+                },
+                {
+                  "attributes": [
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    },
+                    {
+                      "key": "_id_id"
+                    }
+                  ],
+                  "key": "_id__version"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "_id_id"
+                    },
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    }
+                  ],
+                  "key": "_id__code"
+                },
+                {
+                  "attributes": [
+                    {
+                      "key": "_id_id"
+                    },
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    }
+                  ],
+                  "key": "_id__display"
+                },
+                {
+                  "key": "_id_system"
+                },
+                {
+                  "attributes": [
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    },
+                    {
+                      "key": "_id_id"
+                    }
+                  ],
+                  "key": "_id__system"
+                },
+                {
+                  "attributes": [
+                    {
+                      "items": {
+                        "reference": "http://fhirschema/Extension"
+                      },
+                      "key": "_id_extension"
+                    },
+                    {
+                      "key": "_id_id"
+                    }
+                  ],
+                  "key": "_id__userSelected"
+                },
+                {
+                  "key": "_id_code"
+                },
+                {
+                  "items": {
+                    "reference": "http://fhirschema/Extension"
+                  },
+                  "key": "_id_extension"
+                },
+                {
+                  "key": "_id_display"
+                },
+                {
+                  "key": "_id_userSelected"
+                },
+                {
+                  "key": "_id_version"
+                }
+              ]
+            },
+            "key": "_id_coding"
+          },
+          {
+            "key": "_id_text"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://fhirschema/Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__text"
+          },
+          {
+            "key": "_id_id"
+          },
+          {
+            "items": {
+              "reference": "http://fhirschema/Extension"
+            },
+            "key": "_id_extension"
+          }
+        ]
+      },
+      "key": "_id_type"
+    },
+    {
+      "attributes": [
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
+          },
+          "key": "_id_extension"
+        },
+        {
+          "key": "_id_start"
+        },
+        {
+          "attributes": [
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__start"
+        },
+        {
+          "key": "_id_end"
+        },
+        {
+          "attributes": [
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__end"
+        },
+        {
+          "key": "_id_id"
         }
-      }
+      ],
+      "key": "_id_period"
+    },
+    {
+      "attributes": [
+        {
+          "key": "_id_id"
+        },
+        {
+          "items": {
+            "reference": "http://fhirschema/Extension"
+          },
+          "key": "_id_extension"
+        },
+        {
+          "key": "_id_status"
+        },
+        {
+          "attributes": [
+            {
+              "items": {
+                "reference": "http://fhirschema/Extension"
+              },
+              "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__status"
+        },
+        {
+          "key": "_id_div"
+        }
+      ],
+      "key": "_id_text"
+    },
+    {
+      "key": "_id_language"
     }
-  },
-  "name": "EpisodeOfCare"
+  ]
 }

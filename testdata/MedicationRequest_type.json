@@ -1,587 +1,2333 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "MedicationRequest",
-  "types": {
-    "id_allowedBoolean_99652": "boolean",
-    "id_asNeededBoolean_99301": "boolean",
-    "id_authorString_99641": "string",
-    "id_authoredOn_99583": "string",
-    "id_code_98599": "string",
-    "id_code_98624": "string",
-    "id_code_98658": "string",
-    "id_code_98686": "string",
-    "id_code_98718": "string",
-    "id_code_98754": "string",
-    "id_code_98773": "string",
-    "id_code_98847": "string",
-    "id_code_98912": "string",
-    "id_code_98946": "string",
-    "id_code_98984": "string",
-    "id_code_98998": "string",
-    "id_code_99041": "string",
-    "id_code_99064": "string",
-    "id_code_99086": "string",
-    "id_code_99104": "string",
-    "id_code_99139": "string",
-    "id_code_99162": "string",
-    "id_code_99188": "string",
-    "id_code_99212": "string",
-    "id_code_99230": "string",
-    "id_code_99255": "string",
-    "id_code_99287": "string",
-    "id_code_99311": "string",
-    "id_code_99393": "string",
-    "id_code_99420": "string",
-    "id_code_99466": "string",
-    "id_code_99506": "string",
-    "id_code_99542": "string",
-    "id_code_99568": "string",
-    "id_code_99597": "string",
-    "id_code_99675": "string",
-    "id_code_99695": "string",
-    "id_code_99727": "string",
-    "id_code_99772": "string",
-    "id_code_99795": "string",
-    "id_code_99828": "string",
-    "id_code_99858": "string",
-    "id_code_99885": "string",
-    "id_countMax_99483": "number",
-    "id_count_99369": "number",
-    "id_dayOfWeek_99375": "string",
-    "id_display_98734": "string",
-    "id_display_98778": "string",
-    "id_display_98839": "string",
-    "id_display_98928": "string",
-    "id_display_98964": "string",
-    "id_display_99014": "string",
-    "id_display_99158": "string",
-    "id_display_99329": "string",
-    "id_display_99489": "string",
-    "id_display_99525": "string",
-    "id_display_99615": "string",
-    "id_display_99669": "string",
-    "id_display_99700": "string",
-    "id_display_99741": "string",
-    "id_display_99755": "string",
-    "id_display_99785": "string",
-    "id_display_99830": "string",
-    "id_display_99860": "string",
-    "id_display_99899": "string",
-    "id_doNotPerform_99591": "boolean",
-    "id_durationMax_99449": "number",
-    "id_duration_99438": "number",
-    "id_end_98642": "string",
-    "id_end_98808": "string",
-    "id_end_98869": "string",
-    "id_end_99358": "string",
-    "id_event_99520": "string",
-    "id_frequencyMax_99439": "number",
-    "id_frequency_99484": "number",
-    "id_id_98594": "string",
-    "id_id_98596": "string",
-    "id_id_98601": "string",
-    "id_id_98604": "string",
-    "id_id_98606": "string",
-    "id_id_98611": "string",
-    "id_id_98615": "string",
-    "id_id_98616": "string",
-    "id_id_98621": "string",
-    "id_id_98626": "string",
-    "id_id_98629": "string",
-    "id_id_98630": "string",
-    "id_id_98634": "string",
-    "id_id_98639": "string",
-    "id_id_98643": "string",
-    "id_id_98646": "string",
-    "id_id_98655": "string",
-    "id_id_98660": "string",
-    "id_id_98663": "string",
-    "id_id_98667": "string",
-    "id_id_98671": "string",
-    "id_id_98675": "string",
-    "id_id_98679": "string",
-    "id_id_98683": "string",
-    "id_id_98688": "string",
-    "id_id_98691": "string",
-    "id_id_98693": "string",
-    "id_id_98696": "string",
-    "id_id_98700": "string",
-    "id_id_98703": "string",
-    "id_id_98708": "string",
-    "id_id_98712": "string",
-    "id_id_98715": "string",
-    "id_id_98720": "string",
-    "id_id_98723": "string",
-    "id_id_98725": "string",
-    "id_id_98731": "string",
-    "id_id_98735": "string",
-    "id_id_98738": "string",
-    "id_id_98742": "string",
-    "id_id_98744": "string",
-    "id_id_98747": "string",
-    "id_id_98748": "string",
-    "id_id_98757": "string",
-    "id_id_98764": "string",
-    "id_id_98766": "string",
-    "id_id_98767": "string",
-    "id_id_98774": "string",
-    "id_id_98779": "string",
-    "id_id_98782": "string",
-    "id_id_98786": "string",
-    "id_id_98790": "string",
-    "id_id_98795": "string",
-    "id_id_98796": "string",
-    "id_id_98802": "string",
-    "id_id_98805": "string",
-    "id_id_98809": "string",
-    "id_id_98812": "string",
-    "id_id_98815": "string",
-    "id_id_98820": "string",
-    "id_id_98823": "string",
-    "id_id_98826": "string",
-    "id_id_98828": "string",
-    "id_id_98831": "string",
-    "id_id_98833": "string",
-    "id_id_98835": "string",
-    "id_id_98840": "string",
-    "id_id_98843": "string",
-    "id_id_98848": "string",
-    "id_id_98851": "string",
-    "id_id_98852": "string",
-    "id_id_98859": "string",
-    "id_id_98863": "string",
-    "id_id_98866": "string",
-    "id_id_98870": "string",
-    "id_id_98873": "string",
-    "id_id_98877": "string",
-    "id_id_98882": "string",
-    "id_id_98889": "string",
-    "id_id_98893": "string",
-    "id_id_98897": "string",
-    "id_id_98903": "string",
-    "id_id_98908": "string",
-    "id_id_98913": "string",
-    "id_id_98916": "string",
-    "id_id_98918": "string",
-    "id_id_98921": "string",
-    "id_id_98924": "string",
-    "id_id_98929": "string",
-    "id_id_98934": "string",
-    "id_id_98938": "string",
-    "id_id_98941": "string",
-    "id_id_98947": "string",
-    "id_id_98950": "string",
-    "id_id_98952": "string",
-    "id_id_98954": "string",
-    "id_id_98957": "string",
-    "id_id_98961": "string",
-    "id_id_98967": "string",
-    "id_id_98973": "string",
-    "id_id_98976": "string",
-    "id_id_98981": "string",
-    "id_id_98986": "string",
-    "id_id_98987": "string",
-    "id_id_98991": "string",
-    "id_id_98999": "string",
-    "id_id_99002": "string",
-    "id_id_99003": "string",
-    "id_id_99008": "string",
-    "id_id_99011": "string",
-    "id_id_99015": "string",
-    "id_id_99020": "string",
-    "id_id_99023": "string",
-    "id_id_99025": "string",
-    "id_id_99027": "string",
-    "id_id_99028": "string",
-    "id_id_99032": "string",
-    "id_id_99039": "string",
-    "id_id_99043": "string",
-    "id_id_99046": "string",
-    "id_id_99050": "string",
-    "id_id_99051": "string",
-    "id_id_99055": "string",
-    "id_id_99062": "string",
-    "id_id_99067": "string",
-    "id_id_99069": "string",
-    "id_id_99075": "string",
-    "id_id_99078": "string",
-    "id_id_99083": "string",
-    "id_id_99088": "string",
-    "id_id_99089": "string",
-    "id_id_99093": "string",
-    "id_id_99097": "string",
-    "id_id_99101": "string",
-    "id_id_99106": "string",
-    "id_id_99109": "string",
-    "id_id_99112": "string",
-    "id_id_99113": "string",
-    "id_id_99117": "string",
-    "id_id_99122": "string",
-    "id_id_99123": "string",
-    "id_id_99127": "string",
-    "id_id_99131": "string",
-    "id_id_99137": "string",
-    "id_id_99141": "string",
-    "id_id_99146": "string",
-    "id_id_99148": "string",
-    "id_id_99151": "string",
-    "id_id_99154": "string",
-    "id_id_99164": "string",
-    "id_id_99166": "string",
-    "id_id_99167": "string",
-    "id_id_99172": "string",
-    "id_id_99177": "string",
-    "id_id_99181": "string",
-    "id_id_99182": "string",
-    "id_id_99185": "string",
-    "id_id_99190": "string",
-    "id_id_99193": "string",
-    "id_id_99199": "string",
-    "id_id_99203": "string",
-    "id_id_99207": "string",
-    "id_id_99209": "string",
-    "id_id_99214": "string",
-    "id_id_99217": "string",
-    "id_id_99222": "string",
-    "id_id_99228": "string",
-    "id_id_99232": "string",
-    "id_id_99235": "string",
-    "id_id_99238": "string",
-    "id_id_99239": "string",
-    "id_id_99243": "string",
-    "id_id_99249": "string",
-    "id_id_99252": "string",
-    "id_id_99257": "string",
-    "id_id_99260": "string",
-    "id_id_99263": "string",
-    "id_id_99264": "string",
-    "id_id_99268": "string",
-    "id_id_99273": "string",
-    "id_id_99274": "string",
-    "id_id_99278": "string",
-    "id_id_99284": "string",
-    "id_id_99289": "string",
-    "id_id_99292": "string",
-    "id_id_99296": "string",
-    "id_id_99304": "string",
-    "id_id_99306": "string",
-    "id_id_99312": "string",
-    "id_id_99315": "string",
-    "id_id_99316": "string",
-    "id_id_99319": "string",
-    "id_id_99323": "string",
-    "id_id_99325": "string",
-    "id_id_99332": "string",
-    "id_id_99336": "string",
-    "id_id_99338": "string",
-    "id_id_99341": "string",
-    "id_id_99344": "string",
-    "id_id_99347": "string",
-    "id_id_99350": "string",
-    "id_id_99355": "string",
-    "id_id_99359": "string",
-    "id_id_99362": "string",
-    "id_id_99365": "string",
-    "id_id_99370": "string",
-    "id_id_99371": "string",
-    "id_id_99377": "string",
-    "id_id_99380": "string",
-    "id_id_99383": "string",
-    "id_id_99386": "string",
-    "id_id_99390": "string",
-    "id_id_99395": "string",
-    "id_id_99398": "string",
-    "id_id_99402": "string",
-    "id_id_99406": "string",
-    "id_id_99410": "string",
-    "id_id_99412": "string",
-    "id_id_99417": "string",
-    "id_id_99422": "string",
-    "id_id_99425": "string",
-    "id_id_99426": "string",
-    "id_id_99430": "string",
-    "id_id_99435": "string",
-    "id_id_99442": "string",
-    "id_id_99445": "string",
-    "id_id_99450": "string",
-    "id_id_99455": "string",
-    "id_id_99458": "string",
-    "id_id_99460": "string",
-    "id_id_99463": "string",
-    "id_id_99469": "string",
-    "id_id_99473": "string",
-    "id_id_99477": "string",
-    "id_id_99480": "string",
-    "id_id_99490": "string",
-    "id_id_99493": "string",
-    "id_id_99496": "string",
-    "id_id_99499": "string",
-    "id_id_99500": "string",
-    "id_id_99507": "string",
-    "id_id_99512": "string",
-    "id_id_99515": "string",
-    "id_id_99517": "string",
-    "id_id_99526": "string",
-    "id_id_99530": "string",
-    "id_id_99532": "string",
-    "id_id_99535": "string",
-    "id_id_99536": "string",
-    "id_id_99543": "string",
-    "id_id_99548": "string",
-    "id_id_99551": "string",
-    "id_id_99554": "string",
-    "id_id_99557": "string",
-    "id_id_99560": "string",
-    "id_id_99565": "string",
-    "id_id_99570": "string",
-    "id_id_99571": "string",
-    "id_id_99575": "string",
-    "id_id_99587": "string",
-    "id_id_99592": "string",
-    "id_id_99598": "string",
-    "id_id_99601": "string",
-    "id_id_99602": "string",
-    "id_id_99605": "string",
-    "id_id_99608": "string",
-    "id_id_99611": "string",
-    "id_id_99618": "string",
-    "id_id_99624": "string",
-    "id_id_99630": "string",
-    "id_id_99633": "string",
-    "id_id_99636": "string",
-    "id_id_99643": "string",
-    "id_id_99647": "string",
-    "id_id_99653": "string",
-    "id_id_99657": "string",
-    "id_id_99660": "string",
-    "id_id_99662": "string",
-    "id_id_99665": "string",
-    "id_id_99670": "string",
-    "id_id_99676": "string",
-    "id_id_99679": "string",
-    "id_id_99680": "string",
-    "id_id_99686": "string",
-    "id_id_99688": "string",
-    "id_id_99689": "string",
-    "id_id_99696": "string",
-    "id_id_99701": "string",
-    "id_id_99704": "string",
-    "id_id_99707": "string",
-    "id_id_99712": "string",
-    "id_id_99716": "string",
-    "id_id_99719": "string",
-    "id_id_99724": "string",
-    "id_id_99728": "string",
-    "id_id_99731": "string",
-    "id_id_99732": "string",
-    "id_id_99737": "string",
-    "id_id_99742": "string",
-    "id_id_99745": "string",
-    "id_id_99750": "string",
-    "id_id_99756": "string",
-    "id_id_99759": "string",
-    "id_id_99762": "string",
-    "id_id_99765": "string",
-    "id_id_99766": "string",
-    "id_id_99773": "string",
-    "id_id_99777": "string",
-    "id_id_99781": "string",
-    "id_id_99786": "string",
-    "id_id_99790": "string",
-    "id_id_99792": "string",
-    "id_id_99796": "string",
-    "id_id_99799": "string",
-    "id_id_99800": "string",
-    "id_id_99807": "string",
-    "id_id_99810": "string",
-    "id_id_99816": "string",
-    "id_id_99818": "string",
-    "id_id_99821": "string",
-    "id_id_99822": "string",
-    "id_id_99831": "string",
-    "id_id_99834": "string",
-    "id_id_99837": "string",
-    "id_id_99842": "string",
-    "id_id_99846": "string",
-    "id_id_99848": "string",
-    "id_id_99851": "string",
-    "id_id_99852": "string",
-    "id_id_99861": "string",
-    "id_id_99864": "string",
-    "id_id_99867": "string",
-    "id_id_99872": "string",
-    "id_id_99879": "string",
-    "id_id_99882": "string",
-    "id_id_99886": "string",
-    "id_id_99889": "string",
-    "id_id_99890": "string",
-    "id_id_99895": "string",
-    "id_id_99900": "string",
-    "id_id_99903": "string",
-    "id_id_99908": "string",
-    "id_implicitRules_99623": "string",
-    "id_instantiatesCanonical_99722": "string",
-    "id_instantiatesUri_99650": "string",
-    "id_intent_99590": "string",
-    "id_language_99877": "string",
-    "id_lastUpdated_99783": "string",
-    "id_numberOfRepeatsAllowed_98650": "number",
-    "id_offset_99376": "number",
-    "id_patientInstruction_98971": "string",
-    "id_periodMax_99440": "number",
-    "id_period_99374": "number",
-    "id_priority_99649": "string",
-    "id_profile_99813": "string",
-    "id_reportedBoolean_98887": "boolean",
-    "id_sequence_99523": "number",
-    "id_source_99780": "string",
-    "id_start_98648": "string",
-    "id_start_98814": "string",
-    "id_start_98875": "string",
-    "id_start_99364": "string",
-    "id_status_99585": "string",
-    "id_system_98600": "string",
-    "id_system_98633": "string",
-    "id_system_98670": "string",
-    "id_system_98687": "string",
-    "id_system_98719": "string",
-    "id_system_98733": "string",
-    "id_system_98777": "string",
-    "id_system_98800": "string",
-    "id_system_98838": "string",
-    "id_system_98881": "string",
-    "id_system_98927": "string",
-    "id_system_98963": "string",
-    "id_system_98990": "string",
-    "id_system_99013": "string",
-    "id_system_99031": "string",
-    "id_system_99054": "string",
-    "id_system_99092": "string",
-    "id_system_99116": "string",
-    "id_system_99126": "string",
-    "id_system_99157": "string",
-    "id_system_99176": "string",
-    "id_system_99202": "string",
-    "id_system_99242": "string",
-    "id_system_99267": "string",
-    "id_system_99277": "string",
-    "id_system_99328": "string",
-    "id_system_99405": "string",
-    "id_system_99429": "string",
-    "id_system_99454": "string",
-    "id_system_99488": "string",
-    "id_system_99524": "string",
-    "id_system_99574": "string",
-    "id_system_99614": "string",
-    "id_system_99668": "string",
-    "id_system_99699": "string",
-    "id_system_99740": "string",
-    "id_system_99754": "string",
-    "id_system_99784": "string",
-    "id_system_99829": "string",
-    "id_system_99859": "string",
-    "id_system_99898": "string",
-    "id_text_98756": "string",
-    "id_text_98789": "string",
-    "id_text_98858": "string",
-    "id_text_98933": "string",
-    "id_text_98966": "string",
-    "id_text_99019": "string",
-    "id_text_99171": "string",
-    "id_text_99331": "string",
-    "id_text_99337": "string",
-    "id_text_99511": "string",
-    "id_text_99547": "string",
-    "id_text_99617": "string",
-    "id_text_99631": "string",
-    "id_text_99656": "string",
-    "id_text_99711": "string",
-    "id_text_99749": "string",
-    "id_text_99841": "string",
-    "id_text_99871": "string",
-    "id_text_99878": "string",
-    "id_timeOfDay_99448": "string",
-    "id_time_99632": "string",
-    "id_unit_98610": "string",
-    "id_unit_98620": "string",
-    "id_unit_98654": "string",
-    "id_unit_98678": "string",
-    "id_unit_98707": "string",
-    "id_unit_98980": "string",
-    "id_unit_99037": "string",
-    "id_unit_99060": "string",
-    "id_unit_99082": "string",
-    "id_unit_99100": "string",
-    "id_unit_99135": "string",
-    "id_unit_99197": "string",
-    "id_unit_99208": "string",
-    "id_unit_99226": "string",
-    "id_unit_99251": "string",
-    "id_unit_99283": "string",
-    "id_unit_99389": "string",
-    "id_unit_99416": "string",
-    "id_unit_99468": "string",
-    "id_unit_99564": "string",
-    "id_userSelected_98751": "boolean",
-    "id_userSelected_98770": "boolean",
-    "id_userSelected_98855": "boolean",
-    "id_userSelected_98920": "boolean",
-    "id_userSelected_98943": "boolean",
-    "id_userSelected_99006": "boolean",
-    "id_userSelected_99159": "boolean",
-    "id_userSelected_99308": "boolean",
-    "id_userSelected_99503": "boolean",
-    "id_userSelected_99539": "boolean",
-    "id_userSelected_99594": "boolean",
-    "id_userSelected_99683": "boolean",
-    "id_userSelected_99692": "boolean",
-    "id_userSelected_99735": "boolean",
-    "id_userSelected_99769": "boolean",
-    "id_userSelected_99803": "boolean",
-    "id_userSelected_99825": "boolean",
-    "id_userSelected_99855": "boolean",
-    "id_userSelected_99893": "boolean",
-    "id_value_98605": "number",
-    "id_value_98625": "number",
-    "id_value_98659": "number",
-    "id_value_98682": "number",
-    "id_value_98702": "number",
-    "id_value_98763": "string",
-    "id_value_98832": "string",
-    "id_value_98972": "number",
-    "id_value_99042": "number",
-    "id_value_99065": "number",
-    "id_value_99074": "number",
-    "id_value_99105": "number",
-    "id_value_99140": "number",
-    "id_value_99189": "number",
-    "id_value_99213": "number",
-    "id_value_99231": "number",
-    "id_value_99256": "number",
-    "id_value_99288": "number",
-    "id_value_99394": "number",
-    "id_value_99421": "number",
-    "id_value_99472": "number",
-    "id_value_99569": "number",
-    "id_versionId_99814": "string",
-    "id_version_98753": "string",
-    "id_version_98772": "string",
-    "id_version_98846": "string",
-    "id_version_98911": "string",
-    "id_version_98945": "string",
-    "id_version_98997": "string",
-    "id_version_99161": "string",
-    "id_version_99310": "string",
-    "id_version_99505": "string",
-    "id_version_99541": "string",
-    "id_version_99596": "string",
-    "id_version_99674": "string",
-    "id_version_99694": "string",
-    "id_version_99726": "string",
-    "id_version_99771": "string",
-    "id_version_99805": "string",
-    "id_version_99827": "string",
-    "id_version_99857": "string",
-    "id_version_99884": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/MedicationRequest",
+  "selectors": [
+    {
+      "key": "category.text",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.text",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing._event.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low.system",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.text",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction._patientInstruction.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsPeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "groupIdentifier.value",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity.code",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity.value",
+      "type": "number"
+    },
+    {
+      "key": "statusReason.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration._code.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "groupIdentifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "intent",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "doNotPerform",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator.value",
+      "type": "number"
+    },
+    {
+      "key": "medicationCodeableConcept.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.text",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.dayOfWeek",
+      "type": "string"
+    },
+    {
+      "key": "category._text.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high._value.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high.system",
+      "type": "string"
+    },
+    {
+      "key": "statusReason._text.id",
+      "type": "string"
+    },
+    {
+      "key": "_status.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._durationMax.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration.code",
+      "type": "string"
+    },
+    {
+      "key": "substitution._allowedBoolean.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "_reportedBoolean.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high._system.id",
+      "type": "string"
+    },
+    {
+      "key": "authoredOn",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.text",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.validityPeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator.system",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._countMax.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.event",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity.value",
+      "type": "number"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.text",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededBoolean",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.durationMax",
+      "type": "number"
+    },
+    {
+      "key": "reasonCode.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high.id",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._frequency.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept._text.id",
+      "type": "string"
+    },
+    {
+      "key": "status",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration._system.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "note.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dispenseRequest.validityPeriod.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsPeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.text",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration.value",
+      "type": "number"
+    },
+    {
+      "key": "reasonCode.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration.code",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.numberOfRepeatsAllowed",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._timeOfDay.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "_intent.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high.unit",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._periodMax.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.timeOfDay",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low.code",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "note._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator.unit",
+      "type": "string"
+    },
+    {
+      "key": "category.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator.value",
+      "type": "number"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "priority",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction._asNeededBoolean.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration.unit",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime.system",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._offset.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedBoolean",
+      "type": "boolean"
+    },
+    {
+      "key": "note._time.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest._numberOfRepeatsAllowed.id",
+      "type": "string"
+    },
+    {
+      "key": "note.text",
+      "type": "string"
+    },
+    {
+      "key": "note._authorString.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._frequencyMax.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator._code.id",
+      "type": "string"
+    },
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.periodMax",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "instantiatesCanonical",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction._sequence.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "category.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "note.time",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low._code.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsPeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low.value",
+      "type": "number"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration.value",
+      "type": "number"
+    },
+    {
+      "key": "dispenseRequest.validityPeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration.system",
+      "type": "string"
+    },
+    {
+      "key": "instantiatesUri",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.count",
+      "type": "number"
+    },
+    {
+      "key": "groupIdentifier.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.method._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime._value.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.patientInstruction",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.frequencyMax",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator._system.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval._code.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator.code",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._count.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.text",
+      "type": "string"
+    },
+    {
+      "key": "_priority.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsPeriod._end.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._durationUnit.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration.system",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.high.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.frequency",
+      "type": "number"
+    },
+    {
+      "key": "statusReason.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "category.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._dayOfWeek.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "_instantiatesUri.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator.code",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "_doNotPerform.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval.unit",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._periodUnit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.method.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept._text.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.duration",
+      "type": "number"
+    },
+    {
+      "key": "groupIdentifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code._text.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.period",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "medicationCodeableConcept.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.countMax",
+      "type": "number"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval.code",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low.unit",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "performerType.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.reason.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route._text.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerAdministration.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.high.unit",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.site.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.text",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.high._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low.value",
+      "type": "number"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsRange.low._value.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "reportedBoolean",
+      "type": "boolean"
+    },
+    {
+      "key": "courseOfTherapyType.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator._system.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.denominator.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._period.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.asNeededCodeableConcept.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.system",
+      "type": "string"
+    },
+    {
+      "key": "_authoredOn.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerLifetime.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRatio.numerator._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsPeriod.end",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "performerType.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity._code.id",
+      "type": "string"
+    },
+    {
+      "key": "substitution.allowedCodeableConcept.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration.unit",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.validityPeriod.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.validityPeriod._start.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.low.unit",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateQuantity._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.boundsDuration._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseQuantity._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.quantity._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.route.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat.offset",
+      "type": "number"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.denominator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.rateRange.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._duration.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low.system",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.expectedSupplyDuration.unit",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.duration.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "reasonCode.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.additionalInstruction.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.maxDosePerPeriod.numerator._comparator.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.doseAndRate.doseRange.low.code",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.repeat._when.id",
+      "type": "string"
+    },
+    {
+      "key": "statusReason.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "medicationCodeableConcept._text.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "category.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "statusReason.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "_instantiatesCanonical.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.dispenseInterval._unit.id",
+      "type": "string"
+    },
+    {
+      "key": "dispenseRequest.initialFill.quantity.system",
+      "type": "string"
+    },
+    {
+      "key": "groupIdentifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "courseOfTherapyType.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.timing.code.id",
+      "type": "string"
+    },
+    {
+      "key": "dosageInstruction.sequence",
+      "type": "number"
+    },
+    {
+      "key": "substitution.id",
+      "type": "string"
+    },
+    {
+      "key": "note.authorString",
+      "type": "string"
+    }
+  ]
 }

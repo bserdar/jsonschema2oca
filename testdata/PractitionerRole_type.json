@@ -1,134 +1,521 @@
 {
-  "@context": "https://oca.tech/v1",
-  "base": "PractitionerRole",
-  "types": {
-    "id_active_114900": "boolean",
-    "id_allDay_114891": "boolean",
-    "id_availabilityExceptions_114870": "string",
-    "id_availableEndTime_114881": "string",
-    "id_availableStartTime_114876": "string",
-    "id_code_114850": "string",
-    "id_code_114970": "string",
-    "id_code_115034": "string",
-    "id_code_115082": "string",
-    "id_code_115089": "string",
-    "id_daysOfWeek_114890": "string",
-    "id_description_114912": "string",
-    "id_display_114840": "string",
-    "id_display_114984": "string",
-    "id_display_115039": "string",
-    "id_display_115065": "string",
-    "id_display_115105": "string",
-    "id_end_114826": "string",
-    "id_end_114920": "string",
-    "id_end_114935": "string",
-    "id_end_115008": "string",
-    "id_id_114827": "string",
-    "id_id_114830": "string",
-    "id_id_114833": "string",
-    "id_id_114837": "string",
-    "id_id_114841": "string",
-    "id_id_114844": "string",
-    "id_id_114847": "string",
-    "id_id_114851": "string",
-    "id_id_114854": "string",
-    "id_id_114856": "string",
-    "id_id_114863": "string",
-    "id_id_114867": "string",
-    "id_id_114878": "string",
-    "id_id_114882": "string",
-    "id_id_114885": "string",
-    "id_id_114888": "string",
-    "id_id_114893": "string",
-    "id_id_114897": "string",
-    "id_id_114901": "string",
-    "id_id_114906": "string",
-    "id_id_114909": "string",
-    "id_id_114913": "string",
-    "id_id_114917": "string",
-    "id_id_114921": "string",
-    "id_id_114924": "string",
-    "id_id_114929": "string",
-    "id_id_114932": "string",
-    "id_id_114936": "string",
-    "id_id_114939": "string",
-    "id_id_114943": "string",
-    "id_id_114949": "string",
-    "id_id_114953": "string",
-    "id_id_114957": "string",
-    "id_id_114963": "string",
-    "id_id_114967": "string",
-    "id_id_114971": "string",
-    "id_id_114974": "string",
-    "id_id_114975": "string",
-    "id_id_114980": "string",
-    "id_id_114985": "string",
-    "id_id_114988": "string",
-    "id_id_114994": "string",
-    "id_id_114996": "string",
-    "id_id_115000": "string",
-    "id_id_115005": "string",
-    "id_id_115009": "string",
-    "id_id_115012": "string",
-    "id_id_115015": "string",
-    "id_id_115019": "string",
-    "id_id_115022": "string",
-    "id_id_115025": "string",
-    "id_id_115027": "string",
-    "id_id_115028": "string",
-    "id_id_115035": "string",
-    "id_id_115041": "string",
-    "id_id_115043": "string",
-    "id_id_115046": "string",
-    "id_id_115053": "string",
-    "id_id_115056": "string",
-    "id_id_115057": "string",
-    "id_id_115061": "string",
-    "id_id_115066": "string",
-    "id_id_115069": "string",
-    "id_id_115072": "string",
-    "id_id_115075": "string",
-    "id_id_115076": "string",
-    "id_id_115083": "string",
-    "id_id_115090": "string",
-    "id_id_115093": "string",
-    "id_id_115094": "string",
-    "id_id_115098": "string",
-    "id_id_115101": "string",
-    "id_id_115106": "string",
-    "id_id_115110": "string",
-    "id_id_115115": "string",
-    "id_implicitRules_114904": "string",
-    "id_language_114896": "string",
-    "id_lastUpdated_115063": "string",
-    "id_profile_115113": "string",
-    "id_rank_114956": "number",
-    "id_source_115060": "string",
-    "id_start_114832": "string",
-    "id_start_114916": "string",
-    "id_start_114941": "string",
-    "id_start_115004": "string",
-    "id_system_114839": "string",
-    "id_system_114983": "string",
-    "id_system_115018": "string",
-    "id_system_115038": "string",
-    "id_system_115064": "string",
-    "id_system_115104": "string",
-    "id_text_114862": "string",
-    "id_text_114992": "string",
-    "id_text_115050": "string",
-    "id_userSelected_114858": "boolean",
-    "id_userSelected_114978": "boolean",
-    "id_userSelected_115031": "boolean",
-    "id_userSelected_115079": "boolean",
-    "id_userSelected_115097": "boolean",
-    "id_value_114952": "string",
-    "id_value_115054": "string",
-    "id_versionId_115114": "string",
-    "id_version_114860": "string",
-    "id_version_114969": "string",
-    "id_version_115033": "string",
-    "id_version_115081": "string",
-    "id_version_115088": "string"
-  }
+  "@context": [
+    "http://schemas.cloudprivacylabs.com/Overlay",
+    "http://schemas.cloudprivacylabs.com/TypeOverlay"
+  ],
+  "base": "http://fhirschema/PractitionerRole",
+  "selectors": [
+    {
+      "key": "text.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom._use.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.start",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "text._status.id",
+      "type": "string"
+    },
+    {
+      "key": "period.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.end",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable.during.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "key": "_language.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type._text.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "availableTime._daysOfWeek.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._version.id",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable.description",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty._text.id",
+      "type": "string"
+    },
+    {
+      "key": "code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "key": "availableTime._allDay.id",
+      "type": "string"
+    },
+    {
+      "key": "availableTime.daysOfWeek",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "code.text",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable.during.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.period.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom.rank",
+      "type": "number"
+    },
+    {
+      "key": "telecom._system.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "key": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "period.end",
+      "type": "string"
+    },
+    {
+      "key": "active",
+      "type": "boolean"
+    },
+    {
+      "key": "availableTime.allDay",
+      "type": "boolean"
+    },
+    {
+      "key": "notAvailable.during._end.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._version.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.profile",
+      "type": "string"
+    },
+    {
+      "key": "telecom.value",
+      "type": "string"
+    },
+    {
+      "key": "id",
+      "type": "string"
+    },
+    {
+      "key": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.versionId",
+      "type": "string"
+    },
+    {
+      "key": "availableTime.id",
+      "type": "string"
+    },
+    {
+      "key": "availableTime.availableEndTime",
+      "type": "string"
+    },
+    {
+      "key": "specialty.text",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._lastUpdated.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom._value.id",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable.during.end",
+      "type": "string"
+    },
+    {
+      "key": "availabilityExceptions",
+      "type": "string"
+    },
+    {
+      "key": "_active.id",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable._description.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "notAvailable.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._display.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "_availabilityExceptions.id",
+      "type": "string"
+    },
+    {
+      "key": "implicitRules",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "key": "period._start.id",
+      "type": "string"
+    },
+    {
+      "key": "availableTime._availableStartTime.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "meta.source",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "key": "code._text.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "notAvailable.during._start.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "key": "telecom._rank.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.display",
+      "type": "string"
+    },
+    {
+      "key": "language",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._system.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier._system.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding._code.id",
+      "type": "string"
+    },
+    {
+      "key": "period.start",
+      "type": "string"
+    },
+    {
+      "key": "telecom.id",
+      "type": "string"
+    },
+    {
+      "key": "code.coding.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "key": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "key": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "key": "identifier.system",
+      "type": "string"
+    },
+    {
+      "key": "specialty.coding.version",
+      "type": "string"
+    },
+    {
+      "key": "code.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag._userSelected.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "key": "identifier.value",
+      "type": "string"
+    },
+    {
+      "key": "telecom.period.id",
+      "type": "string"
+    },
+    {
+      "key": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "key": "availableTime.availableStartTime",
+      "type": "string"
+    },
+    {
+      "key": "availableTime._availableEndTime.id",
+      "type": "string"
+    }
+  ]
 }
