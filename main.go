@@ -10,6 +10,7 @@ import (
 )
 
 var idGen int
+var targetNS string
 
 type Index struct {
 	names []string
@@ -35,10 +36,11 @@ type Entity struct {
 }
 
 func main() {
-	if len(os.Args) != 2 {
-		fmt.Println("json2oca <entity mappings file>")
+	if len(os.Args) != 3 {
+		fmt.Println("json2oca <entity mappings file> <targetNS>")
 		return
 	}
+	targetNS = os.Args[2]
 	var objects map[string]Entity
 	data, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
@@ -63,8 +65,7 @@ func main() {
 		schemaNames[sch] = name
 	}
 	for name, sch := range schemas {
-		index := Index{}
-		s, err := decompose(name, sch, schemaNames, &index)
+		s, err := decompose(name, sch, schemaNames)
 		if err != nil {
 			panic(err)
 		}
@@ -73,19 +74,25 @@ func main() {
 
 		types := map[string]string{}
 		s.getTypes(types)
-		writeJSON(name, "type", map[string]interface{}{"@context": "https://oca.tech/v1",
-			"base":  name,
-			"types": types})
+		t := []map[string]interface{}{}
+		for k, v := range types {
+			t = append(t, map[string]interface{}{"key": k, "type": v})
+		}
+		writeJSON(name, "type", map[string]interface{}{"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay", "http://schemas.cloudprivacylabs.com/TypeOverlay"},
+			"base":      targetNS + name,
+			"selectors": t})
 
 		formats := map[string]string{}
+		t = []map[string]interface{}{}
+		for k, v := range formats {
+			t = append(t, map[string]interface{}{"key": k, "format": v})
+		}
 		s.getFormats(formats)
-		writeJSON(name, "format", map[string]interface{}{"@context": "https://oca.tech/v1",
-			"base":    name,
-			"formats": formats})
+		writeJSON(name, "format", map[string]interface{}{"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay", "http://schemas.cloudprivacylabs.com/FormatOverlay"},
+			"base":      targetNS + name,
+			"selectors": t})
 
-		writeJSON(name, "index", map[string]interface{}{"@context": "https://oca.tech/v1",
-			"base":  name,
-			"index": index.ids})
+		writeJSON(name, "index", s.toIndex())
 	}
 }
 
@@ -105,43 +112,90 @@ func (a ArraySchema) toBaseSchema() interface{} {
 	return a.Items.toBaseSchema()
 }
 
-func (a ArraySchema) getTypes(id string, types map[string]string) {
-	a.Items.getTypes(id, types)
+func (a ArraySchema) toIndex() interface{} {
+	x := a.Items.toIndex()
+	if x == nil {
+		return nil
+	}
+	return x
 }
 
-func (a ArraySchema) getFormats(id string, formats map[string]string) {
-	a.Items.getFormats(id, formats)
+func (a ArraySchema) getTypes(name string, types map[string]string) {
+	a.Items.getTypes(name, types)
+}
+
+func (a ArraySchema) getFormats(name string, formats map[string]string) {
+	a.Items.getFormats(name, formats)
 }
 
 type ObjectSchema struct {
 	Fields map[string]SchemaProperty
 }
 
-func (o *ObjectSchema) Set(key string, value SchemaProperty, indexes *Index) {
+func (o *ObjectSchema) Set(key string, value SchemaProperty) {
 	if o.Fields == nil {
 		o.Fields = make(map[string]SchemaProperty)
 	}
-	ID := indexes.add(key)
-	o.Fields[ID] = value
+	o.Fields[key] = value
 }
 
 func (o ObjectSchema) toBaseSchema() interface{} {
-	ret := map[string]interface{}{}
+	ret := []map[string]interface{}{}
 	for k, v := range o.Fields {
-		ret[k] = v.toBaseSchema()
+		m := map[string]interface{}{"key": "_id_" + k}
+		for x, y := range v.toBaseSchema() {
+			m[x] = y
+		}
+		ret = append(ret, m)
 	}
 	return ret
 }
 
-func (o ObjectSchema) getTypes(id string, types map[string]string) {
+func (o ObjectSchema) toIndex() interface{} {
+	var ret []map[string]interface{}
 	for k, v := range o.Fields {
-		v.getTypes(k, types)
+		if ret == nil {
+			ret = []map[string]interface{}{}
+		}
+		m := map[string]interface{}{"key": "_id_" + k, "name": k}
+
+		ix := v.toIndex()
+		if ix != nil {
+			for x, y := range ix {
+				if y != nil {
+					m[x] = y
+				}
+			}
+		}
+		ret = append(ret, m)
+	}
+	if ret == nil {
+		return nil
+	}
+	return ret
+}
+
+func (o ObjectSchema) getTypes(name string, types map[string]string) {
+	for k, v := range o.Fields {
+		var newName string
+		if len(name) == 0 {
+			newName = k
+		} else {
+			newName = name + "." + k
+		}
+		v.getTypes(newName, types)
 	}
 }
 
-func (o ObjectSchema) getFormats(id string, formats map[string]string) {
-	for _, v := range o.Fields {
-		v.getFormats(id, formats)
+func (o ObjectSchema) getFormats(name string, formats map[string]string) {
+	for k, v := range o.Fields {
+		var newName string
+		if len(name) == 0 {
+			newName = k
+		} else {
+			newName = name + "." + k
+		}
+		v.getFormats(newName, formats)
 	}
 }
 
@@ -154,15 +208,15 @@ type SchemaProperty struct {
 	Format    string
 }
 
-func (p SchemaProperty) toBaseSchema() interface{} {
+func (p SchemaProperty) toBaseSchema() map[string]interface{} {
 	if len(p.Reference) > 0 {
-		return map[string]interface{}{"reference": p.Reference}
+		return map[string]interface{}{"reference": targetNS + p.Reference}
 	}
 	if p.Object != nil {
-		return map[string]interface{}{"object": p.Object.toBaseSchema()}
+		return map[string]interface{}{"attributes": p.Object.toBaseSchema()}
 	}
 	if p.Array != nil {
-		return map[string]interface{}{"array": p.Array.toBaseSchema()}
+		return map[string]interface{}{"items": p.Array.toBaseSchema()}
 	}
 	if len(p.OneOf) != 0 {
 		arr := make([]interface{}, 0)
@@ -171,42 +225,76 @@ func (p SchemaProperty) toBaseSchema() interface{} {
 		}
 		return map[string]interface{}{"oneOf": arr}
 	}
-	return "value"
+	return map[string]interface{}{}
 }
 
-func (p SchemaProperty) getTypes(id string, types map[string]string) {
+func (p SchemaProperty) toIndex() map[string]interface{} {
+	if len(p.Reference) > 0 {
+		return nil
+	}
 	if p.Object != nil {
-		p.Object.getTypes(id, types)
+		x := p.Object.toIndex()
+		if x != nil {
+			return map[string]interface{}{"attributes": x}
+		}
+		return nil
+	}
+	if p.Array != nil {
+		x := p.Array.toIndex()
+		if x != nil {
+			return map[string]interface{}{"items": x}
+		}
+		return nil
+	}
+	if len(p.OneOf) != 0 {
+		arr := make([]interface{}, 0)
+		for _, c := range p.OneOf {
+			x := c.toIndex()
+			if x != nil {
+				arr = append(arr, c.toIndex())
+			}
+		}
+		if len(arr) == 0 {
+			return nil
+		}
+		return map[string]interface{}{"oneOf": arr}
+	}
+	return nil
+}
+
+func (p SchemaProperty) getTypes(name string, types map[string]string) {
+	if p.Object != nil {
+		p.Object.getTypes(name, types)
 		return
 	}
 	if p.Array != nil {
-		p.Array.getTypes(id, types)
+		p.Array.getTypes(name, types)
 	}
 	if p.OneOf != nil {
 		for _, x := range p.OneOf {
-			x.getTypes(id, types)
+			x.getTypes(name, types)
 		}
 	}
 	if len(p.Type) > 0 {
-		types[id] = p.Type
+		types[name] = p.Type
 	}
 }
 
-func (p SchemaProperty) getFormats(id string, formats map[string]string) {
+func (p SchemaProperty) getFormats(name string, formats map[string]string) {
 	if p.Object != nil {
-		p.Object.getFormats(id, formats)
+		p.Object.getFormats(name, formats)
 		return
 	}
 	if p.Array != nil {
-		p.Array.getFormats(id, formats)
+		p.Array.getFormats(name, formats)
 	}
 	if p.OneOf != nil {
 		for _, x := range p.OneOf {
-			x.getFormats(id, formats)
+			x.getFormats(name, formats)
 		}
 	}
 	if len(p.Format) > 0 {
-		formats[id] = p.Format
+		formats[name] = p.Format
 	}
 }
 
@@ -217,9 +305,18 @@ type Schema struct {
 
 func (s Schema) toBaseSchema() interface{} {
 	ret := map[string]interface{}{
-		"@context":   "https://oca.tech/v1",
-		"name":       s.Name,
+		"@context":   "http://schemas.cloudprivacylabs.com/BaseSchema",
+		"@id":        targetNS + s.Name,
 		"attributes": s.Attributes.toBaseSchema()}
+	return ret
+}
+
+func (s Schema) toIndex() interface{} {
+	ret := map[string]interface{}{
+		"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay",
+			"http://schemas.cloudprivacylabs.com/IndexOverlay"},
+		"base":       targetNS + s.Name,
+		"attributes": s.Attributes.toIndex()}
 	return ret
 }
 
@@ -235,13 +332,13 @@ func (s Schema) getFormats(formats map[string]string) {
 // patternProperties
 // additionalItems
 
-func decompose(objectName string, objectSchema *jsonschema.Schema, nameMap map[*jsonschema.Schema]string, indexes *Index) (Schema, error) {
+func decompose(objectName string, objectSchema *jsonschema.Schema, nameMap map[*jsonschema.Schema]string) (Schema, error) {
 	ret := Schema{}
 	ret.Name = objectName
 
 	s := SchemaProperty{}
 	loop := make([]*jsonschema.Schema, 0)
-	if err := decomposeSchema(&s, objectSchema, nameMap, indexes, loop); err != nil {
+	if err := decomposeSchema(&s, objectSchema, nameMap, loop); err != nil {
 		return ret, err
 	}
 	if s.Object == nil {
@@ -252,7 +349,7 @@ func decompose(objectName string, objectSchema *jsonschema.Schema, nameMap map[*
 	return ret, nil
 }
 
-func decomposeSchema(target *SchemaProperty, sch *jsonschema.Schema, nameMap map[*jsonschema.Schema]string, indexes *Index, loop []*jsonschema.Schema) error {
+func decomposeSchema(target *SchemaProperty, sch *jsonschema.Schema, nameMap map[*jsonschema.Schema]string, loop []*jsonschema.Schema) error {
 	for _, x := range loop {
 		if sch == x {
 			return fmt.Errorf("Loop: %+v\n +: %+v", loop, sch)
@@ -267,7 +364,7 @@ func decomposeSchema(target *SchemaProperty, sch *jsonschema.Schema, nameMap map
 			target.Reference = ref
 			return nil
 		}
-		return decomposeSchema(target, sch.Ref, nameMap, indexes, loop)
+		return decomposeSchema(target, sch.Ref, nameMap, loop)
 
 	case len(sch.AllOf) > 0:
 		panic("allOf not handled")
@@ -278,7 +375,7 @@ func decomposeSchema(target *SchemaProperty, sch *jsonschema.Schema, nameMap map
 	case len(sch.OneOf) > 0:
 		for _, x := range sch.OneOf {
 			prop := SchemaProperty{}
-			if err := decomposeSchema(&prop, x, nameMap, indexes, loop); err != nil {
+			if err := decomposeSchema(&prop, x, nameMap, loop); err != nil {
 				return err
 			}
 			target.OneOf = append(target.OneOf, prop)
@@ -288,16 +385,16 @@ func decomposeSchema(target *SchemaProperty, sch *jsonschema.Schema, nameMap map
 		target.Object = &ObjectSchema{}
 		for k, v := range sch.Properties {
 			val := SchemaProperty{}
-			if err := decomposeSchema(&val, v, nameMap, indexes, loop); err != nil {
+			if err := decomposeSchema(&val, v, nameMap, loop); err != nil {
 				return err
 			}
-			target.Object.Set(k, val, indexes)
+			target.Object.Set(k, val)
 		}
 		// TODO: patternProperties, etc
 	case sch.Items != nil:
 		target.Array = &ArraySchema{}
 		if itemSchema, ok := sch.Items.(*jsonschema.Schema); ok {
-			if err := decomposeSchema(&target.Array.Items, itemSchema, nameMap, indexes, loop); err != nil {
+			if err := decomposeSchema(&target.Array.Items, itemSchema, nameMap, loop); err != nil {
 				return err
 			}
 		} else {
