@@ -22,7 +22,9 @@ Use the go build system. Clone the repository and run:
 
 After building:
 
+```
   jsonschema2oca <entity mappings file> <target prefix>
+``` 
   
 The entity mappings file is a JSON file of the form:
 
