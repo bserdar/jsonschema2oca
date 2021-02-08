@@ -76,21 +76,21 @@ func main() {
 		s.getTypes(types)
 		t := []map[string]interface{}{}
 		for k, v := range types {
-			t = append(t, map[string]interface{}{"key": k, "type": v})
+			t = append(t, map[string]interface{}{"path": k, "type": v})
 		}
 		writeJSON(name, "type", map[string]interface{}{"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay", "http://schemas.cloudprivacylabs.com/TypeOverlay"},
-			"base":      targetNS + name,
-			"selectors": t})
+			"base":  targetNS + name,
+			"paths": t})
 
 		formats := map[string]string{}
 		t = []map[string]interface{}{}
 		for k, v := range formats {
-			t = append(t, map[string]interface{}{"key": k, "format": v})
+			t = append(t, map[string]interface{}{"path": k, "format": v})
 		}
 		s.getFormats(formats)
 		writeJSON(name, "format", map[string]interface{}{"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay", "http://schemas.cloudprivacylabs.com/FormatOverlay"},
-			"base":      targetNS + name,
-			"selectors": t})
+			"base":  targetNS + name,
+			"paths": t})
 
 		writeJSON(name, "index", s.toIndex())
 	}
@@ -157,7 +157,7 @@ func (o ObjectSchema) toIndex() interface{} {
 		if ret == nil {
 			ret = []map[string]interface{}{}
 		}
-		m := map[string]interface{}{"key": "_id_" + k, "name": k}
+		m := map[string]interface{}{"key": "_id_" + k, "attributeName": k}
 
 		ix := v.toIndex()
 		if ix != nil {
@@ -313,7 +313,9 @@ func (s Schema) toBaseSchema() interface{} {
 
 func (s Schema) toIndex() interface{} {
 	ret := map[string]interface{}{
-		"@context": []string{"http://schemas.cloudprivacylabs.com/Overlay",
+		"@context": []string{
+			"http://schemas.cloudprivacylabs.com/BaseSchema",
+			"http://schemas.cloudprivacylabs.com/Overlay",
 			"http://schemas.cloudprivacylabs.com/IndexOverlay"},
 		"base":       targetNS + s.Name,
 		"attributes": s.Attributes.toIndex()}
