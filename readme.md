@@ -22,7 +22,7 @@ Use the go build system. Clone the repository and run:
 
 After building:
 
-  jsonschema2oca <entity mappings file>
+  jsonschema2oca <entity mappings file> <target prefix>
   
 The entity mappings file is a JSON file of the form:
 
@@ -94,53 +94,6 @@ but will have a reference to A.
 
 ## OCA Compliance
 
-In order to map the structure of entities into OCA, I had to make
-several assumptions about the OCA base schema that are not available
-as of this writing:
+The generated OCA schemas are compliant to 
 
-  * Schema layout:
-```
-{
-  @context: https://oca.tech/v1
-  name: <base schema name>
-  attributes: {
-     <attribute definition>,
-     ...
-  }
-}
-```
-  * Simple attributes are defined as:
-```
-    "key": "value"
-```
-  * Nested objects are defined as:
-```
-    "key": {
-      "object" {
-         <attribute definition>...
-      }
-    }
-```
-  * Arrays are defined as:
-```
-    "key": {
-      "array": { <array item definition> }
-    }
-```
-    where array item definition can be a reference, object, array, or "value"
-
-  * References are defined as:
-```
-    "key": {
-       "reference": <schema name>
-    }
-```
-  * oneOf constructs are defined as:
-```
-   "key": {
-      "oneOf": [
-         <item definition>
-         ...
-      ]
-    }
-```
+https://github.com/bserdar/oca-spec/tree/format/RFCs/003-bserdar-schema-format
