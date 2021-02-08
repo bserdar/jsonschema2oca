@@ -3,30 +3,34 @@
     "http://schemas.cloudprivacylabs.com/Overlay",
     "http://schemas.cloudprivacylabs.com/TypeOverlay"
   ],
-  "base": "http://testCatalogEntry",
+  "base": "http://test#CatalogEntry",
   "paths": [
     {
-      "path": "meta.tag.version",
+      "path": "identifier.period.id",
       "type": "string"
     },
     {
-      "path": "meta.security._userSelected.id",
+      "path": "identifier.type._text.id",
       "type": "string"
     },
     {
-      "path": "type.id",
+      "path": "additionalIdentifier._use.id",
       "type": "string"
     },
     {
-      "path": "type.coding.system",
+      "path": "type.coding.version",
       "type": "string"
     },
     {
-      "path": "type.coding.id",
+      "path": "meta.versionId",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.id",
+      "path": "meta.tag.code",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier._system.id",
       "type": "string"
     },
     {
@@ -34,11 +38,35 @@
       "type": "string"
     },
     {
-      "path": "classification.coding.id",
+      "path": "classification.coding.version",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.type.id",
+      "path": "identifier.system",
+      "type": "string"
+    },
+    {
+      "path": "identifier._value.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier._use.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.value",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.period.end",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type._text.id",
       "type": "string"
     },
     {
@@ -46,19 +74,91 @@
       "type": "string"
     },
     {
-      "path": "type.coding._version.id",
+      "path": "additionalClassification.coding._code.id",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.type.coding.version",
+      "path": "lastUpdated",
       "type": "string"
     },
     {
-      "path": "additionalCharacteristic.coding._system.id",
+      "path": "additionalCharacteristic.id",
       "type": "string"
     },
     {
-      "path": "identifier.period._start.id",
+      "path": "id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag.version",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.text",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "type.coding.system",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding.id",
+      "type": "string"
+    },
+    {
+      "path": "validityPeriod.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.id",
+      "type": "string"
+    },
+    {
+      "path": "relatedEntry.id",
+      "type": "string"
+    },
+    {
+      "path": "type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security._code.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding._version.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.display",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.period._start.id",
       "type": "string"
     },
     {
@@ -66,7 +166,319 @@
       "type": "string"
     },
     {
+      "path": "_status.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.text",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "orderable",
+      "type": "boolean"
+    },
+    {
+      "path": "meta.source",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding._version.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "additionalCharacteristic.coding._code.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.text",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.system",
+      "type": "string"
+    },
+    {
+      "path": "meta.security._system.id",
+      "type": "string"
+    },
+    {
+      "path": "type.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "validityPeriod._end.id",
+      "type": "string"
+    },
+    {
+      "path": "text.id",
+      "type": "string"
+    },
+    {
+      "path": "text._status.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "meta.profile",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.system",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding.version",
+      "type": "string"
+    },
+    {
+      "path": "type.text",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding.display",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.display",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "path": "type.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "additionalClassification.coding.version",
+      "type": "string"
+    },
+    {
+      "path": "implicitRules",
+      "type": "string"
+    },
+    {
+      "path": "meta.lastUpdated",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier._value.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding._code.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.code",
+      "type": "string"
+    },
+    {
+      "path": "meta._versionId.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag.system",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding._display.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding.version",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.text",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding.system",
+      "type": "string"
+    },
+    {
+      "path": "type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding._display.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding._version.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding._code.id",
+      "type": "string"
+    },
+    {
+      "path": "classification.id",
+      "type": "string"
+    },
+    {
+      "path": "type._text.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "meta.tag.display",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding.system",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "path": "type.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag._system.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.period.end",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "identifier.id",
+      "type": "string"
+    },
+    {
+      "path": "validityPeriod._start.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.id",
+      "type": "string"
+    },
+    {
+      "path": "meta._source.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.period._end.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "_implicitRules.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.tag._display.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.period.start",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding._display.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalIdentifier.period.start",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "path": "_lastUpdated.id",
+      "type": "string"
+    },
+    {
       "path": "meta.security._display.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security._version.id",
+      "type": "string"
+    },
+    {
+      "path": "type.coding._version.id",
       "type": "string"
     },
     {
@@ -78,83 +490,23 @@
       "type": "string"
     },
     {
-      "path": "implicitRules",
+      "path": "type.coding._userSelected.id",
       "type": "string"
     },
     {
-      "path": "meta.tag.system",
+      "path": "additionalClassification.coding.userSelected",
+      "type": "boolean"
+    },
+    {
+      "path": "identifier.period._start.id",
       "type": "string"
     },
     {
-      "path": "additionalCharacteristic.coding._code.id",
+      "path": "meta.tag._code.id",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.period._end.id",
-      "type": "string"
-    },
-    {
-      "path": "validTo",
-      "type": "string"
-    },
-    {
-      "path": "meta._versionId.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.period.start",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier._use.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier._system.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding.version",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding._userSelected.id",
-      "type": "string"
-    },
-    {
-      "path": "language",
-      "type": "string"
-    },
-    {
-      "path": "meta.security.id",
-      "type": "string"
-    },
-    {
-      "path": "_status.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding.code",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.display",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding._display.id",
-      "type": "string"
-    },
-    {
-      "path": "relatedEntry.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding.display",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding._userSelected.id",
+      "path": "meta.tag._version.id",
       "type": "string"
     },
     {
@@ -162,295 +514,15 @@
       "type": "string"
     },
     {
-      "path": "type._text.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding._code.id",
-      "type": "string"
-    },
-    {
-      "path": "type.coding._userSelected.id",
-      "type": "string"
-    },
-    {
-      "path": "_implicitRules.id",
-      "type": "string"
-    },
-    {
-      "path": "classification._text.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.text",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding._system.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag.code",
-      "type": "string"
-    },
-    {
-      "path": "meta.security.display",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.period._end.id",
-      "type": "string"
-    },
-    {
-      "path": "_language.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding.system",
-      "type": "string"
-    },
-    {
-      "path": "classification.text",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding.display",
-      "type": "string"
-    },
-    {
-      "path": "identifier._system.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag._display.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag.display",
-      "type": "string"
-    },
-    {
-      "path": "type.coding._code.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding.code",
-      "type": "string"
-    },
-    {
-      "path": "identifier._value.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "meta.tag._system.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "validityPeriod.start",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding.code",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding._system.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding._version.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding._version.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.text",
-      "type": "string"
-    },
-    {
-      "path": "_validTo.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding.display",
-      "type": "string"
-    },
-    {
-      "path": "classification.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding.system",
-      "type": "string"
-    },
-    {
-      "path": "id",
-      "type": "string"
-    },
-    {
-      "path": "meta.id",
-      "type": "string"
-    },
-    {
-      "path": "type.coding._system.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.period._start.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.period.start",
-      "type": "string"
-    },
-    {
-      "path": "orderable",
-      "type": "boolean"
-    },
-    {
-      "path": "text._status.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding._userSelected.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "additionalClassification.coding._display.id",
-      "type": "string"
-    },
-    {
-      "path": "lastUpdated",
-      "type": "string"
-    },
-    {
-      "path": "identifier.system",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding._userSelected.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type._text.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag.id",
-      "type": "string"
-    },
-    {
-      "path": "meta._source.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.security.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "additionalClassification._text.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "type.coding.version",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.security._code.id",
-      "type": "string"
-    },
-    {
-      "path": "validityPeriod._end.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.text",
-      "type": "string"
-    },
-    {
-      "path": "validityPeriod._start.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding._userSelected.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.system",
-      "type": "string"
-    },
-    {
       "path": "additionalIdentifier.type.coding._display.id",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.type._text.id",
+      "path": "type.coding.display",
       "type": "string"
     },
     {
-      "path": "additionalClassification.coding._version.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.lastUpdated",
-      "type": "string"
-    },
-    {
-      "path": "_orderable.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.version",
-      "type": "string"
-    },
-    {
-      "path": "meta.security._system.id",
-      "type": "string"
-    },
-    {
-      "path": "type.text",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding._system.id",
+      "path": "_language.id",
       "type": "string"
     },
     {
@@ -462,15 +534,31 @@
       "type": "string"
     },
     {
-      "path": "meta.security.version",
+      "path": "_orderable.id",
       "type": "string"
     },
     {
-      "path": "type.coding.display",
+      "path": "classification._text.id",
       "type": "string"
     },
     {
-      "path": "additionalIdentifier.period.end",
+      "path": "classification.text",
+      "type": "string"
+    },
+    {
+      "path": "type.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding._version.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding._display.id",
       "type": "string"
     },
     {
@@ -478,147 +566,7 @@
       "type": "string"
     },
     {
-      "path": "additionalIdentifier._value.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.code",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding._system.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding._version.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.value",
-      "type": "string"
-    },
-    {
-      "path": "text.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag._version.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.profile",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding._display.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding.version",
-      "type": "string"
-    },
-    {
-      "path": "_lastUpdated.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding.display",
-      "type": "string"
-    },
-    {
-      "path": "meta.source",
-      "type": "string"
-    },
-    {
-      "path": "additionalCharacteristic.coding.version",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.value",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier._use.id",
-      "type": "string"
-    },
-    {
-      "path": "identifier.period.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.tag._code.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.versionId",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding._code.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalClassification.coding._code.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.security.system",
-      "type": "string"
-    },
-    {
-      "path": "meta.security._version.id",
-      "type": "string"
-    },
-    {
-      "path": "validityPeriod.id",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.coding.code",
-      "type": "string"
-    },
-    {
-      "path": "additionalIdentifier.type.text",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding.system",
-      "type": "string"
-    },
-    {
-      "path": "type.coding._display.id",
-      "type": "string"
-    },
-    {
-      "path": "type.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "additionalClassification.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "classification.coding._display.id",
-      "type": "string"
-    },
-    {
-      "path": "classification.coding.userSelected",
-      "type": "boolean"
-    },
-    {
-      "path": "identifier.period.end",
-      "type": "string"
-    },
-    {
-      "path": "identifier.type.coding._code.id",
-      "type": "string"
-    },
-    {
-      "path": "meta.security.code",
+      "path": "meta.security._userSelected.id",
       "type": "string"
     },
     {
@@ -626,11 +574,63 @@
       "type": "string"
     },
     {
-      "path": "additionalClassification.coding.id",
+      "path": "additionalCharacteristic.coding.id",
       "type": "string"
     },
     {
-      "path": "type.coding.code",
+      "path": "additionalClassification._text.id",
+      "type": "string"
+    },
+    {
+      "path": "meta.security.version",
+      "type": "string"
+    },
+    {
+      "path": "language",
+      "type": "string"
+    },
+    {
+      "path": "identifier.type.coding._userSelected.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier.value",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding.display",
+      "type": "string"
+    },
+    {
+      "path": "additionalClassification.coding._system.id",
+      "type": "string"
+    },
+    {
+      "path": "validTo",
+      "type": "string"
+    },
+    {
+      "path": "validityPeriod.start",
+      "type": "string"
+    },
+    {
+      "path": "classification.coding.code",
+      "type": "string"
+    },
+    {
+      "path": "type.coding.id",
+      "type": "string"
+    },
+    {
+      "path": "additionalCharacteristic.coding.display",
+      "type": "string"
+    },
+    {
+      "path": "_validTo.id",
+      "type": "string"
+    },
+    {
+      "path": "identifier._system.id",
       "type": "string"
     }
   ]
