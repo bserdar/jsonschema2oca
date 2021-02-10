@@ -11,6 +11,23 @@ layers. These layers are:
   * A format overlay that contains the JSON format directives for the
     fields.
     
+## OCA Info
+
+OCA is flat. It is primarily intended for data capture. However, OCA
+may have many use cases in data exchange/data processing use-cases where
+data is rarely flat. This RFC proposes changes to the OCA schema to
+support nested and array-like structures, that is, JSON:
+
+https://github.com/bserdar/oca-spec/tree/format/RFCs/003-bserdar-schema-format
+
+So if goes from this:
+
+![OCA](img/schema-base-and-overlays.png)
+
+To this:
+
+![OCA](img/schema-base-and-overlays-linked.png)
+    
 ## Building
 
 Use the go build system. Clone the repository and run:
