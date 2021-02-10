@@ -13,6 +13,10 @@ layers. These layers are:
     
 ## OCA Info
 
+> OCA is an architecture that presents a schema as a multi-dimensional object consisting of a stable schema base and interoperable overlays. 
+
+OCA information: https://wiki.trustoverip.org/display/HOME/Semantic+Domain+Group
+
 OCA is flat. It is primarily intended for data capture. However, OCA
 may have many use cases in data exchange/data processing use-cases where
 data is rarely flat. This RFC proposes changes to the OCA schema to
