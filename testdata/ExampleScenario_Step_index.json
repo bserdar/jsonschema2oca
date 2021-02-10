@@ -1,10 +1,122 @@
 {
   "@context": [
-    "http://schemas.cloudprivacylabs.com/BaseSchema",
+    "http://schemas.cloudprivacylabs.com/SchemaBase",
     "http://schemas.cloudprivacylabs.com/Overlay",
     "http://schemas.cloudprivacylabs.com/IndexOverlay"
   ],
   "attributes": [
+    {
+      "attributeName": "id",
+      "key": "_id_id"
+    },
+    {
+      "attributeName": "extension",
+      "key": "_id_extension"
+    },
+    {
+      "attributeName": "modifierExtension",
+      "key": "_id_modifierExtension"
+    },
+    {
+      "attributeName": "process",
+      "items": {
+        "attributes": [
+          {
+            "attributeName": "postConditions",
+            "key": "_id_postConditions"
+          },
+          {
+            "attributeName": "description",
+            "key": "_id_description"
+          },
+          {
+            "attributeName": "preConditions",
+            "key": "_id_preConditions"
+          },
+          {
+            "attributeName": "modifierExtension",
+            "key": "_id_modifierExtension"
+          },
+          {
+            "attributeName": "_title",
+            "attributes": [
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__title"
+          },
+          {
+            "attributeName": "title",
+            "key": "_id_title"
+          },
+          {
+            "attributeName": "extension",
+            "key": "_id_extension"
+          },
+          {
+            "attributeName": "_description",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__description"
+          },
+          {
+            "attributeName": "id",
+            "key": "_id_id"
+          },
+          {
+            "attributeName": "_preConditions",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__preConditions"
+          },
+          {
+            "attributeName": "_postConditions",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__postConditions"
+          },
+          {
+            "attributeName": "step",
+            "key": "_id_step"
+          }
+        ]
+      },
+      "key": "_id_process"
+    },
+    {
+      "attributeName": "pause",
+      "key": "_id_pause"
+    },
     {
       "attributeName": "_pause",
       "attributes": [
@@ -23,8 +135,62 @@
       "attributeName": "operation",
       "attributes": [
         {
+          "attributeName": "_receiver",
+          "attributes": [
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            },
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__receiver"
+        },
+        {
+          "attributeName": "description",
+          "key": "_id_description"
+        },
+        {
+          "attributeName": "_initiatorActive",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__initiatorActive"
+        },
+        {
+          "attributeName": "_name",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__name"
+        },
+        {
           "attributeName": "extension",
           "key": "_id_extension"
+        },
+        {
+          "attributeName": "name",
+          "key": "_id_name"
+        },
+        {
+          "attributeName": "number",
+          "key": "_id_number"
         },
         {
           "attributeName": "_number",
@@ -41,48 +207,94 @@
           "key": "_id__number"
         },
         {
-          "attributeName": "initiator",
-          "key": "_id_initiator"
-        },
-        {
-          "attributeName": "_initiator",
-          "attributes": [
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            },
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            }
-          ],
-          "key": "_id__initiator"
-        },
-        {
           "attributeName": "_description",
           "attributes": [
             {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            },
-            {
               "attributeName": "id",
               "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
             }
           ],
           "key": "_id__description"
         },
         {
-          "attributeName": "number",
-          "key": "_id_number"
+          "attributeName": "_receiverActive",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__receiverActive"
         },
         {
-          "attributeName": "name",
-          "key": "_id_name"
+          "attributeName": "initiatorActive",
+          "key": "_id_initiatorActive"
         },
         {
-          "attributeName": "description",
-          "key": "_id_description"
+          "attributeName": "type",
+          "key": "_id_type"
+        },
+        {
+          "attributeName": "request",
+          "attributes": [
+            {
+              "attributeName": "modifierExtension",
+              "key": "_id_modifierExtension"
+            },
+            {
+              "attributeName": "resourceId",
+              "key": "_id_resourceId"
+            },
+            {
+              "attributeName": "_resourceId",
+              "attributes": [
+                {
+                  "attributeName": "id",
+                  "key": "_id_id"
+                },
+                {
+                  "attributeName": "extension",
+                  "key": "_id_extension"
+                }
+              ],
+              "key": "_id__resourceId"
+            },
+            {
+              "attributeName": "versionId",
+              "key": "_id_versionId"
+            },
+            {
+              "attributeName": "_versionId",
+              "attributes": [
+                {
+                  "attributeName": "extension",
+                  "key": "_id_extension"
+                },
+                {
+                  "attributeName": "id",
+                  "key": "_id_id"
+                }
+              ],
+              "key": "_id__versionId"
+            },
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id_request"
         },
         {
           "attributeName": "response",
@@ -109,12 +321,12 @@
               "attributeName": "_versionId",
               "attributes": [
                 {
-                  "attributeName": "extension",
-                  "key": "_id_extension"
-                },
-                {
                   "attributeName": "id",
                   "key": "_id_id"
+                },
+                {
+                  "attributeName": "extension",
+                  "key": "_id_extension"
                 }
               ],
               "key": "_id__versionId"
@@ -139,16 +351,8 @@
           "key": "_id_response"
         },
         {
-          "attributeName": "modifierExtension",
-          "key": "_id_modifierExtension"
-        },
-        {
-          "attributeName": "receiver",
-          "key": "_id_receiver"
-        },
-        {
-          "attributeName": "id",
-          "key": "_id_id"
+          "attributeName": "initiator",
+          "key": "_id_initiator"
         },
         {
           "attributeName": "_type",
@@ -169,7 +373,15 @@
           "key": "_id_receiverActive"
         },
         {
-          "attributeName": "_receiverActive",
+          "attributeName": "id",
+          "key": "_id_id"
+        },
+        {
+          "attributeName": "modifierExtension",
+          "key": "_id_modifierExtension"
+        },
+        {
+          "attributeName": "_initiator",
           "attributes": [
             {
               "attributeName": "id",
@@ -180,111 +392,11 @@
               "key": "_id_extension"
             }
           ],
-          "key": "_id__receiverActive"
+          "key": "_id__initiator"
         },
         {
-          "attributeName": "_name",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            }
-          ],
-          "key": "_id__name"
-        },
-        {
-          "attributeName": "type",
-          "key": "_id_type"
-        },
-        {
-          "attributeName": "_receiver",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            }
-          ],
-          "key": "_id__receiver"
-        },
-        {
-          "attributeName": "initiatorActive",
-          "key": "_id_initiatorActive"
-        },
-        {
-          "attributeName": "_initiatorActive",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            }
-          ],
-          "key": "_id__initiatorActive"
-        },
-        {
-          "attributeName": "request",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            },
-            {
-              "attributeName": "modifierExtension",
-              "key": "_id_modifierExtension"
-            },
-            {
-              "attributeName": "resourceId",
-              "key": "_id_resourceId"
-            },
-            {
-              "attributeName": "_resourceId",
-              "attributes": [
-                {
-                  "attributeName": "id",
-                  "key": "_id_id"
-                },
-                {
-                  "attributeName": "extension",
-                  "key": "_id_extension"
-                }
-              ],
-              "key": "_id__resourceId"
-            },
-            {
-              "attributeName": "versionId",
-              "key": "_id_versionId"
-            },
-            {
-              "attributeName": "_versionId",
-              "attributes": [
-                {
-                  "attributeName": "id",
-                  "key": "_id_id"
-                },
-                {
-                  "attributeName": "extension",
-                  "key": "_id_extension"
-                }
-              ],
-              "key": "_id__versionId"
-            }
-          ],
-          "key": "_id_request"
+          "attributeName": "receiver",
+          "key": "_id_receiver"
         }
       ],
       "key": "_id_operation"
@@ -294,20 +406,6 @@
       "items": {
         "attributes": [
           {
-            "attributeName": "_title",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__title"
-          },
-          {
             "attributeName": "description",
             "key": "_id_description"
           },
@@ -344,122 +442,24 @@
           {
             "attributeName": "title",
             "key": "_id_title"
+          },
+          {
+            "attributeName": "_title",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__title"
           }
         ]
       },
       "key": "_id_alternative"
-    },
-    {
-      "attributeName": "id",
-      "key": "_id_id"
-    },
-    {
-      "attributeName": "extension",
-      "key": "_id_extension"
-    },
-    {
-      "attributeName": "modifierExtension",
-      "key": "_id_modifierExtension"
-    },
-    {
-      "attributeName": "process",
-      "items": {
-        "attributes": [
-          {
-            "attributeName": "_postConditions",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__postConditions"
-          },
-          {
-            "attributeName": "_title",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__title"
-          },
-          {
-            "attributeName": "title",
-            "key": "_id_title"
-          },
-          {
-            "attributeName": "step",
-            "key": "_id_step"
-          },
-          {
-            "attributeName": "id",
-            "key": "_id_id"
-          },
-          {
-            "attributeName": "_preConditions",
-            "attributes": [
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              }
-            ],
-            "key": "_id__preConditions"
-          },
-          {
-            "attributeName": "description",
-            "key": "_id_description"
-          },
-          {
-            "attributeName": "postConditions",
-            "key": "_id_postConditions"
-          },
-          {
-            "attributeName": "extension",
-            "key": "_id_extension"
-          },
-          {
-            "attributeName": "preConditions",
-            "key": "_id_preConditions"
-          },
-          {
-            "attributeName": "modifierExtension",
-            "key": "_id_modifierExtension"
-          },
-          {
-            "attributeName": "_description",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__description"
-          }
-        ]
-      },
-      "key": "_id_process"
-    },
-    {
-      "attributeName": "pause",
-      "key": "_id_pause"
     }
   ],
   "base": "http://test#ExampleScenario_Step"

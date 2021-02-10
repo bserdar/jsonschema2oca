@@ -1,5 +1,5 @@
 {
-  "@context": "http://schemas.cloudprivacylabs.com/BaseSchema",
+  "@context": "http://schemas.cloudprivacylabs.com/SchemaBase",
   "@id": "http://test#OperationDefinition_Parameter",
   "attributes": [
     {
@@ -14,23 +14,7 @@
           "key": "_id_extension"
         }
       ],
-      "key": "_id__documentation"
-    },
-    {
-      "key": "_id_name"
-    },
-    {
-      "items": {
-        "reference": "http://test#OperationDefinition_Parameter"
-      },
-      "key": "_id_part"
-    },
-    {
-      "items": {},
-      "key": "_id_targetProfile"
-    },
-    {
-      "key": "_id_min"
+      "key": "_id__min"
     },
     {
       "attributes": [
@@ -44,7 +28,31 @@
           "key": "_id_extension"
         }
       ],
-      "key": "_id__searchType"
+      "key": "_id__max"
+    },
+    {
+      "key": "_id_use"
+    },
+    {
+      "key": "_id_max"
+    },
+    {
+      "attributes": [
+        {
+          "key": "_id_id"
+        },
+        {
+          "items": {
+            "reference": "http://test#Extension"
+          },
+          "key": "_id_extension"
+        }
+      ],
+      "key": "_id__name"
+    },
+    {
+      "items": {},
+      "key": "_id_targetProfile"
     },
     {
       "attributes": [
@@ -61,10 +69,50 @@
       "key": "_id__use"
     },
     {
-      "key": "_id_use"
+      "items": {
+        "reference": "http://test#OperationDefinition_Parameter"
+      },
+      "key": "_id_part"
     },
     {
-      "key": "_id_id"
+      "attributes": [
+        {
+          "key": "_id_id"
+        },
+        {
+          "items": {
+            "reference": "http://test#Extension"
+          },
+          "key": "_id_extension"
+        }
+      ],
+      "key": "_id__searchType"
+    },
+    {
+      "key": "_id_searchType"
+    },
+    {
+      "key": "_id_documentation"
+    },
+    {
+      "items": {
+        "reference": "http://test#Extension"
+      },
+      "key": "_id_extension"
+    },
+    {
+      "attributes": [
+        {
+          "key": "_id_id"
+        },
+        {
+          "items": {
+            "reference": "http://test#Extension"
+          },
+          "key": "_id_extension"
+        }
+      ],
+      "key": "_id__type"
     },
     {
       "items": {
@@ -73,85 +121,23 @@
       "key": "_id_modifierExtension"
     },
     {
-      "key": "_id_searchType"
+      "key": "_id_id"
     },
     {
-      "key": "_id_max"
-    },
-    {
-      "items": {
-        "attributes": [
-          {
-            "key": "_id_id"
-          },
-          {
-            "items": {
-              "reference": "http://test#Extension"
-            },
-            "key": "_id_extension"
-          },
-          {
-            "items": {
-              "reference": "http://test#Extension"
-            },
-            "key": "_id_modifierExtension"
-          },
-          {
-            "key": "_id_source"
-          },
-          {
-            "attributes": [
-              {
-                "items": {
-                  "reference": "http://test#Extension"
-                },
-                "key": "_id_extension"
-              },
-              {
-                "key": "_id_id"
-              }
-            ],
-            "key": "_id__source"
-          },
-          {
-            "key": "_id_sourceId"
-          },
-          {
-            "attributes": [
-              {
-                "key": "_id_id"
-              },
-              {
-                "items": {
-                  "reference": "http://test#Extension"
-                },
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__sourceId"
-          }
-        ]
-      },
-      "key": "_id_referencedFrom"
-    },
-    {
-      "key": "_id_type"
-    },
-    {
-      "key": "_id_documentation"
+      "key": "_id_min"
     },
     {
       "attributes": [
         {
           "attributes": [
             {
-              "key": "_id_id"
-            },
-            {
               "items": {
                 "reference": "http://test#Extension"
               },
               "key": "_id_extension"
+            },
+            {
+              "key": "_id_id"
             }
           ],
           "key": "_id__strength"
@@ -181,38 +167,66 @@
       "key": "_id_binding"
     },
     {
-      "attributes": [
-        {
-          "key": "_id_id"
-        },
-        {
-          "items": {
-            "reference": "http://test#Extension"
-          },
-          "key": "_id_extension"
-        }
-      ],
-      "key": "_id__max"
-    },
-    {
-      "attributes": [
-        {
-          "key": "_id_id"
-        },
-        {
-          "items": {
-            "reference": "http://test#Extension"
-          },
-          "key": "_id_extension"
-        }
-      ],
-      "key": "_id__min"
+      "key": "_id_type"
     },
     {
       "items": {
-        "reference": "http://test#Extension"
+        "attributes": [
+          {
+            "key": "_id_id"
+          },
+          {
+            "items": {
+              "reference": "http://test#Extension"
+            },
+            "key": "_id_extension"
+          },
+          {
+            "items": {
+              "reference": "http://test#Extension"
+            },
+            "key": "_id_modifierExtension"
+          },
+          {
+            "key": "_id_source"
+          },
+          {
+            "attributes": [
+              {
+                "key": "_id_id"
+              },
+              {
+                "items": {
+                  "reference": "http://test#Extension"
+                },
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__source"
+          },
+          {
+            "key": "_id_sourceId"
+          },
+          {
+            "attributes": [
+              {
+                "items": {
+                  "reference": "http://test#Extension"
+                },
+                "key": "_id_extension"
+              },
+              {
+                "key": "_id_id"
+              }
+            ],
+            "key": "_id__sourceId"
+          }
+        ]
       },
-      "key": "_id_extension"
+      "key": "_id_referencedFrom"
+    },
+    {
+      "key": "_id_name"
     },
     {
       "attributes": [
@@ -226,21 +240,7 @@
           "key": "_id_extension"
         }
       ],
-      "key": "_id__type"
-    },
-    {
-      "attributes": [
-        {
-          "key": "_id_id"
-        },
-        {
-          "items": {
-            "reference": "http://test#Extension"
-          },
-          "key": "_id_extension"
-        }
-      ],
-      "key": "_id__name"
+      "key": "_id__documentation"
     }
   ]
 }

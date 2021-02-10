@@ -3,12 +3,11 @@
 This tool compiles a JSON schema and decomposes it to OCA-compliant
 layers. These layers are:
 
-  * Base schema, containing normalized field names and object
+  * Schema base, containing normalized field names and object
     structure,
-  * An index overlay that assigns names to fields defined in the base
-    schema,
-  * A type overlay that assigns JSON types to the fields of the based
-    schema,
+  * An index overlay that assigns names to fields defined in the schema base,
+  * A type overlay that assigns JSON types to the fields of the schema
+    base,
   * A format overlay that contains the JSON format directives for the
     fields.
     

@@ -1,12 +1,12 @@
 {
   "@context": [
-    "http://schemas.cloudprivacylabs.com/BaseSchema",
+    "http://schemas.cloudprivacylabs.com/SchemaBase",
     "http://schemas.cloudprivacylabs.com/Overlay",
     "http://schemas.cloudprivacylabs.com/IndexOverlay"
   ],
   "attributes": [
     {
-      "attributeName": "_created",
+      "attributeName": "_servicedDate",
       "attributes": [
         {
           "attributeName": "id",
@@ -17,39 +17,351 @@
           "key": "_id_extension"
         }
       ],
-      "key": "_id__created"
+      "key": "_id__servicedDate"
     },
     {
       "attributeName": "created",
       "key": "_id_created"
     },
     {
-      "attributeName": "preAuthRef",
-      "key": "_id_preAuthRef"
-    },
-    {
-      "attributeName": "purpose",
-      "key": "_id_purpose"
-    },
-    {
-      "attributeName": "_purpose",
-      "items": {
-        "attributes": [
-          {
-            "attributeName": "id",
-            "key": "_id_id"
+      "attributeName": "meta",
+      "attributes": [
+        {
+          "attributeName": "versionId",
+          "key": "_id_versionId"
+        },
+        {
+          "attributeName": "security",
+          "items": {
+            "attributes": [
+              {
+                "attributeName": "version",
+                "key": "_id_version"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              },
+              {
+                "attributeName": "code",
+                "key": "_id_code"
+              },
+              {
+                "attributeName": "display",
+                "key": "_id_display"
+              },
+              {
+                "attributeName": "system",
+                "key": "_id_system"
+              },
+              {
+                "attributeName": "_system",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__system"
+              },
+              {
+                "attributeName": "_version",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__version"
+              },
+              {
+                "attributeName": "_code",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__code"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "_userSelected",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__userSelected"
+              },
+              {
+                "attributeName": "userSelected",
+                "key": "_id_userSelected"
+              },
+              {
+                "attributeName": "_display",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__display"
+              }
+            ]
           },
-          {
-            "attributeName": "extension",
-            "key": "_id_extension"
-          }
-        ]
-      },
-      "key": "_id__purpose"
+          "key": "_id_security"
+        },
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
+        },
+        {
+          "attributeName": "_versionId",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__versionId"
+        },
+        {
+          "attributeName": "profile",
+          "key": "_id_profile"
+        },
+        {
+          "attributeName": "_lastUpdated",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__lastUpdated"
+        },
+        {
+          "attributeName": "source",
+          "key": "_id_source"
+        },
+        {
+          "attributeName": "id",
+          "key": "_id_id"
+        },
+        {
+          "attributeName": "lastUpdated",
+          "key": "_id_lastUpdated"
+        },
+        {
+          "attributeName": "tag",
+          "items": {
+            "attributes": [
+              {
+                "attributeName": "system",
+                "key": "_id_system"
+              },
+              {
+                "attributeName": "userSelected",
+                "key": "_id_userSelected"
+              },
+              {
+                "attributeName": "_system",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__system"
+              },
+              {
+                "attributeName": "_code",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__code"
+              },
+              {
+                "attributeName": "version",
+                "key": "_id_version"
+              },
+              {
+                "attributeName": "_userSelected",
+                "attributes": [
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  },
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__userSelected"
+              },
+              {
+                "attributeName": "code",
+                "key": "_id_code"
+              },
+              {
+                "attributeName": "display",
+                "key": "_id_display"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "_display",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__display"
+              },
+              {
+                "attributeName": "_version",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__version"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ]
+          },
+          "key": "_id_tag"
+        },
+        {
+          "attributeName": "_source",
+          "attributes": [
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            },
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            }
+          ],
+          "key": "_id__source"
+        }
+      ],
+      "key": "_id_meta"
     },
     {
-      "attributeName": "implicitRules",
-      "key": "_id_implicitRules"
+      "attributeName": "servicedDate",
+      "key": "_id_servicedDate"
+    },
+    {
+      "attributeName": "language",
+      "key": "_id_language"
+    },
+    {
+      "attributeName": "contained",
+      "key": "_id_contained"
+    },
+    {
+      "attributeName": "text",
+      "attributes": [
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
+        },
+        {
+          "attributeName": "status",
+          "key": "_id_status"
+        },
+        {
+          "attributeName": "_status",
+          "attributes": [
+            {
+              "attributeName": "id",
+              "key": "_id_id"
+            },
+            {
+              "attributeName": "extension",
+              "key": "_id_extension"
+            }
+          ],
+          "key": "_id__status"
+        },
+        {
+          "attributeName": "div",
+          "key": "_id_div"
+        },
+        {
+          "attributeName": "id",
+          "key": "_id_id"
+        }
+      ],
+      "key": "_id_text"
+    },
+    {
+      "attributeName": "request",
+      "key": "_id_request"
+    },
+    {
+      "attributeName": "status",
+      "key": "_id_status"
     },
     {
       "attributeName": "_preAuthRef",
@@ -66,7 +378,15 @@
       "key": "_id__preAuthRef"
     },
     {
-      "attributeName": "_status",
+      "attributeName": "id",
+      "key": "_id_id"
+    },
+    {
+      "attributeName": "extension",
+      "key": "_id_extension"
+    },
+    {
+      "attributeName": "_language",
       "attributes": [
         {
           "attributeName": "id",
@@ -77,269 +397,57 @@
           "key": "_id_extension"
         }
       ],
+      "key": "_id__language"
+    },
+    {
+      "attributeName": "_status",
+      "attributes": [
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
+        },
+        {
+          "attributeName": "id",
+          "key": "_id_id"
+        }
+      ],
       "key": "_id__status"
     },
     {
-      "attributeName": "identifier",
-      "items": {
-        "attributes": [
-          {
-            "attributeName": "value",
-            "key": "_id_value"
-          },
-          {
-            "attributeName": "system",
-            "key": "_id_system"
-          },
-          {
-            "attributeName": "type",
-            "attributes": [
-              {
-                "attributeName": "coding",
-                "items": {
-                  "attributes": [
-                    {
-                      "attributeName": "userSelected",
-                      "key": "_id_userSelected"
-                    },
-                    {
-                      "attributeName": "_userSelected",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__userSelected"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "system",
-                      "key": "_id_system"
-                    },
-                    {
-                      "attributeName": "_system",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__system"
-                    },
-                    {
-                      "attributeName": "_code",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__code"
-                    },
-                    {
-                      "attributeName": "_display",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__display"
-                    },
-                    {
-                      "attributeName": "version",
-                      "key": "_id_version"
-                    },
-                    {
-                      "attributeName": "code",
-                      "key": "_id_code"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    },
-                    {
-                      "attributeName": "_version",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__version"
-                    },
-                    {
-                      "attributeName": "display",
-                      "key": "_id_display"
-                    }
-                  ]
-                },
-                "key": "_id_coding"
-              },
-              {
-                "attributeName": "text",
-                "key": "_id_text"
-              },
-              {
-                "attributeName": "_text",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__text"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id_type"
-          },
-          {
-            "attributeName": "_use",
-            "attributes": [
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              }
-            ],
-            "key": "_id__use"
-          },
-          {
-            "attributeName": "_system",
-            "attributes": [
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              }
-            ],
-            "key": "_id__system"
-          },
-          {
-            "attributeName": "use",
-            "key": "_id_use"
-          },
-          {
-            "attributeName": "_value",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              }
-            ],
-            "key": "_id__value"
-          },
-          {
-            "attributeName": "id",
-            "key": "_id_id"
-          },
-          {
-            "attributeName": "assigner",
-            "key": "_id_assigner"
-          },
-          {
-            "attributeName": "extension",
-            "key": "_id_extension"
-          },
-          {
-            "attributeName": "period",
-            "attributes": [
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "start",
-                "key": "_id_start"
-              },
-              {
-                "attributeName": "_start",
-                "attributes": [
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  },
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  }
-                ],
-                "key": "_id__start"
-              },
-              {
-                "attributeName": "end",
-                "key": "_id_end"
-              },
-              {
-                "attributeName": "_end",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__end"
-              }
-            ],
-            "key": "_id_period"
-          }
-        ]
-      },
-      "key": "_id_identifier"
+      "attributeName": "_outcome",
+      "attributes": [
+        {
+          "attributeName": "id",
+          "key": "_id_id"
+        },
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
+        }
+      ],
+      "key": "_id__outcome"
+    },
+    {
+      "attributeName": "_disposition",
+      "attributes": [
+        {
+          "attributeName": "id",
+          "key": "_id_id"
+        },
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
+        }
+      ],
+      "key": "_id__disposition"
+    },
+    {
+      "attributeName": "patient",
+      "key": "_id_patient"
+    },
+    {
+      "attributeName": "requestor",
+      "key": "_id_requestor"
     },
     {
       "attributeName": "insurance",
@@ -367,19 +475,15 @@
             "attributeName": "benefitPeriod",
             "attributes": [
               {
-                "attributeName": "end",
-                "key": "_id_end"
-              },
-              {
                 "attributeName": "_end",
                 "attributes": [
                   {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
                     "attributeName": "extension",
                     "key": "_id_extension"
+                  },
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
                   }
                 ],
                 "key": "_id__end"
@@ -409,6 +513,10 @@
                   }
                 ],
                 "key": "_id__start"
+              },
+              {
+                "attributeName": "end",
+                "key": "_id_end"
               }
             ],
             "key": "_id_benefitPeriod"
@@ -418,199 +526,11 @@
             "items": {
               "attributes": [
                 {
-                  "attributeName": "provider",
-                  "key": "_id_provider"
+                  "attributeName": "description",
+                  "key": "_id_description"
                 },
                 {
-                  "attributeName": "_authorizationUrl",
-                  "attributes": [
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    }
-                  ],
-                  "key": "_id__authorizationUrl"
-                },
-                {
-                  "attributeName": "name",
-                  "key": "_id_name"
-                },
-                {
-                  "attributeName": "excluded",
-                  "key": "_id_excluded"
-                },
-                {
-                  "attributeName": "id",
-                  "key": "_id_id"
-                },
-                {
-                  "attributeName": "_description",
-                  "attributes": [
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    }
-                  ],
-                  "key": "_id__description"
-                },
-                {
-                  "attributeName": "authorizationSupporting",
-                  "items": {
-                    "attributes": [
-                      {
-                        "attributeName": "coding",
-                        "items": {
-                          "attributes": [
-                            {
-                              "attributeName": "code",
-                              "key": "_id_code"
-                            },
-                            {
-                              "attributeName": "display",
-                              "key": "_id_display"
-                            },
-                            {
-                              "attributeName": "_display",
-                              "attributes": [
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                },
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                }
-                              ],
-                              "key": "_id__display"
-                            },
-                            {
-                              "attributeName": "userSelected",
-                              "key": "_id_userSelected"
-                            },
-                            {
-                              "attributeName": "id",
-                              "key": "_id_id"
-                            },
-                            {
-                              "attributeName": "extension",
-                              "key": "_id_extension"
-                            },
-                            {
-                              "attributeName": "_system",
-                              "attributes": [
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                },
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                }
-                              ],
-                              "key": "_id__system"
-                            },
-                            {
-                              "attributeName": "version",
-                              "key": "_id_version"
-                            },
-                            {
-                              "attributeName": "_userSelected",
-                              "attributes": [
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                },
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                }
-                              ],
-                              "key": "_id__userSelected"
-                            },
-                            {
-                              "attributeName": "system",
-                              "key": "_id_system"
-                            },
-                            {
-                              "attributeName": "_version",
-                              "attributes": [
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                },
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                }
-                              ],
-                              "key": "_id__version"
-                            },
-                            {
-                              "attributeName": "_code",
-                              "attributes": [
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                },
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                }
-                              ],
-                              "key": "_id__code"
-                            }
-                          ]
-                        },
-                        "key": "_id_coding"
-                      },
-                      {
-                        "attributeName": "text",
-                        "key": "_id_text"
-                      },
-                      {
-                        "attributeName": "_text",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          }
-                        ],
-                        "key": "_id__text"
-                      },
-                      {
-                        "attributeName": "id",
-                        "key": "_id_id"
-                      },
-                      {
-                        "attributeName": "extension",
-                        "key": "_id_extension"
-                      }
-                    ]
-                  },
-                  "key": "_id_authorizationSupporting"
-                },
-                {
-                  "attributeName": "extension",
-                  "key": "_id_extension"
-                },
-                {
-                  "attributeName": "authorizationUrl",
-                  "key": "_id_authorizationUrl"
-                },
-                {
-                  "attributeName": "term",
+                  "attributeName": "unit",
                   "attributes": [
                     {
                       "attributeName": "extension",
@@ -621,22 +541,8 @@
                       "items": {
                         "attributes": [
                           {
-                            "attributeName": "_version",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__version"
-                          },
-                          {
-                            "attributeName": "display",
-                            "key": "_id_display"
+                            "attributeName": "code",
+                            "key": "_id_code"
                           },
                           {
                             "attributeName": "_system",
@@ -653,16 +559,18 @@
                             "key": "_id__system"
                           },
                           {
-                            "attributeName": "code",
-                            "key": "_id_code"
-                          },
-                          {
-                            "attributeName": "userSelected",
-                            "key": "_id_userSelected"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
+                            "attributeName": "_version",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__version"
                           },
                           {
                             "attributeName": "_code",
@@ -679,6 +587,14 @@
                             "key": "_id__code"
                           },
                           {
+                            "attributeName": "version",
+                            "key": "_id_version"
+                          },
+                          {
+                            "attributeName": "userSelected",
+                            "key": "_id_userSelected"
+                          },
+                          {
                             "attributeName": "_display",
                             "attributes": [
                               {
@@ -693,27 +609,31 @@
                             "key": "_id__display"
                           },
                           {
-                            "attributeName": "system",
-                            "key": "_id_system"
-                          },
-                          {
                             "attributeName": "extension",
                             "key": "_id_extension"
                           },
                           {
-                            "attributeName": "version",
-                            "key": "_id_version"
+                            "attributeName": "display",
+                            "key": "_id_display"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "system",
+                            "key": "_id_system"
                           },
                           {
                             "attributeName": "_userSelected",
                             "attributes": [
                               {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
                                 "attributeName": "extension",
                                 "key": "_id_extension"
+                              },
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
                               }
                             ],
                             "key": "_id__userSelected"
@@ -745,7 +665,519 @@
                       "key": "_id_id"
                     }
                   ],
+                  "key": "_id_unit"
+                },
+                {
+                  "attributeName": "term",
+                  "attributes": [
+                    {
+                      "attributeName": "text",
+                      "key": "_id_text"
+                    },
+                    {
+                      "attributeName": "_text",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__text"
+                    },
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "coding",
+                      "items": {
+                        "attributes": [
+                          {
+                            "attributeName": "_code",
+                            "attributes": [
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              },
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              }
+                            ],
+                            "key": "_id__code"
+                          },
+                          {
+                            "attributeName": "_display",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__display"
+                          },
+                          {
+                            "attributeName": "userSelected",
+                            "key": "_id_userSelected"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "system",
+                            "key": "_id_system"
+                          },
+                          {
+                            "attributeName": "_userSelected",
+                            "attributes": [
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              },
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              }
+                            ],
+                            "key": "_id__userSelected"
+                          },
+                          {
+                            "attributeName": "_system",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__system"
+                          },
+                          {
+                            "attributeName": "_version",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__version"
+                          },
+                          {
+                            "attributeName": "version",
+                            "key": "_id_version"
+                          },
+                          {
+                            "attributeName": "code",
+                            "key": "_id_code"
+                          },
+                          {
+                            "attributeName": "display",
+                            "key": "_id_display"
+                          }
+                        ]
+                      },
+                      "key": "_id_coding"
+                    }
+                  ],
                   "key": "_id_term"
+                },
+                {
+                  "attributeName": "authorizationRequired",
+                  "key": "_id_authorizationRequired"
+                },
+                {
+                  "attributeName": "modifierExtension",
+                  "key": "_id_modifierExtension"
+                },
+                {
+                  "attributeName": "_description",
+                  "attributes": [
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    }
+                  ],
+                  "key": "_id__description"
+                },
+                {
+                  "attributeName": "excluded",
+                  "key": "_id_excluded"
+                },
+                {
+                  "attributeName": "_authorizationUrl",
+                  "attributes": [
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    }
+                  ],
+                  "key": "_id__authorizationUrl"
+                },
+                {
+                  "attributeName": "authorizationUrl",
+                  "key": "_id_authorizationUrl"
+                },
+                {
+                  "attributeName": "benefit",
+                  "items": {
+                    "attributes": [
+                      {
+                        "attributeName": "allowedUnsignedInt",
+                        "key": "_id_allowedUnsignedInt"
+                      },
+                      {
+                        "attributeName": "_usedUnsignedInt",
+                        "attributes": [
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          }
+                        ],
+                        "key": "_id__usedUnsignedInt"
+                      },
+                      {
+                        "attributeName": "id",
+                        "key": "_id_id"
+                      },
+                      {
+                        "attributeName": "usedUnsignedInt",
+                        "key": "_id_usedUnsignedInt"
+                      },
+                      {
+                        "attributeName": "_usedString",
+                        "attributes": [
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          }
+                        ],
+                        "key": "_id__usedString"
+                      },
+                      {
+                        "attributeName": "modifierExtension",
+                        "key": "_id_modifierExtension"
+                      },
+                      {
+                        "attributeName": "allowedMoney",
+                        "attributes": [
+                          {
+                            "attributeName": "currency",
+                            "key": "_id_currency"
+                          },
+                          {
+                            "attributeName": "_currency",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__currency"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "value",
+                            "key": "_id_value"
+                          },
+                          {
+                            "attributeName": "_value",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__value"
+                          }
+                        ],
+                        "key": "_id_allowedMoney"
+                      },
+                      {
+                        "attributeName": "usedMoney",
+                        "attributes": [
+                          {
+                            "attributeName": "value",
+                            "key": "_id_value"
+                          },
+                          {
+                            "attributeName": "_value",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__value"
+                          },
+                          {
+                            "attributeName": "currency",
+                            "key": "_id_currency"
+                          },
+                          {
+                            "attributeName": "_currency",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__currency"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          }
+                        ],
+                        "key": "_id_usedMoney"
+                      },
+                      {
+                        "attributeName": "_allowedString",
+                        "attributes": [
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          }
+                        ],
+                        "key": "_id__allowedString"
+                      },
+                      {
+                        "attributeName": "allowedString",
+                        "key": "_id_allowedString"
+                      },
+                      {
+                        "attributeName": "extension",
+                        "key": "_id_extension"
+                      },
+                      {
+                        "attributeName": "usedString",
+                        "key": "_id_usedString"
+                      },
+                      {
+                        "attributeName": "_allowedUnsignedInt",
+                        "attributes": [
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          }
+                        ],
+                        "key": "_id__allowedUnsignedInt"
+                      },
+                      {
+                        "attributeName": "type",
+                        "attributes": [
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "coding",
+                            "items": {
+                              "attributes": [
+                                {
+                                  "attributeName": "code",
+                                  "key": "_id_code"
+                                },
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                },
+                                {
+                                  "attributeName": "_userSelected",
+                                  "attributes": [
+                                    {
+                                      "attributeName": "id",
+                                      "key": "_id_id"
+                                    },
+                                    {
+                                      "attributeName": "extension",
+                                      "key": "_id_extension"
+                                    }
+                                  ],
+                                  "key": "_id__userSelected"
+                                },
+                                {
+                                  "attributeName": "userSelected",
+                                  "key": "_id_userSelected"
+                                },
+                                {
+                                  "attributeName": "_code",
+                                  "attributes": [
+                                    {
+                                      "attributeName": "id",
+                                      "key": "_id_id"
+                                    },
+                                    {
+                                      "attributeName": "extension",
+                                      "key": "_id_extension"
+                                    }
+                                  ],
+                                  "key": "_id__code"
+                                },
+                                {
+                                  "attributeName": "_display",
+                                  "attributes": [
+                                    {
+                                      "attributeName": "id",
+                                      "key": "_id_id"
+                                    },
+                                    {
+                                      "attributeName": "extension",
+                                      "key": "_id_extension"
+                                    }
+                                  ],
+                                  "key": "_id__display"
+                                },
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                },
+                                {
+                                  "attributeName": "display",
+                                  "key": "_id_display"
+                                },
+                                {
+                                  "attributeName": "system",
+                                  "key": "_id_system"
+                                },
+                                {
+                                  "attributeName": "_system",
+                                  "attributes": [
+                                    {
+                                      "attributeName": "extension",
+                                      "key": "_id_extension"
+                                    },
+                                    {
+                                      "attributeName": "id",
+                                      "key": "_id_id"
+                                    }
+                                  ],
+                                  "key": "_id__system"
+                                },
+                                {
+                                  "attributeName": "_version",
+                                  "attributes": [
+                                    {
+                                      "attributeName": "id",
+                                      "key": "_id_id"
+                                    },
+                                    {
+                                      "attributeName": "extension",
+                                      "key": "_id_extension"
+                                    }
+                                  ],
+                                  "key": "_id__version"
+                                },
+                                {
+                                  "attributeName": "version",
+                                  "key": "_id_version"
+                                }
+                              ]
+                            },
+                            "key": "_id_coding"
+                          },
+                          {
+                            "attributeName": "text",
+                            "key": "_id_text"
+                          },
+                          {
+                            "attributeName": "_text",
+                            "attributes": [
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              },
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              }
+                            ],
+                            "key": "_id__text"
+                          }
+                        ],
+                        "key": "_id_type"
+                      }
+                    ]
+                  },
+                  "key": "_id_benefit"
                 },
                 {
                   "attributeName": "_excluded",
@@ -762,6 +1194,444 @@
                   "key": "_id__excluded"
                 },
                 {
+                  "attributeName": "_name",
+                  "attributes": [
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    }
+                  ],
+                  "key": "_id__name"
+                },
+                {
+                  "attributeName": "extension",
+                  "key": "_id_extension"
+                },
+                {
+                  "attributeName": "network",
+                  "attributes": [
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "coding",
+                      "items": {
+                        "attributes": [
+                          {
+                            "attributeName": "_userSelected",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__userSelected"
+                          },
+                          {
+                            "attributeName": "_code",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__code"
+                          },
+                          {
+                            "attributeName": "system",
+                            "key": "_id_system"
+                          },
+                          {
+                            "attributeName": "userSelected",
+                            "key": "_id_userSelected"
+                          },
+                          {
+                            "attributeName": "_system",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__system"
+                          },
+                          {
+                            "attributeName": "_version",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__version"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "code",
+                            "key": "_id_code"
+                          },
+                          {
+                            "attributeName": "display",
+                            "key": "_id_display"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "version",
+                            "key": "_id_version"
+                          },
+                          {
+                            "attributeName": "_display",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__display"
+                          }
+                        ]
+                      },
+                      "key": "_id_coding"
+                    },
+                    {
+                      "attributeName": "text",
+                      "key": "_id_text"
+                    },
+                    {
+                      "attributeName": "_text",
+                      "attributes": [
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        },
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        }
+                      ],
+                      "key": "_id__text"
+                    }
+                  ],
+                  "key": "_id_network"
+                },
+                {
+                  "attributeName": "authorizationSupporting",
+                  "items": {
+                    "attributes": [
+                      {
+                        "attributeName": "id",
+                        "key": "_id_id"
+                      },
+                      {
+                        "attributeName": "extension",
+                        "key": "_id_extension"
+                      },
+                      {
+                        "attributeName": "coding",
+                        "items": {
+                          "attributes": [
+                            {
+                              "attributeName": "id",
+                              "key": "_id_id"
+                            },
+                            {
+                              "attributeName": "_userSelected",
+                              "attributes": [
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                },
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                }
+                              ],
+                              "key": "_id__userSelected"
+                            },
+                            {
+                              "attributeName": "display",
+                              "key": "_id_display"
+                            },
+                            {
+                              "attributeName": "_system",
+                              "attributes": [
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                },
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                }
+                              ],
+                              "key": "_id__system"
+                            },
+                            {
+                              "attributeName": "userSelected",
+                              "key": "_id_userSelected"
+                            },
+                            {
+                              "attributeName": "_version",
+                              "attributes": [
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                },
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                }
+                              ],
+                              "key": "_id__version"
+                            },
+                            {
+                              "attributeName": "system",
+                              "key": "_id_system"
+                            },
+                            {
+                              "attributeName": "extension",
+                              "key": "_id_extension"
+                            },
+                            {
+                              "attributeName": "code",
+                              "key": "_id_code"
+                            },
+                            {
+                              "attributeName": "_code",
+                              "attributes": [
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                },
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                }
+                              ],
+                              "key": "_id__code"
+                            },
+                            {
+                              "attributeName": "version",
+                              "key": "_id_version"
+                            },
+                            {
+                              "attributeName": "_display",
+                              "attributes": [
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                },
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                }
+                              ],
+                              "key": "_id__display"
+                            }
+                          ]
+                        },
+                        "key": "_id_coding"
+                      },
+                      {
+                        "attributeName": "text",
+                        "key": "_id_text"
+                      },
+                      {
+                        "attributeName": "_text",
+                        "attributes": [
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          }
+                        ],
+                        "key": "_id__text"
+                      }
+                    ]
+                  },
+                  "key": "_id_authorizationSupporting"
+                },
+                {
+                  "attributeName": "name",
+                  "key": "_id_name"
+                },
+                {
+                  "attributeName": "productOrService",
+                  "attributes": [
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "coding",
+                      "items": {
+                        "attributes": [
+                          {
+                            "attributeName": "_code",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__code"
+                          },
+                          {
+                            "attributeName": "version",
+                            "key": "_id_version"
+                          },
+                          {
+                            "attributeName": "system",
+                            "key": "_id_system"
+                          },
+                          {
+                            "attributeName": "userSelected",
+                            "key": "_id_userSelected"
+                          },
+                          {
+                            "attributeName": "_system",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__system"
+                          },
+                          {
+                            "attributeName": "_version",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__version"
+                          },
+                          {
+                            "attributeName": "_userSelected",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__userSelected"
+                          },
+                          {
+                            "attributeName": "_display",
+                            "attributes": [
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              },
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              }
+                            ],
+                            "key": "_id__display"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
+                            "attributeName": "code",
+                            "key": "_id_code"
+                          },
+                          {
+                            "attributeName": "display",
+                            "key": "_id_display"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          }
+                        ]
+                      },
+                      "key": "_id_coding"
+                    },
+                    {
+                      "attributeName": "text",
+                      "key": "_id_text"
+                    },
+                    {
+                      "attributeName": "_text",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__text"
+                    }
+                  ],
+                  "key": "_id_productOrService"
+                },
+                {
                   "attributeName": "_authorizationRequired",
                   "attributes": [
                     {
@@ -774,14 +1644,6 @@
                     }
                   ],
                   "key": "_id__authorizationRequired"
-                },
-                {
-                  "attributeName": "modifierExtension",
-                  "key": "_id_modifierExtension"
-                },
-                {
-                  "attributeName": "authorizationRequired",
-                  "key": "_id_authorizationRequired"
                 },
                 {
                   "attributeName": "modifier",
@@ -818,38 +1680,40 @@
                         "items": {
                           "attributes": [
                             {
+                              "attributeName": "_system",
+                              "attributes": [
+                                {
+                                  "attributeName": "id",
+                                  "key": "_id_id"
+                                },
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
+                                }
+                              ],
+                              "key": "_id__system"
+                            },
+                            {
                               "attributeName": "system",
                               "key": "_id_system"
                             },
                             {
-                              "attributeName": "extension",
-                              "key": "_id_extension"
-                            },
-                            {
-                              "attributeName": "userSelected",
-                              "key": "_id_userSelected"
-                            },
-                            {
-                              "attributeName": "id",
-                              "key": "_id_id"
-                            },
-                            {
-                              "attributeName": "display",
-                              "key": "_id_display"
-                            },
-                            {
-                              "attributeName": "_version",
+                              "attributeName": "_userSelected",
                               "attributes": [
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                },
                                 {
                                   "attributeName": "id",
                                   "key": "_id_id"
+                                },
+                                {
+                                  "attributeName": "extension",
+                                  "key": "_id_extension"
                                 }
                               ],
-                              "key": "_id__version"
+                              "key": "_id__userSelected"
+                            },
+                            {
+                              "attributeName": "code",
+                              "key": "_id_code"
                             },
                             {
                               "attributeName": "_code",
@@ -880,7 +1744,11 @@
                               "key": "_id__display"
                             },
                             {
-                              "attributeName": "_system",
+                              "attributeName": "userSelected",
+                              "key": "_id_userSelected"
+                            },
+                            {
+                              "attributeName": "_version",
                               "attributes": [
                                 {
                                   "attributeName": "id",
@@ -891,29 +1759,23 @@
                                   "key": "_id_extension"
                                 }
                               ],
-                              "key": "_id__system"
+                              "key": "_id__version"
+                            },
+                            {
+                              "attributeName": "id",
+                              "key": "_id_id"
+                            },
+                            {
+                              "attributeName": "extension",
+                              "key": "_id_extension"
+                            },
+                            {
+                              "attributeName": "display",
+                              "key": "_id_display"
                             },
                             {
                               "attributeName": "version",
                               "key": "_id_version"
-                            },
-                            {
-                              "attributeName": "code",
-                              "key": "_id_code"
-                            },
-                            {
-                              "attributeName": "_userSelected",
-                              "attributes": [
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                },
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                }
-                              ],
-                              "key": "_id__userSelected"
                             }
                           ]
                         },
@@ -924,633 +1786,13 @@
                   "key": "_id_modifier"
                 },
                 {
-                  "attributeName": "unit",
-                  "attributes": [
-                    {
-                      "attributeName": "text",
-                      "key": "_id_text"
-                    },
-                    {
-                      "attributeName": "_text",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__text"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    },
-                    {
-                      "attributeName": "coding",
-                      "items": {
-                        "attributes": [
-                          {
-                            "attributeName": "_system",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__system"
-                          },
-                          {
-                            "attributeName": "version",
-                            "key": "_id_version"
-                          },
-                          {
-                            "attributeName": "_version",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__version"
-                          },
-                          {
-                            "attributeName": "display",
-                            "key": "_id_display"
-                          },
-                          {
-                            "attributeName": "userSelected",
-                            "key": "_id_userSelected"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "system",
-                            "key": "_id_system"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "code",
-                            "key": "_id_code"
-                          },
-                          {
-                            "attributeName": "_code",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__code"
-                          },
-                          {
-                            "attributeName": "_display",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__display"
-                          },
-                          {
-                            "attributeName": "_userSelected",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__userSelected"
-                          }
-                        ]
-                      },
-                      "key": "_id_coding"
-                    }
-                  ],
-                  "key": "_id_unit"
-                },
-                {
-                  "attributeName": "benefit",
-                  "items": {
-                    "attributes": [
-                      {
-                        "attributeName": "modifierExtension",
-                        "key": "_id_modifierExtension"
-                      },
-                      {
-                        "attributeName": "_usedString",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          }
-                        ],
-                        "key": "_id__usedString"
-                      },
-                      {
-                        "attributeName": "allowedUnsignedInt",
-                        "key": "_id_allowedUnsignedInt"
-                      },
-                      {
-                        "attributeName": "_allowedString",
-                        "attributes": [
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          }
-                        ],
-                        "key": "_id__allowedString"
-                      },
-                      {
-                        "attributeName": "id",
-                        "key": "_id_id"
-                      },
-                      {
-                        "attributeName": "_usedUnsignedInt",
-                        "attributes": [
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          }
-                        ],
-                        "key": "_id__usedUnsignedInt"
-                      },
-                      {
-                        "attributeName": "allowedString",
-                        "key": "_id_allowedString"
-                      },
-                      {
-                        "attributeName": "allowedMoney",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "value",
-                            "key": "_id_value"
-                          },
-                          {
-                            "attributeName": "_value",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__value"
-                          },
-                          {
-                            "attributeName": "currency",
-                            "key": "_id_currency"
-                          },
-                          {
-                            "attributeName": "_currency",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__currency"
-                          }
-                        ],
-                        "key": "_id_allowedMoney"
-                      },
-                      {
-                        "attributeName": "_allowedUnsignedInt",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          }
-                        ],
-                        "key": "_id__allowedUnsignedInt"
-                      },
-                      {
-                        "attributeName": "usedUnsignedInt",
-                        "key": "_id_usedUnsignedInt"
-                      },
-                      {
-                        "attributeName": "usedString",
-                        "key": "_id_usedString"
-                      },
-                      {
-                        "attributeName": "extension",
-                        "key": "_id_extension"
-                      },
-                      {
-                        "attributeName": "type",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "coding",
-                            "items": {
-                              "attributes": [
-                                {
-                                  "attributeName": "version",
-                                  "key": "_id_version"
-                                },
-                                {
-                                  "attributeName": "_display",
-                                  "attributes": [
-                                    {
-                                      "attributeName": "id",
-                                      "key": "_id_id"
-                                    },
-                                    {
-                                      "attributeName": "extension",
-                                      "key": "_id_extension"
-                                    }
-                                  ],
-                                  "key": "_id__display"
-                                },
-                                {
-                                  "attributeName": "system",
-                                  "key": "_id_system"
-                                },
-                                {
-                                  "attributeName": "_system",
-                                  "attributes": [
-                                    {
-                                      "attributeName": "id",
-                                      "key": "_id_id"
-                                    },
-                                    {
-                                      "attributeName": "extension",
-                                      "key": "_id_extension"
-                                    }
-                                  ],
-                                  "key": "_id__system"
-                                },
-                                {
-                                  "attributeName": "code",
-                                  "key": "_id_code"
-                                },
-                                {
-                                  "attributeName": "userSelected",
-                                  "key": "_id_userSelected"
-                                },
-                                {
-                                  "attributeName": "_userSelected",
-                                  "attributes": [
-                                    {
-                                      "attributeName": "id",
-                                      "key": "_id_id"
-                                    },
-                                    {
-                                      "attributeName": "extension",
-                                      "key": "_id_extension"
-                                    }
-                                  ],
-                                  "key": "_id__userSelected"
-                                },
-                                {
-                                  "attributeName": "id",
-                                  "key": "_id_id"
-                                },
-                                {
-                                  "attributeName": "_version",
-                                  "attributes": [
-                                    {
-                                      "attributeName": "id",
-                                      "key": "_id_id"
-                                    },
-                                    {
-                                      "attributeName": "extension",
-                                      "key": "_id_extension"
-                                    }
-                                  ],
-                                  "key": "_id__version"
-                                },
-                                {
-                                  "attributeName": "_code",
-                                  "attributes": [
-                                    {
-                                      "attributeName": "id",
-                                      "key": "_id_id"
-                                    },
-                                    {
-                                      "attributeName": "extension",
-                                      "key": "_id_extension"
-                                    }
-                                  ],
-                                  "key": "_id__code"
-                                },
-                                {
-                                  "attributeName": "extension",
-                                  "key": "_id_extension"
-                                },
-                                {
-                                  "attributeName": "display",
-                                  "key": "_id_display"
-                                }
-                              ]
-                            },
-                            "key": "_id_coding"
-                          },
-                          {
-                            "attributeName": "text",
-                            "key": "_id_text"
-                          },
-                          {
-                            "attributeName": "_text",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__text"
-                          }
-                        ],
-                        "key": "_id_type"
-                      },
-                      {
-                        "attributeName": "usedMoney",
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "value",
-                            "key": "_id_value"
-                          },
-                          {
-                            "attributeName": "_value",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__value"
-                          },
-                          {
-                            "attributeName": "currency",
-                            "key": "_id_currency"
-                          },
-                          {
-                            "attributeName": "_currency",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__currency"
-                          }
-                        ],
-                        "key": "_id_usedMoney"
-                      }
-                    ]
-                  },
-                  "key": "_id_benefit"
-                },
-                {
-                  "attributeName": "description",
-                  "key": "_id_description"
-                },
-                {
-                  "attributeName": "_name",
-                  "attributes": [
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    }
-                  ],
-                  "key": "_id__name"
-                },
-                {
-                  "attributeName": "network",
-                  "attributes": [
-                    {
-                      "attributeName": "_text",
-                      "attributes": [
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        },
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        }
-                      ],
-                      "key": "_id__text"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    },
-                    {
-                      "attributeName": "coding",
-                      "items": {
-                        "attributes": [
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "_system",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__system"
-                          },
-                          {
-                            "attributeName": "version",
-                            "key": "_id_version"
-                          },
-                          {
-                            "attributeName": "code",
-                            "key": "_id_code"
-                          },
-                          {
-                            "attributeName": "_version",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__version"
-                          },
-                          {
-                            "attributeName": "display",
-                            "key": "_id_display"
-                          },
-                          {
-                            "attributeName": "_code",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__code"
-                          },
-                          {
-                            "attributeName": "_display",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__display"
-                          },
-                          {
-                            "attributeName": "userSelected",
-                            "key": "_id_userSelected"
-                          },
-                          {
-                            "attributeName": "_userSelected",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__userSelected"
-                          },
-                          {
-                            "attributeName": "system",
-                            "key": "_id_system"
-                          }
-                        ]
-                      },
-                      "key": "_id_coding"
-                    },
-                    {
-                      "attributeName": "text",
-                      "key": "_id_text"
-                    }
-                  ],
-                  "key": "_id_network"
-                },
-                {
                   "attributeName": "category",
                   "attributes": [
                     {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
                       "attributeName": "extension",
                       "key": "_id_extension"
                     },
@@ -1559,66 +1801,8 @@
                       "items": {
                         "attributes": [
                           {
-                            "attributeName": "system",
-                            "key": "_id_system"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "_system",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__system"
-                          },
-                          {
-                            "attributeName": "display",
-                            "key": "_id_display"
-                          },
-                          {
-                            "attributeName": "version",
-                            "key": "_id_version"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "_userSelected",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__userSelected"
-                          },
-                          {
-                            "attributeName": "_version",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__version"
+                            "attributeName": "userSelected",
+                            "key": "_id_userSelected"
                           },
                           {
                             "attributeName": "_code",
@@ -1649,12 +1833,70 @@
                             "key": "_id__display"
                           },
                           {
+                            "attributeName": "system",
+                            "key": "_id_system"
+                          },
+                          {
+                            "attributeName": "_system",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__system"
+                          },
+                          {
+                            "attributeName": "_version",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__version"
+                          },
+                          {
+                            "attributeName": "version",
+                            "key": "_id_version"
+                          },
+                          {
+                            "attributeName": "extension",
+                            "key": "_id_extension"
+                          },
+                          {
                             "attributeName": "code",
                             "key": "_id_code"
                           },
                           {
-                            "attributeName": "userSelected",
-                            "key": "_id_userSelected"
+                            "attributeName": "display",
+                            "key": "_id_display"
+                          },
+                          {
+                            "attributeName": "id",
+                            "key": "_id_id"
+                          },
+                          {
+                            "attributeName": "_userSelected",
+                            "attributes": [
+                              {
+                                "attributeName": "id",
+                                "key": "_id_id"
+                              },
+                              {
+                                "attributeName": "extension",
+                                "key": "_id_extension"
+                              }
+                            ],
+                            "key": "_id__userSelected"
                           }
                         ]
                       },
@@ -1677,151 +1919,17 @@
                         }
                       ],
                       "key": "_id__text"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
                     }
                   ],
                   "key": "_id_category"
                 },
                 {
-                  "attributeName": "productOrService",
-                  "attributes": [
-                    {
-                      "attributeName": "text",
-                      "key": "_id_text"
-                    },
-                    {
-                      "attributeName": "_text",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__text"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
-                    },
-                    {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
-                    },
-                    {
-                      "attributeName": "coding",
-                      "items": {
-                        "attributes": [
-                          {
-                            "attributeName": "system",
-                            "key": "_id_system"
-                          },
-                          {
-                            "attributeName": "extension",
-                            "key": "_id_extension"
-                          },
-                          {
-                            "attributeName": "version",
-                            "key": "_id_version"
-                          },
-                          {
-                            "attributeName": "code",
-                            "key": "_id_code"
-                          },
-                          {
-                            "attributeName": "_code",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__code"
-                          },
-                          {
-                            "attributeName": "_display",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__display"
-                          },
-                          {
-                            "attributeName": "_userSelected",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__userSelected"
-                          },
-                          {
-                            "attributeName": "id",
-                            "key": "_id_id"
-                          },
-                          {
-                            "attributeName": "userSelected",
-                            "key": "_id_userSelected"
-                          },
-                          {
-                            "attributeName": "display",
-                            "key": "_id_display"
-                          },
-                          {
-                            "attributeName": "_system",
-                            "attributes": [
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              },
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              }
-                            ],
-                            "key": "_id__system"
-                          },
-                          {
-                            "attributeName": "_version",
-                            "attributes": [
-                              {
-                                "attributeName": "id",
-                                "key": "_id_id"
-                              },
-                              {
-                                "attributeName": "extension",
-                                "key": "_id_extension"
-                              }
-                            ],
-                            "key": "_id__version"
-                          }
-                        ]
-                      },
-                      "key": "_id_coding"
-                    }
-                  ],
-                  "key": "_id_productOrService"
+                  "attributeName": "id",
+                  "key": "_id_id"
+                },
+                {
+                  "attributeName": "provider",
+                  "key": "_id_provider"
                 }
               ]
             },
@@ -1848,477 +1956,43 @@
       "key": "_id_insurance"
     },
     {
-      "attributeName": "patient",
-      "key": "_id_patient"
+      "attributeName": "insurer",
+      "key": "_id_insurer"
+    },
+    {
+      "attributeName": "outcome",
+      "key": "_id_outcome"
+    },
+    {
+      "attributeName": "implicitRules",
+      "key": "_id_implicitRules"
+    },
+    {
+      "attributeName": "purpose",
+      "key": "_id_purpose"
     },
     {
       "attributeName": "_implicitRules",
       "attributes": [
         {
-          "attributeName": "extension",
-          "key": "_id_extension"
-        },
-        {
           "attributeName": "id",
           "key": "_id_id"
+        },
+        {
+          "attributeName": "extension",
+          "key": "_id_extension"
         }
       ],
       "key": "_id__implicitRules"
     },
     {
-      "attributeName": "servicedDate",
-      "key": "_id_servicedDate"
-    },
-    {
-      "attributeName": "request",
-      "key": "_id_request"
-    },
-    {
-      "attributeName": "extension",
-      "key": "_id_extension"
-    },
-    {
-      "attributeName": "form",
-      "attributes": [
-        {
-          "attributeName": "id",
-          "key": "_id_id"
-        },
-        {
-          "attributeName": "extension",
-          "key": "_id_extension"
-        },
-        {
-          "attributeName": "coding",
-          "items": {
-            "attributes": [
-              {
-                "attributeName": "version",
-                "key": "_id_version"
-              },
-              {
-                "attributeName": "_display",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__display"
-              },
-              {
-                "attributeName": "code",
-                "key": "_id_code"
-              },
-              {
-                "attributeName": "_userSelected",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__userSelected"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "_system",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__system"
-              },
-              {
-                "attributeName": "display",
-                "key": "_id_display"
-              },
-              {
-                "attributeName": "_code",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__code"
-              },
-              {
-                "attributeName": "userSelected",
-                "key": "_id_userSelected"
-              },
-              {
-                "attributeName": "system",
-                "key": "_id_system"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "_version",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__version"
-              }
-            ]
-          },
-          "key": "_id_coding"
-        },
-        {
-          "attributeName": "text",
-          "key": "_id_text"
-        },
-        {
-          "attributeName": "_text",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            }
-          ],
-          "key": "_id__text"
-        }
-      ],
-      "key": "_id_form"
-    },
-    {
-      "attributeName": "meta",
-      "attributes": [
-        {
-          "attributeName": "_lastUpdated",
-          "attributes": [
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            },
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            }
-          ],
-          "key": "_id__lastUpdated"
-        },
-        {
-          "attributeName": "_versionId",
-          "attributes": [
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            },
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            }
-          ],
-          "key": "_id__versionId"
-        },
-        {
-          "attributeName": "versionId",
-          "key": "_id_versionId"
-        },
-        {
-          "attributeName": "_source",
-          "attributes": [
-            {
-              "attributeName": "extension",
-              "key": "_id_extension"
-            },
-            {
-              "attributeName": "id",
-              "key": "_id_id"
-            }
-          ],
-          "key": "_id__source"
-        },
-        {
-          "attributeName": "extension",
-          "key": "_id_extension"
-        },
-        {
-          "attributeName": "lastUpdated",
-          "key": "_id_lastUpdated"
-        },
-        {
-          "attributeName": "source",
-          "key": "_id_source"
-        },
-        {
-          "attributeName": "profile",
-          "key": "_id_profile"
-        },
-        {
-          "attributeName": "security",
-          "items": {
-            "attributes": [
-              {
-                "attributeName": "_display",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__display"
-              },
-              {
-                "attributeName": "system",
-                "key": "_id_system"
-              },
-              {
-                "attributeName": "_system",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__system"
-              },
-              {
-                "attributeName": "version",
-                "key": "_id_version"
-              },
-              {
-                "attributeName": "_version",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__version"
-              },
-              {
-                "attributeName": "_code",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__code"
-              },
-              {
-                "attributeName": "code",
-                "key": "_id_code"
-              },
-              {
-                "attributeName": "userSelected",
-                "key": "_id_userSelected"
-              },
-              {
-                "attributeName": "_userSelected",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__userSelected"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "display",
-                "key": "_id_display"
-              }
-            ]
-          },
-          "key": "_id_security"
-        },
-        {
-          "attributeName": "tag",
-          "items": {
-            "attributes": [
-              {
-                "attributeName": "_display",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__display"
-              },
-              {
-                "attributeName": "userSelected",
-                "key": "_id_userSelected"
-              },
-              {
-                "attributeName": "_userSelected",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__userSelected"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
-              },
-              {
-                "attributeName": "extension",
-                "key": "_id_extension"
-              },
-              {
-                "attributeName": "_system",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__system"
-              },
-              {
-                "attributeName": "_code",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__code"
-              },
-              {
-                "attributeName": "version",
-                "key": "_id_version"
-              },
-              {
-                "attributeName": "code",
-                "key": "_id_code"
-              },
-              {
-                "attributeName": "system",
-                "key": "_id_system"
-              },
-              {
-                "attributeName": "_version",
-                "attributes": [
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  },
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  }
-                ],
-                "key": "_id__version"
-              },
-              {
-                "attributeName": "display",
-                "key": "_id_display"
-              }
-            ]
-          },
-          "key": "_id_tag"
-        },
-        {
-          "attributeName": "id",
-          "key": "_id_id"
-        }
-      ],
-      "key": "_id_meta"
-    },
-    {
-      "attributeName": "insurer",
-      "key": "_id_insurer"
-    },
-    {
-      "attributeName": "requestor",
-      "key": "_id_requestor"
-    },
-    {
-      "attributeName": "contained",
-      "key": "_id_contained"
-    },
-    {
-      "attributeName": "language",
-      "key": "_id_language"
-    },
-    {
       "attributeName": "error",
       "items": {
         "attributes": [
+          {
+            "attributeName": "id",
+            "key": "_id_id"
+          },
           {
             "attributeName": "extension",
             "key": "_id_extension"
@@ -2331,6 +2005,28 @@
             "attributeName": "code",
             "attributes": [
               {
+                "attributeName": "text",
+                "key": "_id_text"
+              },
+              {
+                "attributeName": "_text",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__text"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
                 "attributeName": "extension",
                 "key": "_id_extension"
               },
@@ -2339,12 +2035,26 @@
                 "items": {
                   "attributes": [
                     {
-                      "attributeName": "system",
-                      "key": "_id_system"
+                      "attributeName": "display",
+                      "key": "_id_display"
                     },
                     {
-                      "attributeName": "extension",
-                      "key": "_id_extension"
+                      "attributeName": "_display",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__display"
+                    },
+                    {
+                      "attributeName": "userSelected",
+                      "key": "_id_userSelected"
                     },
                     {
                       "attributeName": "_system",
@@ -2375,34 +2085,12 @@
                       "key": "_id__code"
                     },
                     {
-                      "attributeName": "version",
-                      "key": "_id_version"
+                      "attributeName": "extension",
+                      "key": "_id_extension"
                     },
                     {
                       "attributeName": "code",
                       "key": "_id_code"
-                    },
-                    {
-                      "attributeName": "userSelected",
-                      "key": "_id_userSelected"
-                    },
-                    {
-                      "attributeName": "_userSelected",
-                      "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
-                        {
-                          "attributeName": "extension",
-                          "key": "_id_extension"
-                        }
-                      ],
-                      "key": "_id__userSelected"
-                    },
-                    {
-                      "attributeName": "id",
-                      "key": "_id_id"
                     },
                     {
                       "attributeName": "_version",
@@ -2419,55 +2107,37 @@
                       "key": "_id__version"
                     },
                     {
-                      "attributeName": "display",
-                      "key": "_id_display"
+                      "attributeName": "version",
+                      "key": "_id_version"
                     },
                     {
-                      "attributeName": "_display",
+                      "attributeName": "_userSelected",
                       "attributes": [
-                        {
-                          "attributeName": "id",
-                          "key": "_id_id"
-                        },
                         {
                           "attributeName": "extension",
                           "key": "_id_extension"
+                        },
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
                         }
                       ],
-                      "key": "_id__display"
+                      "key": "_id__userSelected"
+                    },
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "system",
+                      "key": "_id_system"
                     }
                   ]
                 },
                 "key": "_id_coding"
-              },
-              {
-                "attributeName": "text",
-                "key": "_id_text"
-              },
-              {
-                "attributeName": "_text",
-                "attributes": [
-                  {
-                    "attributeName": "id",
-                    "key": "_id_id"
-                  },
-                  {
-                    "attributeName": "extension",
-                    "key": "_id_extension"
-                  }
-                ],
-                "key": "_id__text"
-              },
-              {
-                "attributeName": "id",
-                "key": "_id_id"
               }
             ],
             "key": "_id_code"
-          },
-          {
-            "attributeName": "id",
-            "key": "_id_id"
           }
         ]
       },
@@ -2524,72 +2194,322 @@
       "key": "_id_servicedPeriod"
     },
     {
-      "attributeName": "_disposition",
+      "attributeName": "identifier",
+      "items": {
+        "attributes": [
+          {
+            "attributeName": "id",
+            "key": "_id_id"
+          },
+          {
+            "attributeName": "use",
+            "key": "_id_use"
+          },
+          {
+            "attributeName": "_value",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__value"
+          },
+          {
+            "attributeName": "system",
+            "key": "_id_system"
+          },
+          {
+            "attributeName": "value",
+            "key": "_id_value"
+          },
+          {
+            "attributeName": "assigner",
+            "key": "_id_assigner"
+          },
+          {
+            "attributeName": "_system",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__system"
+          },
+          {
+            "attributeName": "extension",
+            "key": "_id_extension"
+          },
+          {
+            "attributeName": "period",
+            "attributes": [
+              {
+                "attributeName": "_end",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__end"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              },
+              {
+                "attributeName": "start",
+                "key": "_id_start"
+              },
+              {
+                "attributeName": "_start",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__start"
+              },
+              {
+                "attributeName": "end",
+                "key": "_id_end"
+              }
+            ],
+            "key": "_id_period"
+          },
+          {
+            "attributeName": "type",
+            "attributes": [
+              {
+                "attributeName": "coding",
+                "items": {
+                  "attributes": [
+                    {
+                      "attributeName": "extension",
+                      "key": "_id_extension"
+                    },
+                    {
+                      "attributeName": "display",
+                      "key": "_id_display"
+                    },
+                    {
+                      "attributeName": "id",
+                      "key": "_id_id"
+                    },
+                    {
+                      "attributeName": "system",
+                      "key": "_id_system"
+                    },
+                    {
+                      "attributeName": "userSelected",
+                      "key": "_id_userSelected"
+                    },
+                    {
+                      "attributeName": "_system",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__system"
+                    },
+                    {
+                      "attributeName": "_code",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__code"
+                    },
+                    {
+                      "attributeName": "_display",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__display"
+                    },
+                    {
+                      "attributeName": "_version",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__version"
+                    },
+                    {
+                      "attributeName": "version",
+                      "key": "_id_version"
+                    },
+                    {
+                      "attributeName": "code",
+                      "key": "_id_code"
+                    },
+                    {
+                      "attributeName": "_userSelected",
+                      "attributes": [
+                        {
+                          "attributeName": "id",
+                          "key": "_id_id"
+                        },
+                        {
+                          "attributeName": "extension",
+                          "key": "_id_extension"
+                        }
+                      ],
+                      "key": "_id__userSelected"
+                    }
+                  ]
+                },
+                "key": "_id_coding"
+              },
+              {
+                "attributeName": "text",
+                "key": "_id_text"
+              },
+              {
+                "attributeName": "_text",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__text"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id_type"
+          },
+          {
+            "attributeName": "_use",
+            "attributes": [
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              }
+            ],
+            "key": "_id__use"
+          }
+        ]
+      },
+      "key": "_id_identifier"
+    },
+    {
+      "attributeName": "_created",
       "attributes": [
-        {
-          "attributeName": "id",
-          "key": "_id_id"
-        },
         {
           "attributeName": "extension",
           "key": "_id_extension"
-        }
-      ],
-      "key": "_id__disposition"
-    },
-    {
-      "attributeName": "_servicedDate",
-      "attributes": [
-        {
-          "attributeName": "extension",
-          "key": "_id_extension"
         },
         {
           "attributeName": "id",
           "key": "_id_id"
         }
       ],
-      "key": "_id__servicedDate"
+      "key": "_id__created"
     },
     {
-      "attributeName": "outcome",
-      "key": "_id_outcome"
+      "attributeName": "_purpose",
+      "items": {
+        "attributes": [
+          {
+            "attributeName": "id",
+            "key": "_id_id"
+          },
+          {
+            "attributeName": "extension",
+            "key": "_id_extension"
+          }
+        ]
+      },
+      "key": "_id__purpose"
     },
     {
-      "attributeName": "modifierExtension",
-      "key": "_id_modifierExtension"
+      "attributeName": "disposition",
+      "key": "_id_disposition"
     },
     {
-      "attributeName": "status",
-      "key": "_id_status"
-    },
-    {
-      "attributeName": "_language",
-      "attributes": [
-        {
-          "attributeName": "id",
-          "key": "_id_id"
-        },
-        {
-          "attributeName": "extension",
-          "key": "_id_extension"
-        }
-      ],
-      "key": "_id__language"
+      "attributeName": "preAuthRef",
+      "key": "_id_preAuthRef"
     },
     {
       "attributeName": "resourceType",
       "key": "_id_resourceType"
     },
     {
-      "attributeName": "id",
-      "key": "_id_id"
+      "attributeName": "modifierExtension",
+      "key": "_id_modifierExtension"
     },
     {
-      "attributeName": "text",
+      "attributeName": "form",
       "attributes": [
         {
-          "attributeName": "_status",
+          "attributeName": "text",
+          "key": "_id_text"
+        },
+        {
+          "attributeName": "_text",
           "attributes": [
             {
               "attributeName": "id",
@@ -2600,11 +2520,7 @@
               "key": "_id_extension"
             }
           ],
-          "key": "_id__status"
-        },
-        {
-          "attributeName": "div",
-          "key": "_id_div"
+          "key": "_id__text"
         },
         {
           "attributeName": "id",
@@ -2615,29 +2531,113 @@
           "key": "_id_extension"
         },
         {
-          "attributeName": "status",
-          "key": "_id_status"
+          "attributeName": "coding",
+          "items": {
+            "attributes": [
+              {
+                "attributeName": "_display",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__display"
+              },
+              {
+                "attributeName": "_system",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__system"
+              },
+              {
+                "attributeName": "_version",
+                "attributes": [
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  },
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  }
+                ],
+                "key": "_id__version"
+              },
+              {
+                "attributeName": "system",
+                "key": "_id_system"
+              },
+              {
+                "attributeName": "_userSelected",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__userSelected"
+              },
+              {
+                "attributeName": "code",
+                "key": "_id_code"
+              },
+              {
+                "attributeName": "display",
+                "key": "_id_display"
+              },
+              {
+                "attributeName": "version",
+                "key": "_id_version"
+              },
+              {
+                "attributeName": "userSelected",
+                "key": "_id_userSelected"
+              },
+              {
+                "attributeName": "_code",
+                "attributes": [
+                  {
+                    "attributeName": "id",
+                    "key": "_id_id"
+                  },
+                  {
+                    "attributeName": "extension",
+                    "key": "_id_extension"
+                  }
+                ],
+                "key": "_id__code"
+              },
+              {
+                "attributeName": "extension",
+                "key": "_id_extension"
+              },
+              {
+                "attributeName": "id",
+                "key": "_id_id"
+              }
+            ]
+          },
+          "key": "_id_coding"
         }
       ],
-      "key": "_id_text"
-    },
-    {
-      "attributeName": "_outcome",
-      "attributes": [
-        {
-          "attributeName": "id",
-          "key": "_id_id"
-        },
-        {
-          "attributeName": "extension",
-          "key": "_id_extension"
-        }
-      ],
-      "key": "_id__outcome"
-    },
-    {
-      "attributeName": "disposition",
-      "key": "_id_disposition"
+      "key": "_id_form"
     }
   ],
   "base": "http://test#CoverageEligibilityResponse"

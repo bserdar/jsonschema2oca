@@ -70,7 +70,7 @@ func main() {
 			panic(err)
 		}
 
-		writeJSON(name, "base", s.toBaseSchema())
+		writeJSON(name, "base", s.toSchemaBase())
 
 		types := map[string]string{}
 		s.getTypes(types)
@@ -108,8 +108,8 @@ type ArraySchema struct {
 	Items SchemaProperty `json:"items"`
 }
 
-func (a ArraySchema) toBaseSchema() interface{} {
-	return a.Items.toBaseSchema()
+func (a ArraySchema) toSchemaBase() interface{} {
+	return a.Items.toSchemaBase()
 }
 
 func (a ArraySchema) toIndex() interface{} {
@@ -139,11 +139,11 @@ func (o *ObjectSchema) Set(key string, value SchemaProperty) {
 	o.Fields[key] = value
 }
 
-func (o ObjectSchema) toBaseSchema() interface{} {
+func (o ObjectSchema) toSchemaBase() interface{} {
 	ret := []map[string]interface{}{}
 	for k, v := range o.Fields {
 		m := map[string]interface{}{"key": "_id_" + k}
-		for x, y := range v.toBaseSchema() {
+		for x, y := range v.toSchemaBase() {
 			m[x] = y
 		}
 		ret = append(ret, m)
@@ -208,20 +208,20 @@ type SchemaProperty struct {
 	Format    string
 }
 
-func (p SchemaProperty) toBaseSchema() map[string]interface{} {
+func (p SchemaProperty) toSchemaBase() map[string]interface{} {
 	if len(p.Reference) > 0 {
 		return map[string]interface{}{"reference": targetNS + p.Reference}
 	}
 	if p.Object != nil {
-		return map[string]interface{}{"attributes": p.Object.toBaseSchema()}
+		return map[string]interface{}{"attributes": p.Object.toSchemaBase()}
 	}
 	if p.Array != nil {
-		return map[string]interface{}{"items": p.Array.toBaseSchema()}
+		return map[string]interface{}{"items": p.Array.toSchemaBase()}
 	}
 	if len(p.OneOf) != 0 {
 		arr := make([]interface{}, 0)
 		for _, c := range p.OneOf {
-			arr = append(arr, c.toBaseSchema())
+			arr = append(arr, c.toSchemaBase())
 		}
 		return map[string]interface{}{"oneOf": arr}
 	}
@@ -303,18 +303,18 @@ type Schema struct {
 	Attributes ObjectSchema `json:"attributes"`
 }
 
-func (s Schema) toBaseSchema() interface{} {
+func (s Schema) toSchemaBase() interface{} {
 	ret := map[string]interface{}{
-		"@context":   "http://schemas.cloudprivacylabs.com/BaseSchema",
+		"@context":   "http://schemas.cloudprivacylabs.com/SchemaBase",
 		"@id":        targetNS + s.Name,
-		"attributes": s.Attributes.toBaseSchema()}
+		"attributes": s.Attributes.toSchemaBase()}
 	return ret
 }
 
 func (s Schema) toIndex() interface{} {
 	ret := map[string]interface{}{
 		"@context": []string{
-			"http://schemas.cloudprivacylabs.com/BaseSchema",
+			"http://schemas.cloudprivacylabs.com/SchemaBase",
 			"http://schemas.cloudprivacylabs.com/Overlay",
 			"http://schemas.cloudprivacylabs.com/IndexOverlay"},
 		"base":       targetNS + s.Name,
